@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFFFF;
+}
+#navbar{
+    width: 100%;
+}
+#top-banner{
+    position: sticky;
+    display: flex;
+    /* border: 5px solid blue; */
+    height: 20px;
+    
+}
+#center{
+    display: flex;
+    /* position: relative; */
+    /* left: 40%; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* background: #fff; */
+    position: relative;
+    /* width: 100%; */
+    /* z-index: 99999; */
+    text-align: center;
+    /* margin: auto; */
+    border-bottom: 1px solid #ccc;
+    top: 0;
+    height: 36px;
+    flex: 1;
+    justify-content: center;
+}
+#faballey-img{
+    background-color: black;
+    border: 1px solid purple;
+    padding: 11px 20px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#faballey-img>img{
+    width: 80%;
+}
+#indya{
+    padding: 6px 20px;
+    width: 76px;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#indya>img{
+    /* width: 100%; */
+}
+.gap{
+    display: flex;
+    background-color: pink;
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+#right{
+    display: flex;
+    /* width: 300px; */
+    box-sizing: border-box;
+    align-items: center;
+    padding-right: 10px;
+    border-bottom: 1px solid #ccc;
+    height: 36px;
+}
+#left{
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+    height: 36px;
+}
+
+#right a{
+    text-decoration: none;
+    font-size:11px;
+    margin-right: 10px;
+    font-weight:700;
+font-style:
+normal;
+font-variant:
+normal;
+text-transform:
+none;
+text-decoration:
+none solid rgb(50, 50, 50);
+text-align:
+center;
+text-indent:
+0px;
+color:
+#323232
+
+}
+
+#navbar-cart-count{
+    height: 5px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+}

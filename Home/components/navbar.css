@@ -121,6 +121,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 41.2px;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(252, 100, 134);
+  text-align: left;
+  text-indent: 0px;
 }
 #navbar-mid > img {
   max-width: 100%;
@@ -139,9 +147,7 @@ body {
   text-align: center;
   text-indent: 0px;
 }
-#navbar-mid-mid a:hover {
-  border-bottom: 3px solid #fc6486;
-}
+
 #navbar-mid-mid > :last-child {
   color: #fc6486;
 }
@@ -226,12 +232,12 @@ input.search-text::-webkit-search-cancel-button {
   right: 2em;
   cursor: pointer;
 }
+/* search-ends */
 
 #nav-bottom {
   margin: 20px 0;
   display: flex;
   width: 100%;
-  /* border: 1px solid rebeccapurple; */
   justify-content: space-evenly;
   font-size: 12px;
   font-weight: 600;
@@ -253,4 +259,94 @@ input.search-text::-webkit-search-cancel-button {
   width: 100%;
   background-color: #ffe9e5;
   padding: 5px;
+}
+
+/* DROPDOWN MENU  */
+
+.dropbtn {
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 8px;
+  padding: 50px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  width: 100% !important;
+  left: 0;
+}
+
+.dropdown:hover .dropbtn {
+  border-bottom: 3px solid #fc6486;
+}
+
+.dropdown:hover .flexxxxx {
+  display: flex;
+}
+
+.newin-main {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto auto auto 20em;
+}
+.newin-img {
+  width: 50%;
+}
+.clothing-left,.clothing-mid,.clothing-right{
+  margin: 40px;
+  margin-top: 0;
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.clothing-left>p,.clothing-mid>p,.clothing-right>p{
+  margin-bottom: 25px; ;
+}
+.clothing-mid{
+  /* margin: 0 90px; */
+}
+.cloth-main-div {
+  display: flex;
+  top: 0;
+  justify-content: center;
+  /* align-items: center; */
+  /* border: 1px solid red; */
+  width: 60%;
+  margin: auto;
+
+}
+.hover-heading {
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(50, 50, 50);
+  text-align: left;
+  text-indent: 0px;
+  font-size: 16px;
 }

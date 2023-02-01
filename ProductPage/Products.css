@@ -218,6 +218,7 @@ body{
     margin-right: 20px;
     width:14%;
     border:none;
+    cursor: pointer;
 }
 
 /* ------------------drop down css------------------ */
@@ -288,7 +289,7 @@ body{
     background: #fff;
     position: absolute;
     z-index: 1;
-    display: none;
+    visibility: hidden;
     transition: all 1s ease;
 }
 .shorted_by span {
@@ -298,6 +299,9 @@ body{
     padding: 5px 12px;
     cursor: pointer;
 }
+.sort_by_relevence{
+    cursor: pointer;
+}
 .display_sorted  { 
-display: block;
+visibility: visible;
 }

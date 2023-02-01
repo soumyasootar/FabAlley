@@ -389,7 +389,14 @@ document.querySelector(".sub-category-list").addEventListener("click",function(x
 })
 
 
-
-// document.querySelector("#sort_by_relevence").addEventListener("click"()=>{
-//   document.querySelector(".shorted_by").classList.add("display_sorted")
-// })
+let bala=false;
+document.querySelector(".sort_by_relevence").addEventListener("click",()=>{
+ const disthis= document.querySelector(".shorted_by")
+ if (bala===true) {
+  disthis.classList.remove("display_sorted")
+  bala=false;
+} else {
+  disthis.classList.add("display_sorted")
+  bala=true;
+}
+});

@@ -1,12 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FABALLEY</title>
-</head>
-<body>
-    <img src="https://www.google.com/logos/doodles/2023/celebrating-bubble-tea-6753651837109839.3-s.png" alt="">
-</body>
+    <link rel="stylesheet" href="./Home/css/slideshow.css" />
+    <link rel="stylesheet" href="./Home/components/navbar.css" />
+    <link rel="stylesheet" href="./Home/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main-main-navbar"></div>
+    <div id="main-body-container">
+      <div class="slideshow-container">
+        <div class="mySlides fade ">
+          <img
+            src="https://img.faballey.com/images/banner/c570584c-a4ae-442a-a94e-c0f5d707e03f.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            src="https://img.faballey.com/images/banner/1b94021f-60b1-4596-82a3-5330da7b0a0a.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            src="https://img.faballey.com/images/banner/04ccbc22-0288-4ce9-93a5-6edef22f09e7.jpg"
+            style="width: 100%"
+          />
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="https://img.faballey.com/images/banner/73116c8a-e414-467b-89e4-9790f376ce65.jpg"
+            style="width: 100%"
+          />
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="https://img.faballey.com/images/banner/845484f6-4bc2-43e0-b2ff-48b62e2404cd.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        <div style="text-align: center" class="dot-div">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+    </div>
+    <div id="grid-div">
+      <p>TRENDING CATEGORIES</p>
+      <div id="trending-category-home">
+        <img src="https://img.faballey.com/images/banner/0f4e5802-c211-44a3-9b8f-cedd34403493.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/3b6c111f-acea-4c54-83d4-7c91c35115e0.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/4983c969-53fc-4a84-b94c-75c2b1b2ec55.jpg" alt="">
+      </div>
+    </div>
+    <div id="grid-div">
+      <p>HOT RIGHT NOW</p>
+      <div class="img-grid">
+        <img src="https://img.faballey.com/images/banner/c9a9b20f-b34d-4c3f-8008-3c961bc4cfaf.jpg" alt="">
+      </div>
+    </div>
+    <div id="grid-div">
+      <p>NEW ARRIVALS</p>
+      <div class="img-grid">
+        <img src="https://img.faballey.com/images/banner/5c30d476-045f-4e78-8802-27259a286e40.jpg" alt="">
+      </div>
+    </div>
+    <div id="grid-div">
+      <p>DEALS YOU DON'T WANT TO MISS</p>
+      <div id="spotlight-category-home">
+        <img src="https://img.faballey.com/images/banner/c1ec67b2-6310-446d-bcd2-236656309955.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/e5422ac4-865e-4fe0-9dbf-2d0672a31913.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/05b3e299-7f6f-4d3a-9a1a-b2b96ea76018.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/112420fc-fcae-4ea4-962a-cf35c7e536c3.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/f57cfdc2-3ac2-4e29-ae04-4a7094796d56.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/ac2e6063-9f74-4eef-a409-ad7e31fa7784.jpg" alt="">
+      </div>
+    </div>
+    <div id="grid-div">
+      <p>IN THE SPOTLIGHT</p>
+      <div id="spotlight-category-home">
+        <img src="https://img.faballey.com/images/banner/b3d44164-0b88-4f8d-8b70-b59315950ab8.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/fa4d9e0d-d620-46dd-bcf6-277dd86461f4.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/dc295136-e941-4486-b7ef-cbe3b5a103e0.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/d754591d-fe1f-48db-912b-8de29f3c0fd4.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/ce6a3f37-0e3a-4911-a66c-b678296dc96c.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/4acf6a5e-feb5-4146-b689-b05fffc2546a.jpg" alt="">
+      </div>
+      <div class="img-grid">
+        <img src="https://img.faballey.com/images/banner/5325797a-b495-4acc-920c-2b1b9111db00.jpg" alt="">
+      </div>
+    </div>
+    <div id="grid-div">
+      <p>EXPLORE MORE</p>
+      <div id="exploremore-category-home">
+        <img src="https://img.faballey.com/images/banner/8b737eb9-8b69-4613-aaf6-80534b3270bd.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/83694101-251c-43b8-b0e3-bfb852a1fb55.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/1542622f-efee-4e6f-84d2-5c88a941476f.jpg" alt="">
+        <img src="https://img.faballey.com/images/banner/09985e07-ed9e-4fe9-9d3c-fcba8ac200a6.jpg" alt="">
+      </div>
+    </div>
+  </body>
 </html>
+<script type="module" src="./Home/src/index.js"></script>
+<script src="./Home/src/slideshow.js"></script>

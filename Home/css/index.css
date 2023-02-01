@@ -8,6 +8,7 @@
   text-indent: 0px;
   font-size: 25px;
   text-align: center;
+  color: #583232;
 }
 #grid-div>#trending-category-home{
     display: grid;
@@ -25,7 +26,6 @@
 }
 
 .img-grid{
-    /* border: 10px solid coral; */
     display: flex;
     justify-content: center;
     margin: auto;
@@ -44,4 +44,10 @@
     grid-template-columns: repeat(4,1fr);
     margin: 1em;
     gap: 1em;
+}
+.instagram-grid-div{
+    display: flex;
+    width: 98%;
+    margin: auto;
+    align-items: flex-start;
 }

@@ -4,6 +4,13 @@ body {
   font-family: "Lato", sans-serif;
   background-color: #ffffff;
 }
+#main-main-navbar{
+  position: sticky;
+  top:0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #CCCCCC;
+
+}
 #navbar {
   position: sticky;
   top: 0;
@@ -233,12 +240,13 @@ input.search-text::-webkit-search-cancel-button {
 /* search-ends */
 
 #nav-bottom {
-  margin: 20px 0;
+  margin: 5px 0;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   font-size: 12px;
   font-weight: 600;
+  /* border-bottom: 1px solid #CCCCCC; */
 }
 #nav-bottom > :nth-child(1) {
   text-align: center;

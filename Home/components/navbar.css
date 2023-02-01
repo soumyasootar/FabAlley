@@ -148,9 +148,6 @@ body {
   text-indent: 0px;
 }
 
-#navbar-mid-mid > :last-child {
-  color: #fc6486;
-}
 #currency {
   background: #fff;
   text-align: center;
@@ -321,24 +318,19 @@ input.search-text::-webkit-search-cancel-button {
 .clothing-left,.clothing-mid,.clothing-right{
   margin: 40px;
   margin-top: 0;
-  /* border: 1px solid red; */
   width: 100%;
 }
 .clothing-left>p,.clothing-mid>p,.clothing-right>p{
-  margin-bottom: 25px; ;
+  margin-bottom: 20px; ;
 }
-.clothing-mid{
-  /* margin: 0 90px; */
-}
+
 .cloth-main-div {
   display: flex;
   top: 0;
   justify-content: center;
-  /* align-items: center; */
-  /* border: 1px solid red; */
   width: 60%;
   margin: auto;
-
+  
 }
 .hover-heading {
   font-weight: 600;
@@ -349,4 +341,28 @@ input.search-text::-webkit-search-cancel-button {
   text-align: left;
   text-indent: 0px;
   font-size: 16px;
+}
+
+.tops-main{
+  display: flex;
+  margin:auto;
+  width: 80%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.tops-img{
+  width: 20%;
+}
+
+.sale-m{
+  display: flex ;
+  width: 80%;
+  margin: auto 20em;
+}
+.sale-left{
+  margin-right: 10px;
+}
+.sale-img{
+ margin: 1em;
+ width: 18%;
 }

@@ -225,22 +225,26 @@ localStorage.setItem("FabAlleyProduct", JSON.stringify(Product));
 let data = JSON.parse(localStorage.getItem("FabAlleyProduct"));
 display(data)
 function display(data) {
-  document.querySelector("#product_tops").innerHTML = ""
-  data.map(function (ele) {
+  let productEl=document.querySelector("#product_tops").innerHTML = ""
+  data.map(function (ele,ind) {
     // if(ele.category=="dress"){
 
     document.querySelector("#product_tops").innerHTML +=
       `
             <div id="product_single_item_container">
             <div id="image_hover">
-                <img src="${ele.img2}" alt="" id="product_single_item_container_image">
+                <img src="${ele.img1}"  onmouseover="hover(${ind})" onmouseout="hoverout(${ind})"
+                id="product_single_item_container_image" class="change_image${ind}">
+                <div id="product_size">
+                <span >Sizes XS,S,L,XL</span>
+                </div>
                 <span id="product_offer">${ele.discount}%<br>OFF</span>
                 
               </div>
                 <div id="product_name_div"><p>${ele.title}</p></div>
                 <div id="product_price_div">
-                <span id="selling_price">₹${ele.price1}</span>
-                <h3 id="printed_price">₹${ele.price2}</h3>
+                <span id="selling_price"><i class="fa-solid fa-indian-rupee-sign"></i> ${ele.price1}</span>
+                <h3 id="printed_price"><i class="fa-solid fa-indian-rupee-sign"></i> ${ele.price2}</h3>
                 </div>
                 <div id="product_express_div">
                 <i class="fa-solid fa-truck-fast" id="express_icon"></i>
@@ -254,16 +258,132 @@ function display(data) {
                 
 
             </div>
-            `
+            `;
     // }
   })
 }
 
-async function fetching() {
-  let res = await fetch("http://localhost:3000/products")
-  let json = await res.json();
-  display(json)
-  console.log(res)
-  console.log(json)
+function hover(ind) {
+  let product = data[ind].img2;
+  document.querySelector(".change_image"+ind).src = product;
 }
-fetching();
+function hoverout(ind) {
+  let product = data[ind].img1;
+  document.querySelector(".change_image"+ind).src = product;
+}
+
+
+// ----------------drop downs--------------------
+document.querySelector("#drop_down").innerHTML=
+`
+<span class="menu-heading">TOPS</span>
+    <ul class="category-list">
+      <li class="category-item">
+        <button class="category-btn" id="this_page">TOPS <i class="fa-solid fa-angle-right"></i></button>
+        <ul class="sub-category-list">
+          <li class="sub-category-item">CROP TOPS</li>
+          <li class="sub-category-item">TANK TOPS</li>
+          <li class="sub-category-item">T-SHIRTS</li>
+          <li class="sub-category-item">SHIRTS</li>
+          <li class="sub-category-item">BLOUSES</li>
+          <li class="sub-category-item">MAXI TOPS</li>
+          <li class="sub-category-item">PEPLUM TOPS</li>
+          <li class="sub-category-item">CAPE TOPS</li>
+          <li class="sub-category-item">WRAP TOPS</li>
+          <li class="sub-category-item">HALTER TOP</li>
+          <li class="sub-category-item">LACE TOPS</li>
+          <li class="sub-category-item">COLD SHOULDER TOPS</li>
+          <li class="sub-category-item">OFF SHOULDER TOPS</li>
+          <li class="sub-category-item">BELL SLEEVES TOPS</li>
+        </ul>
+      </li>
+      <li class="category-item">
+        <button class="category-btn">LOUNGEWEAR <i class="fa-solid fa-angle-right"></i></button>
+        <ul class="sub-category-list">
+          <li class="sub-category-item">COORDINATES</li>
+          <li class="sub-category-item">TOPS</li>
+          <li class="sub-category-item">DRESSES</li>
+          <li class="sub-category-item">BOTTOMS</li>
+        </ul>
+      </li>
+      <button class="category-btn1">PARTY WEAR</button>
+      <button class="category-btn1">WORK FROM HOME COLLECTION</button>
+      <li class="category-item">
+        <button class="category-btn">DRESSES <i class="fa-solid fa-angle-right"></i></button>
+        <ul class="sub-category-list">
+          <li class="sub-category-item">BODYCON DRESSES</li>
+          <li class="sub-category-item">SKATER DRESSES</li>
+          <li class="sub-category-item">A-LINE DRESSES</li>
+          <li class="sub-category-item">SHIRT DRESSES</li>
+          <li class="sub-category-item">SHIFT DRESSES</li>
+          <li class="sub-category-item">MAXI DRESSES</li>
+          <li class="sub-category-item">JUMPSUITS</li>
+          <li class="sub-category-item">WRAP DRESSES</li>
+          <li class="sub-category-item">HALTER DRESS</li>
+          <li class="sub-category-item">OFF SHOULDER DRESSES</li>
+          <li class="sub-category-item">COLD SHOULDER DRESSES</li>
+          <li class="sub-category-item">RUFFLE DRESSES</li>
+          <li class="sub-category-item">LITTLE BLACK DRESSES</li>
+          <li class="sub-category-item">LACE DRESSES</li>
+          <li class="sub-category-item">MIDI DRESSES</li>
+          <li class="sub-category-item">MINI DRESSES</li>
+        </ul>
+      </li>
+      <li class="category-item">
+        <button class="category-btn">SKIRTS <i class="fa-solid fa-angle-right"></i></button>
+        <ul class="sub-category-list">
+          <li class="sub-category-item">MINI SKIRTS</li>
+          <li class="sub-category-item">MAXI SKIRTS</li>
+          <li class="sub-category-item">MIDI SKIRTS</li>
+        </ul>
+      </li>
+      <li class="category-item">
+        <button class="category-btn">BOTTOMS <i class="fa-solid fa-angle-right"></i></button>
+        <ul class="sub-category-list">
+          <li class="sub-category-item">FORMAL TROUSERS</li>
+          <li class="sub-category-item">LEGGINGS & JEGGINGS</li>
+          <li class="sub-category-item">WIDE LEGGED PANTS</li>
+        </ul>
+      </li>
+      <li class="category-item">
+        <button class="category-btn">WINTER WEAR <i class="fa-solid fa-angle-right"></i></button>
+        <ul class="sub-category-list">
+          <li class="sub-category-item">JACKETS</li>
+          <li class="sub-category-item">COATS</li>
+          <li class="sub-category-item">SHRUGS</li>
+          <li class="sub-category-item">SWEATERS & CARDIGANS</li>
+          <li class="sub-category-item">HOODIES & SWEATSHIRTS</li>
+        </ul>
+      </li>
+      <button class="category-btn1">SHORTS</button>
+      <button class="category-btn1">SHRUGS</button>
+      <button class="category-btn1">UNDER 699</button>
+      <button class="category-btn1">UNDER 799</button>
+      <button class="category-btn1">UNDER 999</button>
+    </ul>
+`;
+
+
+const categoryBtns = document.querySelectorAll('.category-btn');
+console.log(categoryBtns)
+categoryBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const subCategoryList = btn.nextElementSibling;
+    const right=btn.lastChild;
+    console.log(right)
+    // console.log(subCategoryList)
+    if (subCategoryList.style.display === 'block') {
+      right.classList.remove("fa-angle-down")
+      subCategoryList.style.display = 'none';
+    } else {
+      subCategoryList.style.display = 'block';
+      right.classList.add("fa-angle-down")
+    }
+  });
+});
+var right=document.querySelector(".fa-angle-right");
+
+
+document.querySelector(".sub-category-list").addEventListener("click",function(x){
+  // console.log(x.target.innerText)
+})

@@ -195,6 +195,7 @@ body{
     border-top:.5px solid #dedede;
     border-bottom:.5px solid #dedede;
     color: #323232;
+    position:relative;
 }
 #poster_of_type_product{
     width:97%;
@@ -215,6 +216,8 @@ body{
 }
 #relevence_sorting{
     margin-right: 20px;
+    width:14%;
+    border:none;
 }
 
 /* ------------------drop down css------------------ */
@@ -276,3 +279,25 @@ body{
     color: #323232;
     line-height: 30px;
   }
+
+  /* sort---------------------- */
+  .shorted_by {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    transition: all 1s ease;
+}
+.shorted_by span {
+    border: 1px solid #dcdcdc;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+.display_sorted  { 
+display: block;
+}

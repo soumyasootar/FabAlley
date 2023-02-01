@@ -387,3 +387,9 @@ var right=document.querySelector(".fa-angle-right");
 document.querySelector(".sub-category-list").addEventListener("click",function(x){
   // console.log(x.target.innerText)
 })
+
+
+
+// document.querySelector("#sort_by_relevence").addEventListener("click"()=>{
+//   document.querySelector(".shorted_by").classList.add("display_sorted")
+// })

@@ -1,118 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carts Page</title>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Carts Page</title>
 </head>
+
 <body>
-    <div id="navbar" style="display:flex;height:55px;background-color:grey;" > 
-        <div id="child1" style="font-family:roboto;font-size: 35px;font-weight: 400;color: rgb(0,0,0);margin-top: 5px;margin-left:45px"> FABALLEY</div>
-         <div id="child2">
-            <button style="border:none;background-color: palevioletred; padding:5px 5px;margin-left: 350px;margin-top: 12px;" >Bag</button>
-            <button style="border:none;background-color: palevioletred; padding:5px 5px;margin-left:30px"> Shipping</button>
-            <button style="border:none;background-color: palevioletred; padding:5px 5px;margin-left:30px">Payment</button>
-         </div>
+   <div id="navbar" style="display: flex; height: 55px; background-color: grey">
+      <div id="child1" style="
+          font-family: roboto;
+          font-size: 35px;
+          font-weight: 400;
+          color: rgb(0, 0, 0);
+          margin-top: 5px;
+          margin-left: 45px;
+        ">
+         FABALLEY
+      </div>
+      <div id="child2">
+         <button style="
+            border: none;
+            background-color: palevioletred;
+            padding: 5px 5px;
+            margin-left: 350px;
+            margin-top: 12px;
+          ">
+            Bag
+         </button>
+         <button style="
+            border: none;
+            background-color: palevioletred;
+            padding: 5px 5px;
+            margin-left: 30px;
+          ">
+            Shipping
+         </button>
+         <button style="
+            border: none;
+            background-color: palevioletred;
+            padding: 5px 5px;
+            margin-left: 30px;
+          ">
+            Payment
+         </button>
+      </div>
 
-         <div id="child3" style="margin-left: 380px;font-size: 20px;margin-top: 12px;"> Hi, <p id="custname">  </p></div>
+      <div id="child3" style="margin-left: 380px; font-size: 20px; margin-top: 12px">
+         Hi, <span id="custname"> User </span>
+      </div>
+   </div>
 
-    </div>
+   <div id="counterCart" style="margin-left: 45px; font-size: 18px">
+      <p>My Shopping Bag( <span id="cartcount"> 3 </span> )</p>
+   </div>
 
-       <div id="counterCart"  style="margin-left:45px;font-size:18px">
-        <p>My Shopping Bag( <span id="cartcount"> 3 </span> ) </p>
-     </div>
-
-     <div id="mainbox12" style="display:flex">
-       <div style="margin-left:45px" id="box111">
-
-         <div id="productBox"> 
-             <div id="recbox" style="width:651px;height:162px;border:1px solid grey;display:flex">
+   <div id="mainbox12" style="display: flex">
+      <div style="margin-left: 45px" id="box111">
+         <div id="productBox">
+            <div id="recbox" style="
+              width: 651px;
+              height: 162px;
+              border: 1px solid grey;
+              display: flex;
+            ">
                <div id="forimage">
-                  <img  style="width:88px;height:116px"   src="https://img.faballey.com/images/Product/BOT00728Z/1.jpg" alt="dress">
-                 </div>
-                 <div style="width:292px;height:21px"  id="dressnames">
-   
+                  <img style="width: 88px; height: 116px" src="https://img.faballey.com/images/Product/BOT00728Z/1.jpg"
+                     alt="dress" />
+               </div>
+               <div style="width: 292px; height: 21px" id="dressnames">
                   Black Front Slit High Waist Flared Leggings
-         
-                 </div>
-                 <div id="pricy" style="display:flex;margin-left: 30%;">
-                  <div style="margin-right:20px" id="price111"> ₹3400</div>
-                  <div style="margin-right: 15px;text-decoration:line-through" id="price222"> ₹4500  </div>
-                 </div>
-                 
-                 <div id="quantitycolor" style="display:flex">
-                  <div> Quantity <span> 2 </span> </div>
-                  <div> Color <span> black</span></div>
-                 </div>
-   
-                 
-   
-   
-            </div> 
+               </div>
+               <div id="pricy" style="display: flex; margin-left: 30%">
+                  <div style="margin-right: 20px" id="price111">₹3400</div>
+                  <div style="margin-right: 15px; text-decoration: line-through" id="price222">
+                     ₹4500
+                  </div>
+               </div>
+
+               <div id="quantitycolor" style="display: flex">
+                  <div id="cartquantity">Quantity <span> 2 </span></div>
+                  <div>Color <span> black</span></div>
+               </div>
+            </div>
          </div>
 
-         <div style="display:flex;width:651px;height:37px;justify-content: space-between;border:1px solid grey;margin-top: 20px;" id="continueshopping"> 
-            <div style="margin-top:7px"> <a  style="color:#FD938E;text-decoration: none;" href=""> Continue Shopping </a></div>
-            <div style="color:#FD938E;margin-top:7px"> Add to Wishlist</div>
-             </div>
-
-
-       </div>
-
-
-       <p style="margin-top:-35px;margin-left:40px;font-size:20px;font-family: roboto;"> Price Details</p>
-
-       <div id="donationbox" style="width:349px;height:380px;border:1px solid grey;background-color: grey;margin-left:-7%;">
-
-         <div> 
-            <h4> Donation</h4>
-            <p style="width:80%;font-size:12px;margin-top:-5px"> Extra ₹10 (This donation is towards NGO Ssrishti that is 
-               providing food and hygiene essentials to migrant labors during 
-               the COVID-19 lockdown)</p>
-      
-
+         <div style="
+            display: flex;
+            width: 651px;
+            height: 37px;
+            justify-content: space-between;
+            border: 1px solid grey;
+            margin-top: 20px;
+          " id="continueshopping">
+            <div style="margin-top: 7px">
+               <a style="color: #fd938e; text-decoration: none" href="">
+                  Continue Shopping
+               </a>
+            </div>
+            <div style="color: #fd938e; margin-top: 7px">Add to Wishlist</div>
          </div>
-         <hr/>
-         <div style="text-align:center;margin-bottom:15px"> Apply Coupon</div>
-         <hr>
-         <div style="text-align:center;margin"> Redeem Gift Card</div>
-         <hr>
-         <div style="display:flex">
-            <p style="margin-left:10px"> Sub Total</p>
-            <p style="margin-left:58%"> ₹<span id="subtotalll"> 4000 </span></p> 
-         </div>
-         <hr>
-         <div style="display:flex;">
-            <p   style="margin-left:10px"> Total</p>
-            <p  style="margin-left:65%"> ₹ <span id="subtotalll"> 4000 </span></p>
-         </div>
-         <hr>
+      </div>
+
+      <p style="
+          margin-top: -35px;
+          margin-left: 40px;
+          font-size: 20px;
+          font-family: roboto;
+        ">
+         Price Details
+      </p>
+
+      <div id="donationbox" style="
+          width: 349px;
+          height: 380px;
+          border: 1px solid grey;
+          background-color: grey;
+          margin-left: -7%;
+        ">
          <div>
-            <button  id="orderplacing" style="width:80%;margin-left:30px;height:42px;font-size:18px;background-color:palevioletred;border:none;border-radius: 10px;color:aliceblue"> Place Order </button>
+            <h4>Donation</h4>
+            <p style="width: 80%; font-size: 12px; margin-top: -5px">
+               Extra ₹10 (This donation is towards NGO Ssrishti that is providing
+               food and hygiene essentials to migrant labors during the COVID-19
+               lockdown)
+            </p>
+         </div>
+         <hr />
+         <div style="text-align: center; margin-bottom: 15px"> 
+            <input id="CouPonID" type="text" placeholder="Enter Coupon">
+            <button id="CouponBtn">  Apply Coupon </button>
+            <p> <span id="CouponApplied">  </span></p>
+               </div>
+
+         <hr />
+         <div style="text-align: center">Redeem Gift Card</div>
+         <hr />
+         <div style="display: flex">
+            <p style="margin-left: 10px">
+               Sub Total <span id="subtotalll"> </span>
+            </p>
+            <p style="margin-left: 58%">₹<span id="subtotalll1"> 0 </span></p>
+         </div>
+         <hr />
+         <div style="display: flex">
+            <p style="margin-left: 10px">Total</p>
+            <p style="margin-left: 65%">₹ <span id="subtotalll2"> 0 </span></p>
+         </div>
+         <hr />
+         <div>
+            <button id="orderplacing" style="
+              width: 80%;
+              margin-left: 30px;
+              height: 42px;
+              font-size: 18px;
+              background-color: palevioletred;
+              border: none;
+              border-radius: 10px;
+              color: aliceblue;
+            ">
+               Place Order
+            </button>
          </div>
 
-         <div style="width:347px;height:72px;border:1px solid grey;margin-top: 20px;font-size:14px;font-family: sans-serif;"> 
-            <p style="line-height:5px"> Estimated Delivery Time</p>
-            <p style="margin-top:15px">India : 1-3 business days.</p>
+         <div style="
+            width: 347px;
+            height: 72px;
+            border: 1px solid grey;
+            margin-top: 20px;
+            font-size: 14px;
+            font-family: sans-serif;
+          ">
+            <p style="line-height: 5px">Estimated Delivery Time</p>
+            <p style="margin-top: 15px">India : 1-3 business days.</p>
 
-              <p style="margin-top:-15px" > International: 7-10 business days.</p>
-
+            <p style="margin-top: -15px">International: 7-10 business days.</p>
          </div>
-
-
-       </div>
-
-
-
-     </div>
-
-      
-     
-     
-
-    
+      </div>
+   </div>
 </body>
+
 </html>
 
-<script src="cart.js"> </script>
+<script src="cart.js"></script>

@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    background-color: #ffffff;
+}
+#footer-main-main {
+  background-color: #fbfbfb;
+  border-top: 1px solid #ededed;
+  width: 100%;
+  margin: auto;
+}
+.footer-p-tags {
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none solid rgb(50, 50, 50);
+  text-align: start;
+  text-indent: 0px;
+  font-size: 16px;
+  color: #323232;
+}
+#footer-div-2{
+    display: flex;
+    width: 80%;
+}
+#footer-div-3{
+    display: flex;
+    width: 80%;
+    background-color: red;
+}
+#footer-div-32a{
+    display: flex;
+    width: 80%;
+}
+#footer-div-41{
+    width: 80%;
+    display: flex;
+}

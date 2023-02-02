@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato';
+    color: #323232;
+}
+
+#Single_Page_container {
+    display: flex;
+    margin: auto;
+    width: 95%;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#all_detail_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#product_type{
+    text-transform: uppercase !important;
+}
+#for_image {
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: space-between;
+}
+
+#for_image div {
+    display: flex;
+    margin: auto;
+    padding: 10px;
+}
+
+#for_image div img {
+    width: 100%;
+}
+#firstImg{
+    width:100%;
+}
+#forother_detail {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 33%;
+    padding-top: 2px;
+}
+
+#head_single_page {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+#head_single_page span {
+    padding: 0 6px 0 10px;
+}
+
+#name_div {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#price_div span {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+#product_discount {
+    font-size: 14px !important;
+    color: #fc6486;
+}
+
+#product_printp {
+    text-decoration: line-through;
+    color: #999;
+}
+
+#rupee {
+    font-size: 25px !important;
+    font-weight: 100;
+}
+
+#rupee1 {
+    font-size: 25px !important;
+    font-weight: 100;
+    color: #999;
+}
+
+#intax {
+    display: block;
+    font-size: 14px;
+    color: #03bb5c;
+}
+
+#pro_code {
+    font-size: 12px;
+    font-weight: 700;
+    color: #999;
+}
+#product_express_div{
+    display: flex;
+}
+#product_express_div i,h4,h5 {
+    display: flex;
+    padding-left: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#express_icon{
+    transform: rotateY(180deg);
+}
+#size_guide {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    align-items: center;
+}
+#size_guide span:last-child{
+    font-size: 11px ;
+}
+#choose_size{
+    display: flex;
+    list-style-type: none;
+    gap:20px;
+    padding-left: 0px;
+}
+#choose_size li{
+    font-size: 14px;
+    border: 1px solid #dcdcdc;
+    min-width: auto;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    padding:0 15px;
+}
+#buttons{
+    display: flex;
+    width:100%;
+}
+#add_to_bag{
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    background: #fc6486;
+    display: table-cell;
+    width: 55%;
+    letter-spacing: 1px;
+    padding: 18px 0;
+    float: left;
+    border:none;
+}
+#wishllist {
+    text-align: center;
+    font-weight: 700;
+    font-size: 12px;
+    display: table-cell;
+    letter-spacing: 1px;
+    padding: 17px 10px;
+    background: white;
+    border: 1px solid #dcdcdc;
+    float: left;
+    width: 42%;
+    margin-left: 3%;
+}
+#check_heading{
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+#check_pin{
+    display: flex;
+    width:100%;
+    margin-top: 10px;
+}
+#inter_pin{
+    padding: 15px;
+    border: 1px solid #dcdcdc;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 500;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    positon:relative;
+    border-right: none;
+}
+#check_btn{
+    display: flex;
+    align-items: center;
+    border:none;
+    background: white;
+    border:1px solid #dcdcdc;
+    padding: 0 20px;
+    color: #fc6486;
+}
+#delivery_type{
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+#delivery_type div{
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    padding: 10px 5px;
+    width: 32%;
+    list-style: none;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+    color: #000;
+}
+.accordion-item{
+    border-left:none !important;
+    border-right: none;
+}
+.accordion-button{
+    font-size: 17px;
+    font-weight: 600;
+}
+#social-media-logo{
+    display: flex;
+    margin-top: 30px;
+    font-size: 25px;
+    gap:20px;
+}
+.whatsapp{
+    color:#3cb05c;
+}
+.insta{
+    color:#d3428a;
+}
+.facebook{
+    color:#5d85d7;
+}
+.pintrest{
+    color:#e61947;
+}

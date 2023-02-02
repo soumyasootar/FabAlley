@@ -166,7 +166,7 @@ body{
 #filtering_part{
     width:100%;
     display: grid;
-    grid-template-columns: repeat(5,19%);
+    grid-template-columns: repeat(5,18.5%);
     justify-content: space-between;
     /* border:2px solid black; */
     padding-bottom: 16px;
@@ -180,7 +180,7 @@ body{
     margin-top: 8px;
     color:#919191;
     justify-content: space-between;
-    padding: 8px 20px;
+    /* padding: 8px 20px; */
     
     
 }
@@ -218,6 +218,7 @@ body{
     margin-right: 20px;
     width:14%;
     border:none;
+    cursor: pointer;
 }
 
 /* ------------------drop down css------------------ */
@@ -288,8 +289,7 @@ body{
     background: #fff;
     position: absolute;
     z-index: 1;
-    display: none;
-    transition: all 1s ease;
+    visibility: hidden;
 }
 .shorted_by span {
     border: 1px solid #dcdcdc;
@@ -298,6 +298,32 @@ body{
     padding: 5px 12px;
     cursor: pointer;
 }
+.sort_by_relevence{
+    cursor: pointer;
+}
 .display_sorted  { 
-display: block;
+visibility: visible;
+}
+#the_page{
+    display: block;
+}
+/* ------------button------------- */
+.dropdown-toggle{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width:100%;
+    border:none !important;
+    background: white !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color:#919191 !important;
+    font-family: 'Lato' !important;
+}
+.dropdown-menu{
+    font-size: 11px !important;
+    font-family: 'Lato' !important;
+    color:#919191 !important;
+    width:100% !important;
+    border-radius: 0px !important;
 }

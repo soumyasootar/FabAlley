@@ -546,4 +546,12 @@ document.querySelector("#filtering_part").innerHTML=
   </ul>
 </div>
 
-`
+`;
+
+
+
+// ----------------jump to dress Page-----------------
+
+document.querySelector("#open_dress_page").addEventListener("click",()=>{
+  window.open("dress.html","_self")
+})

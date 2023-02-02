@@ -9,6 +9,7 @@ body {
   border-top: 1px solid #ededed;
   width: 100%;
   margin: auto;
+  margin-top: 5em;
 }
 #footer-main-main > p {
   font-size: 15px;

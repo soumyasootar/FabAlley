@@ -440,11 +440,11 @@ document.querySelector("#filtering_part").innerHTML=
   </a>
 
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">XS (extra samll)</a></li>
-    <li><a class="dropdown-item" href="#">S (small)</a></li>
-    <li><a class="dropdown-item" href="#">M (medium)</a></li>
-    <li><a class="dropdown-item" href="#">L (large)</a></li>
-    <li><a class="dropdown-item" href="#">XL (extra large)</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> XS (extra samll)</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> S (small)</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> M (medium)</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> L (large)</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> XL (extra large)</a></li>
   </ul>
 </div>
 <div class="dropdown">
@@ -453,14 +453,14 @@ document.querySelector("#filtering_part").innerHTML=
   </a>
 
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Pink</a></li>
-    <li><a class="dropdown-item" href="#">Black</a></li>
-    <li><a class="dropdown-item" href="#">Grey</a></li>
-    <li><a class="dropdown-item" href="#">White</a></li>
-    <li><a class="dropdown-item" href="#">Lilac</a></li>
-    <li><a class="dropdown-item" href="#">Dusty</a></li>
-    <li><a class="dropdown-item" href="#">Rust</a></li>
-    <li><a class="dropdown-item" href="#">Wine</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Pink</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Black</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Grey</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> White</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Lilac</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Dusty</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Rust</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Wine</a></li>
   </ul>
 </div>
 <div class="dropdown">
@@ -524,14 +524,14 @@ document.querySelector("#filtering_part").innerHTML=
   </a>
 
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">10 % and above</a></li>
-    <li><a class="dropdown-item" href="#">20 % and above</a></li>
-    <li><a class="dropdown-item" href="#">30 % and above</a></li>
-    <li><a class="dropdown-item" href="#">40 % and above</a></li>
-    <li><a class="dropdown-item" href="#">50 % and above</a></li>
-    <li><a class="dropdown-item" href="#">50 % and above</a></li>
-    <li><a class="dropdown-item" href="#">60 % and above</a></li>
-    <li><a class="dropdown-item" href="#">70 % and above</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 10 % and above</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 20 % and above</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 30 % and above</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 40 % and above</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 50 % and above</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 50 % and above</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 60 % and above</a></li>
+    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 70 % and above</a></li>
   </ul>
 </div>
 <div class="dropdown">

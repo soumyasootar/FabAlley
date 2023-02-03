@@ -26,7 +26,7 @@ body{
 .form {
     position: absolute;
     background: white;
-    /* max-width: 400px; */
+    max-width: 400px;
     padding: 30px;
     border-radius: 6px;
     /* width: 100%; */

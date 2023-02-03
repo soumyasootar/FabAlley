@@ -21,7 +21,7 @@ export default function navbar() {
     <a href="" >Store Locator | </a>
     <a href="../../fabAlleyProfile/UserProfile/myorder/myorder.html" >Your Profile | </a>
     <a href="../../LOGIN/LOGIN.html" id="login-signup">Login/Signup | </a>
-    <a href="" id="hi-name"> | Hi,<span id="custname"> User </span></a>
+    <a href="" id="hi-name">  Hi,<span id="custname"> User </span></a>
     <a id="navbar-cart">
       <a id="navbar-cart">
         <svg

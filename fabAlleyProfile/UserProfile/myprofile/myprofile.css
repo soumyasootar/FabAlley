@@ -1,0 +1,128 @@
+ul{
+  /* margin: 0; */
+  padding: 0;
+}
+.profileList
+{
+  width: 20%;
+}
+.profileback {
+  width: 76%;
+  margin: auto;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  height: 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .profile {
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .profileList {
+    width: 100%;
+  }
+  .profileback {
+    width: 100%;
+    margin-left: 0; margin-top: 1rem; background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
+  }
+  body
+  {
+    width: 100%;
+    margin: auto;
+  }
+}
+#contant_information{
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#profile_edit{
+  display: flex;
+  flex-direction: column;
+  width:65%;
+  background: white;
+}
+#email_section {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  border: 1px solid #f2f2f2;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 1px;
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+#number_edit{
+  width:95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:auto;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 15px;
+}
+#code_div{
+  width:35%;
+  height:40px;
+}
+#imput_number{
+  width:60%;
+
+}
+#imput_number input{
+  width:95%;
+  border:none;
+  padding: 10px;
+  font-size: 14px;
+  height:100%;
+}
+#edit_button{
+  width:95%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#edit_button button{
+  width:100%;
+  padding: 12px;
+  border:none;
+  background: #ff8ba5;
+  color:white;
+  font-weight: 600;
+  font-size: 14px;
+}
+#prime_info{
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#prime_info_edit{
+  display: flex;
+  flex-direction: column;
+  width:65%;
+  background: white;
+}
+#info_user_name,#info_user_last,#info_user_gender,
+#info_user_gender,#info_user_pass{
+  width:60%;
+  display: flex;
+  justify-content: space-between;
+  color: #9a9a9a;
+  font-weight: 500;
+  font-size: 17px;
+  margin-left: 15px;
+  padding: 12px 0;
+}
+#footer-main-main {
+  margin-top: 80px !important;
+}

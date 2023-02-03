@@ -4,6 +4,7 @@ let Product=[
         category: "dress",
         title: "Black Blazer Dress With Embellished Belt",
         discount: "40",
+        colour:"black",
         price2: "3400",
         price1: "2040",
         site: "https://www.faballey.com/black-blazer-dress-with-embellished-belt-83/prdt",
@@ -17,6 +18,7 @@ let Product=[
         category: "dress",
         title: "White Floral High Neck Tiered Midi Dress",
         discount: "56",
+        colour:"white",
         price2: "2450",
         price1: "1078",
         site: "https://www.faballey.com/white-floral-high-neck-tiered-midi-dress-83/prdt",
@@ -30,6 +32,7 @@ let Product=[
         category: "dress",
         title: "Silver Plisse Draped Maxi Dress",
         discount: "40",
+        colour:"grey",
         price2: "3600",
         price1: "2160",
         site: "https://www.faballey.com/silver-plissC3A9-draped-maxi-dress-83/prdt",
@@ -43,6 +46,7 @@ let Product=[
         category: "dress",
         title: "Gold Plisse Draped Maxi Dress",
         discount: "40",
+        colour:"yellow",
         price2: "3600",
         price1: "2160",
         site: "https://www.faballey.com/gold-plissC3A9-draped-maxi-dress-83/prdt",
@@ -56,6 +60,7 @@ let Product=[
         category: "dress",
         title: "Brown  Shoulder Puff Sleeve Maxi Dress",
         discount: "50",
+        colour:"brown",
         price2: "3400",
         price1: "1700",
         site: "https://www.faballey.com/brown--shoulder-puff-sleeve-maxi-dress-83/prdt",
@@ -69,6 +74,7 @@ let Product=[
         category: "dress",
         title: "Mustard Yellow Printed Front Slit Dress",
         discount: "56",
+        colour:"yellow",
         price2: "2400",
         price1: "1056",
         site: "https://www.faballey.com/mustard-botanical-front-slit-milkmaid-dress-83/prdt",
@@ -82,6 +88,7 @@ let Product=[
         category: "dress",
         title: "Navy Halter Embellished Bodycon Dress",
         discount: "56",
+        colour:"blue",
         price2: "2400",
         price1: "1056",
         site: "https://www.faballey.com/navy-halter-embellished-bodycon-dress-83/prdt",
@@ -95,6 +102,7 @@ let Product=[
         category: "dress",
         title: "White Schiffli Ruffle Belted Dress",
         discount: "56",
+        colour:"white",
         price2: "2600",
         price1: "1144",
         site: "https://www.faballey.com/white-schiffli-ruffle-belted-dress-83/prdt",
@@ -108,6 +116,7 @@ let Product=[
         category: "dress",
         title: "Pink Floral Ruffled Belted Maxi Dress",
         discount: "56",
+        colour:"pink",
         price2: "2950",
         price1: "1298",
         site: "https://www.faballey.com/pink-floral-ruffled-belted-maxi-dress-83/prdt",
@@ -121,6 +130,7 @@ let Product=[
         category: "dress",
         title: "Aqua Tie Dye Ruched Waist Maxi Dress",
         discount: "56",
+        colour:"blue",
         price2: "2700",
         price1: "1188",
         site: "https://www.faballey.com/aqua-tie-dye-ruched-waist-maxi-dress-83/prdt",
@@ -134,6 +144,7 @@ let Product=[
         category: "dress",
         title: "Blush Strappy Schiffli Belted Tiered Dress",
         discount: "56",
+        colour:"pink",
         price2: "2600",
         price1: "1144",
         site: "https://www.faballey.com/blush-strappy-schiffli-belted-tiered-dress-83/prdt",
@@ -147,6 +158,7 @@ let Product=[
         category: "dress",
         title: "Hot Pink Buttoned Sundress",
         discount: "56",
+        colour:"pink",
         price2: "1800",
         price1: "792",
         site: "https://www.faballey.com/hot-pink-buttoned-sundress-83/prdt",
@@ -160,6 +172,7 @@ let Product=[
         category: "dress",
         title: "Olive Striped Dolman Sleeve Shirt Dress",
         discount: "56",
+        colour:"green",
         price2: "2500",
         price1: "1100",
         site: "https://www.faballey.com/olive-striped-dolman-sleeve-shirt-dress-83/prdt",
@@ -173,6 +186,7 @@ let Product=[
         category: "dress",
         title: "Black Shimmer Strappy Belted Jumpsuit",
         discount: "40",
+        colour:"black",
         price2: "2500",
         price1: "1500",
         site: "https://www.faballey.com/black-shimmer-strappy-belted-jumpsuit-83/prdt",
@@ -186,6 +200,7 @@ let Product=[
         category: "dress",
         title: "Yellow Noodle Strap Ruched Maxi Dress",
         discount: "56",
+        colour:"yellow",
         price2: "2600",
         price1: "1144",
         site: "https://www.faballey.com/yellow-noodle-strap-ruched-maxi-dress-83/prdt",
@@ -199,6 +214,7 @@ let Product=[
         category: "dress",
         title: "Grey Velvet Strappy Flared Dress",
         discount: "40",
+        colour:"grey",
         price2: "2350",
         price1: "1410",
         site: "https://www.faballey.com/grey-velvet-strappy-flared-dress-83/prdt",
@@ -212,6 +228,7 @@ let Product=[
         category: "dress",
         title: "Green Floral Pleated Wrap Belted Dress",
         discount: "56",
+        colour:"green",
         price2: "2100",
         price1: "924",
         site: "https://www.faballey.com/green-floral-pleated-wrap-belted-dress-83/prdt",
@@ -225,6 +242,7 @@ let Product=[
         category: "dress",
         title: "Navy Lace Ruched Midi Dress with Leather Belt",
         discount: "61",
+        colour:"blue",
         price2: "2400",
         price1: "936",
         site: "https://www.faballey.com/navy-lace-ruched-midi-dress-with-leather-belt-83/prdt",
@@ -238,6 +256,7 @@ let Product=[
         category: "dress",
         title: "Peach Floral Ruffled Belted Skater Dress",
         discount: "56",
+        colour:"pink",
         price2: "1950",
         price1: "858",
         site: "https://www.faballey.com/peach-floral-ruffled-belted-skater-dress-83/prdt",
@@ -251,6 +270,7 @@ let Product=[
         category: "dress",
         title: "Bottle Green Halter Neck Embellished Jumpsuit",
         discount: "57",
+        colour:"green",
         price2: "2700",
         price1: "1161",
         site: "https://www.faballey.com/bottle-green-halter-neck-embellished-jumpsuit-83/prdt",
@@ -264,6 +284,7 @@ let Product=[
         category: "dress",
         title: "Blue Floral High Slit -Shoulder Midi Dress",
         discount: "56",
+        colour:"blue",
         price2: "2500",
         price1: "1100",
         site: "https://www.faballey.com/blue-floral-high-slit--shoulder-midi-dress-83/prdt",
@@ -277,6 +298,7 @@ let Product=[
         category: "dress",
         title: "Teal Embellished Cross Back Jumpsuit",
         discount: "57",
+        colour:"green",
         price2: "2400",
         price1: "1032",
         site: "https://www.faballey.com/teal-embellished-cross-back-jumpsuit-83/prdt",
@@ -290,6 +312,7 @@ let Product=[
         category: "dress",
         title: "Green Floral Pleated Smocked Skater Dress",
         discount: "56",
+        colour:"green",
         price2: "2200",
         price1: "968",
         site: "https://www.faballey.com/green-floral-pleated-smocked-skater-dress-83/prdt",
@@ -303,6 +326,7 @@ let Product=[
         category: "dress",
         title: "Oxblood Raglan Sleeve High Neck Dress",
         discount: "56",
+        colour:"red",
         price2: "2100",
         price1: "924",
         site: "https://www.faballey.com/oxblood-raglan-sleeve-high-neck-bodycon-dress-83/prdt",
@@ -316,6 +340,7 @@ let Product=[
         category: "dress",
         title: "Navy Solid Belted A-Line Dress",
         discount: "61",
+        colour:"blue",
         price2: "2200",
         price1: "858",
         site: "https://www.faballey.com/navy-solid-belted-a-line-dress-83/prdt",
@@ -329,6 +354,7 @@ let Product=[
         category: "dress",
         title: "Blue Striped Belted Wrap Jumpsuit",
         discount: "57",
+        colour:"blue",
         price2: "2200",
         price1: "946",
         site: "https://www.faballey.com/blue-striped-belted-wrap-jumpsuit-83/prdt",
@@ -342,6 +368,7 @@ let Product=[
         category: "dress",
         title: "Maroon Ruffled Bodycon Dress with Tan Belt",
         discount: "56",
+        colour:"maroon",
         price2: "2150",
         price1: "946",
         site: "https://www.faballey.com/maroon-ruffled-bodycon-dress-with-tan-belt-83/prdt",
@@ -363,8 +390,8 @@ function display(data) {
 
     document.querySelector("#product_tops").innerHTML +=
       `
-            <div id="product_single_item_container" onclick="viewpage(${ind})">
-            <div id="image_hover">
+            <div id="product_single_item_container" >
+            <div id="image_hover" onclick="viewpage(${ind})">
                 <img src="${ele.img1}"  onmouseover="hover(${ind})" onmouseout="hoverout(${ind})"
                 id="product_single_item_container_image" class="change_image${ind}">
                 <div id="product_size">
@@ -384,16 +411,15 @@ function display(data) {
                 <h5>3 Day Delivery</h5>
                 </div>
                 <div id="product_cartWishlist_div">
-                <i class="fa-regular fa-heart"></i>
-                <button id="add_to_bag">ADD TO BAG</button>
+                <i class="fa-regular fa-heart" id="wishlist${ind}" onclick="wishlist(${ind})"></i>
+                <button id="add_to_bag" class="add_to_bag${ind}" onclick="cart(${ind})">ADD TO BAG</button>
                 </div>
-                
-
             </div>
             `;
     // }
   })
 }
+
 
 function hover(ind) {
   let product = data[ind].img2;
@@ -405,12 +431,62 @@ function hoverout(ind) {
 }
 
 // --------------------View Product Detail---------------------
-let viewProduct=JSON.parse(localStorage.getItem("cart"));
+let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
 function viewpage(ind){
   let viewThis=data[ind];
   console.log(viewThis)
-  localStorage.setItem("cart",JSON.stringify(viewThis));
+  localStorage.setItem("View_detail",JSON.stringify(viewThis));
   window.open("singleProduct.html","_self")
+}
+
+// ----------------------wishlist----------------------
+let wishlist_product = JSON.parse(localStorage.getItem("mywishlistcart")) || [];
+
+function wishlist(e) {
+  // console.log(e.target)
+  console.log(viewProduct.id)
+  let t=document.querySelector("#wishlist"+e)
+  let filpro=wishlist_product.filter(function(y){
+    return y.id==Product[e].id;
+  });
+  if(filpro.length==1){
+   for(let i=0; i<wishlist_product.length; i++){
+    if(wishlist_product[i].id==filpro[0].id){
+      wishlist_product.splice(i,1)
+      t.classList.remove("fa-solid")
+      t.style.color="#1d2322"
+    }
+   }
+  }else{
+    wishlist_product.push(Product[e])
+    t.classList.add("fa-solid")
+    t.style.color="#fc6486"
+        localStorage.setItem("mywishlistcart",JSON.stringify(wishlist_product))
+  }
+  console.log(wishlist_product)
+}
+// --------------------------add to bag-----------------------
+let cart_product = JSON.parse(localStorage.getItem("mycart")) || [];
+
+function cart(e) {
+
+  let t=document.querySelector(".add_to_bag"+e)
+
+  let filprox=cart_product.filter(function (d){
+    return d.id==Product[e].id;
+  });
+  if(filprox.length==1){
+   for(let i=0; i<cart_product.length; i++){
+    if(cart_product[i].id==Product[e].id){
+      console.log(cart_product[i])
+    }
+   }
+  }else{
+    cart_product.push(Product[e])
+    t.style.background="#03bb5c"
+        localStorage.setItem("mycart",JSON.stringify(cart_product))
+  }
+  console.log(cart_product)
 }
 
 // ----------------drop downs--------------------
@@ -584,15 +660,16 @@ document.querySelector("#filtering_part").innerHTML=
     Colour
   </a>
 
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Pink</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Black</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Grey</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> White</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Lilac</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Dusty</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Rust</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Wine</a></li>
+  <ul class="dropdown-menu" id="chooseColor">
+    <li value="pink" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Pink</li>
+    <li value="black" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Black</li>
+    <li value="grey" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Grey</li>
+    <li value="white" class="dropdown-item"><i class="fa-regular fa-square-full"></i> White</li>
+    <li value="lilac" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Lilac</li>
+    <li value="dusty" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Dusty</li>
+    <li value="rust" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Rust</li>
+    <li value="wine" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Wine</li>
+    <li value="blue" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Blue</li>
   </ul>
 </div>
 <div class="dropdown">
@@ -655,15 +732,14 @@ document.querySelector("#filtering_part").innerHTML=
     Discount
   </a>
 
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 10 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 20 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 30 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 40 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 50 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 50 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 60 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 70 % and above</a></li>
+  <ul class="dropdown-menu" id="chooseDis">
+    <li value="10" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 10 % and above</li>
+    <li value="20" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 20 % and above</li>
+    <li value="30" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 30 % and above</li>
+    <li value="40" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 40 % and above</li>
+    <li value="50" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 50 % and above</li>
+    <li value="60" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 60 % and above</li>
+    <li value="70" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 70 % and above</li>
   </ul>
 </div>
 <div class="dropdown">
@@ -671,15 +747,84 @@ document.querySelector("#filtering_part").innerHTML=
     Price
   </a>
 
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <ul class="dropdown-menu" id="filPrice">
+    <li value="500" class="dropdown-item" ><i class="fa-regular fa-square-full"></i> Less Than-₹ 500</li>
+    <li value="1000" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Less Than-₹ 1000</li>
+    <li value="2000" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Less Than-₹ 2000</li>
+    <li value="2500" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Less Than-₹ 2500</li>
   </ul>
 </div>
 
-`
+`;
 
+// --------------------filtering-------------------------
+let cv = "";
+let filcolor = document.querySelector("#chooseColor");
+filcolor.addEventListener("click", (event) => {
+  for (let i = 0; i < filcolor.children.length; i++) {
+    if (filcolor.children[i] === event.target) {
+      cv = filcolor.children[i].attributes.value.nodeValue;
+      console.log(cv);
+      break;
+    }
+  }
+  if(cv===""){
+    display(data);
+  }else{
+    var filtered=data.filter(function(elem){
+      return elem.colour==cv;
+    })
+    console.log(filtered)
+    display(filtered);
+  }
+});
+
+
+let dv = "";
+let fildis = document.querySelector("#chooseDis");
+fildis.addEventListener("click", (event) => {
+  for (let i = 0; i < fildis.children.length; i++) {
+    if (fildis.children[i] === event.target) {
+      dv = fildis.children[i].attributes.value.nodeValue;
+      console.log(dv);
+      break;
+    }
+  }
+  if(dv===""){
+    display(data);
+  }else{
+    var filtered=data.filter(function(elem){
+      return elem.discount>=dv;
+    })
+    display(filtered);
+  }
+});
+
+
+
+let pv = "";
+let filPri = document.querySelector("#filPrice");
+filPri.addEventListener("click", (event) => {
+  for (let i = 0; i < filPri.children.length; i++) {
+    if (filPri.children[i] === event.target) {
+      pv = filPri.children[i].attributes.value.nodeValue;
+      // console.log(pv);
+      break;
+    }
+  }
+  // console.log(pv)
+  if(pv==""){
+    display(data);
+  }else{
+    var filtered=data.filter(function(elem){
+      // console.log(elem.price1)
+      console.log(pv)
+      return elem.price1<= Number(pv);
+    })
+    console.log(filtered)
+    display(filtered);
+  }
+});
 
 // -------------jump to tops Page------------------------
 document.querySelector("#tops_page_open").addEventListener("click",()=>{

@@ -1,0 +1,91 @@
+.nykaawallet {
+  display: flex;
+  margin: auto;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+}
+.wallerdiscription {
+  margin-left: 1rem;
+  margin-top: -2rem;
+}
+.wallerdiscription h1 {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+.walletbalance {
+  margin-left: 2rem;
+}
+.walletbalance p {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+.walletbalance h2 {
+  color: #fc2779;
+}
+.nykaacash {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  border-top: 1px solid grey;
+  width: 40%;
+  justify-content: space-between;
+}
+.nykaacash h5 {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+.nykaacash h6 {
+  color: #fc2779;
+}
+.reward {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  border-top: 1px solid grey;
+  width: 40%;
+  justify-content: space-between;
+  margin-top: -2.8rem;
+}
+.reward h5 {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+.reward h6 {
+  color: #fc2779;
+}
+.walletlogo img {
+  width: 98%;
+}
+.walletlogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.font-wallet-description{
+  margin-top: -2rem;
+}
+.profileList
+{
+  width: 20%;
+}
+.walletbox {
+  width: 80%;
+  margin-left: 2.4rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .profile {
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profileList {
+    width: 90%;
+  }
+  .walletbox {
+    width: 90%;
+    margin: auto;
+  }
+}

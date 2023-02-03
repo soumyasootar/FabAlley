@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    background-color: #ffffff;
+  }
+  #footer-main-main {
+    background-color: #fbfbfb;
+    border-top: 1px solid #ededed;
+    width: 100%;
+    margin-top: 60px;
+    margin: auto;
+  }
+  #footer-main-main > p {
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(50, 50, 50);
+    text-align: left;
+    text-indent: 0px;
+    line-height: 25px;
+    color: #323232;
+  }
+  .footer-p-tags {
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(50, 50, 50);
+    text-align: start;
+    text-indent: 0px;
+    font-size: 16px;
+    color: #323232;
+  }
+  #footer-div-1 {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #footer-div-2 {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  #footer-div-21 {
+      margin-left: 10px;
+  }
+  #footer-div-3 {
+      display: flex;
+      width: 80%;
+      justify-content: space-evenly;
+      border-bottom: 1px solid #dcdcdc;
+      margin: auto;
+  }
+  
+  #footer-div-32a {
+      display: flex;
+      width: 100%;
+      gap: 30px;
+  }
+  
+  #footer-div-3231 input {
+      border: 1px solid #dcdcdc;
+      padding: 10px;
+      margin-bottom: 30px;
+  }
+  #footer-div-3231 button {
+      padding: 10px;
+      background-color: #323232;
+      color: #fbfbfb;
+      font-weight: bold;
+  }
+  #footer-div-4{
+      width: 80%;
+      margin: auto;
+      border-bottom: 1px solid #dcdcdc;
+  }
+  #footer-div-41 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+  }
+  #footer-div-5{
+      width: 80%;
+      margin: auto;
+  }
+  #footer-div-6 {
+    text-align: center;
+    border-top: 1px solid #dcdcdc;
+  }

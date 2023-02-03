@@ -95,17 +95,38 @@ body {
   font-size: 13px;
   width: 250px;
 }
-#submit-form-adress{
-    background:#fc6486;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
+#submit-form-adress {
+  background: #fc6486;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
 }
 /* -------------------------------address-box------------------- */
-
+#boxx {
+  border: 1px dashed #cccccc;
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+#boxx p {
+  font-size: 17px;
+  color: #4a4a4a;
+}
+#add-butt-on {
+  color: #ffffff;
+  background-color: #fc6486;
+  font-size: 15px;
+  width: 200px;
+  padding: 0px;
+  height: 40px;
+  background: #fc6486;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid black;
+}
 /* -----------------footer---------------------- */
 footer {
-margin-top: 50px;
+  margin-top: 50px;
   bottom: 0;
   height: 70px;
   display: flex;

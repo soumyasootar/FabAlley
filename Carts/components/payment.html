@@ -54,7 +54,7 @@
             </div>
             <form id="adressform">
                 <div class="col-50">
-                    <label for="fname" style="color: #000;font-weight: 700;font-size: 35px; " >Accepted Cards</label>
+                    <label for="fname" style="color: #000;font-weight: 700;font-size: 35px; ">Accepted Cards</label>
                     <div class="icon-container">
                         <i class="fa fa-cc-visa" style="color:navy;"></i>
                         <i class="fa fa-cc-amex" style="color:blue;"></i>
@@ -77,15 +77,16 @@
                             <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
                         </div>
                     </div>
-                    <input type="submit" name="submit" value="SUBMIT"
+                    <input type="submit" name="submit" value="PLACE ORDER" onclick="sendemail()"
                         style="color:#ffffff;font-size: 20px; width: 200px;padding: 0px;height: 40px;margin-top: 30px;"
                         id="submit-form-adress">
                 </div>
             </form>
             <form id="adressform">
                 <div class="col-50">
-                    <label for="fname" style="color: #000;font-weight: 700;font-size: 35px;" >Cash on Delivery <img src="https://img.freepik.com/free-icon/money_318-642229.jpg" width="40px" alt=""></label>
-                    <input type="submit" name="submit" value="SUBMIT"
+                    <label for="fname" style="color: #000;font-weight: 700;font-size: 35px;">Cash on Delivery <img
+                            src="https://img.freepik.com/free-icon/money_318-642229.jpg" width="40px" alt=""></label>
+                    <input type="submit" name="submit" value="PLACE ORDER" onclick="sendemail()"
                         style="color:#ffffff;font-size: 20px; width: 200px;padding: 0px;height: 40px;margin-top: 30px;background: green; margin-bottom: 30px;"
                         id="submit-form-adress">
                 </div>
@@ -117,11 +118,6 @@
                     <p>₹ <span id="subtotalll2"> 0 </span></p>
                 </div>
                 <hr style="border:0.1px solid #D6D6D6;" />
-                <div id="orderplacing">
-                    <button>
-                        Place Order
-                    </button>
-                </div>
             </div>
             <div id="Addressbox">
             </div>
@@ -140,13 +136,17 @@
 </body>
 
 </html>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
     //username 
-    var naaaaame = "SOUMYA"
-    localStorage.setItem("usernamefab", JSON.stringify(naaaaame))
     var user1name = JSON.parse(localStorage.getItem("usernamefab")) || "User"
     document.getElementById("custname").innerText = user1name
+
+    //total
+    var cost = JSON.parse(localStorage.getItem("local-subtotal")) || "2547"
+    document.getElementById("subtotalll1").innerText = `${cost + 1000}`;
+    document.getElementById("subtotalll2").innerText = `${cost}`;
+    document.getElementById("discount11").innerText = `1000 off Applied`;
 
     //address
     var addressobj = JSON.parse(localStorage.getItem("address-form")) || {}
@@ -172,15 +172,37 @@
         phone.textContent = obj.phone1;
         var div2 = document.createElement("div")
         div2.setAttribute("id", "boxx1")
-        // var button=document.createElement("button")
-        // button.id="add-butt-on"
-        // button.innerText="DELIVER HERE"
-        // button.addEventListener("click",opennext)
         div2.append(name, address, city, state, phone)
         div1.append(div2)
         var asd = document.createElement("p")
         asd.id = "asd"
         asd.textContent = "ADDRESS:";
         document.getElementById("Addressbox").append(asd, div1)
+    }
+    function sendemail() {
+        event.preventDefault();
+        var myCart=JSON.parse(localStorage.getItem("mycart"))||[]
+        localStorage.setItem("ordercart-fab",JSON.stringify(myCart))
+        myCart=[]
+        localStorage.setItem("mycart",JSON.stringify(myCart))
+        let username = JSON.parse(localStorage.getItem("usernamefab")) || "Soumya";
+        console.log("username: ", username);
+        var email = JSON.parse(localStorage.getItem("useremailfab")) || "soumyaswaroopsootar@gmail.com";
+        console.log("email: ", email);
+        var otpmath = Math.floor(Math.random() * 599999) + 100000;
+        localStorage.setItem("otp-fab", JSON.stringify(otpmath));
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "faballey.india1@gmail.com",
+            Password: "31762D74A7E1E57A7DC33FD99AA517638508",
+            To: email,
+            From: "faballey.india1@gmail.com",
+            Subject: "OTP for FABALLEY INDIA PAYMENT",
+            Body: "Hello ! " + username + " ,Thank You for Ordering .Here is your OTP:  " + otpmath,
+        }).then((message) => {
+            alert("OTP SENT TO YOUR REGISTER EMAIL,Redirecting....")
+            window.open("otp-cart.html", "_self")
+        })
+        email.value = "";
     }
 </script>

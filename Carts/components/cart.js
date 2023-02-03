@@ -274,7 +274,5 @@ document.getElementById("CouponBtn").addEventListener("click",()=>{
 })
 
 //username 
-var naaaaame = "SUNIL"
-localStorage.setItem("usernamefab",JSON.stringify(naaaaame))
 var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
 document.getElementById("custname").innerText=user1name

@@ -229,7 +229,13 @@ body {
   font-weight: 600;
   padding: 18px;
 }
-
+#Addressbox{
+    background-color: #f4f4f4;
+  padding: 15px;
+  margin: 20px;
+  border: 1px dashed #343232;
+  /* width: 100%; */
+}
 /* -----------------footer---------------------- */
 footer {
   height: 100px;

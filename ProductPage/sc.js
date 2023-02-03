@@ -483,7 +483,6 @@ if(getValue==="LOW"){
   data.sort(function(a,b){
     return a.price1-b.price
   })
-d
 colour:"pink",isplay(data);
 document.querySelector(".shorted_by").classList.remove("display_sorted");
 }

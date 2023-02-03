@@ -17,10 +17,10 @@ function sendemail() {
     // }, 6000);
     Email.send({
       Host: "smtp.elasticemail.com",
-      Username: "faballey.india@gmail.com",
-      Password: "5CC29E7C97D339E7EAC711DC1AAE8E6DC4E8",
+      Username: "faballey.india1@gmail.com",
+      Password: "31762D74A7E1E57A7DC33FD99AA517638508",
       To: email,
-      From: "faballey.india@gmail.com",
+      From: "faballey.india1@gmail.com",
       Subject: "OTP for FABALLEY INDIA LOGIN",
       Body:"Hello ! " +username +" ! You are receiving this email because we received a otp request for your account. Your OTP Is:  " +otpmath,
     }).then((message) => {
@@ -34,8 +34,4 @@ function sendemail() {
   }
 }
 
-// function oppppener() {
-//   window.open("./OTP.html", "_self");
-// }
 
-//5CC29E7C97D339E7EAC711DC1AAE8E6DC4E8

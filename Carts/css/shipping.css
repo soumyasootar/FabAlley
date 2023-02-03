@@ -126,6 +126,7 @@ body {
 }
 /* -----------------footer---------------------- */
 footer {
+    position: absolute;
   margin-top: 50px;
   bottom: 0;
   height: 70px;

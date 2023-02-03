@@ -36,6 +36,9 @@ body {
   justify-content: center;
   background-color: #ffffff;
 }
+#hi-name{
+  display: none;
+}
 #faballey-img {
   background-color: black;
   /* border: 5px solid purple; */

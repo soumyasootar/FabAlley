@@ -20,7 +20,7 @@
    <div id="navbar">
       <div id="navbar-child">
          <div id="child1">
-            <img src="https://www.faballey.com/images/logo.png" alt="">
+            <img src="https://www.faballey.com/images/logo.png" onclick="homego()" alt="">
          </div>
          <div id="child2">
             <div class="top-bag">
@@ -108,7 +108,7 @@
             </div>
             <hr style="border:0.1px solid #D6D6D6;"/>
             <div id="orderplacing">
-               <button>
+               <button onclick="homego1()">
                   Place Order
                </button>
             </div>
@@ -132,7 +132,17 @@
 
 <script src="cart.js"></script>
 
-
+<script>
+   function homego(){
+      window.open("../../index.html","_self")
+   }
+   function homego1(){
+      window.open("shipping.html","_self")
+   }
+   function homego(){
+      window.open("../../index.html","_self")
+   }
+</script>
 
 
 <!-- <div id="productBox">

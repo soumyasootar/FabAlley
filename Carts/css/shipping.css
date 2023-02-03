@@ -1,245 +1,120 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Lato", sans-serif;
-    background-color: #ffffff;
-  }
-  #navbar {
-    background-color: #f4f4f4;
-    width: 100%;
-    height: 70px;
-  }
-  #navbar-child {
-    display: flex;
-    justify-content: space-around;
-  }
-  #child1 {
-    margin-top: 18px;
-    cursor: pointer;
-  }
-  #child1 > img {
-    width: 75%;
-  }
-  #child2 {
-    display: flex;
-    justify-content: space-between;
-    /* margin: auto; */
-    width: 22%;
-  }
-  #child3>p{
-      font-size: larger;
-  }
-  .top-bag > img {
-    height: 64.29px;
-    /* overflow: hidden; */
-  }
-  .navbar-top-p {
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-  }
-  
-  .username-navbar {
-    line-height: 30px;
-    color: #adadad;
-    font-size: 14px;
-  }
-  
-  /* ------------navbar ends---------------------- */
-  
-  .myshbag {
-    text-align: start;
-    font-weight: 400;
-    color: #555555;
-    font-size: 25px;
-  }
-  #mainbox12 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0;
-    margin-bottom: 300px;
-  }
-  
-  #counterCart {
-    width: 40vw;
-  }
-  
-  .boximage {
-    width: 185px;
-    margin-right: 1.5em;
-  }
-  #productBox {
-    width: 100%;
-  }
-  #box-box {
-    /* background: pink; */
-    display: flex;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #ececec;
-    margin-right: 20px;
-  }
-  #box11 {
-    display: flex;
-    width: 40em;
-    justify-content: space-between;
-  }
-  #boxname {
-    color: #000000;
-    font-weight: 600;
-    text-align: start;
-    font-size: 25px;
-  }
-  #box-grey {
-    color: #343232;
-    font-size: 16px;
-  }
-  #boxprice {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-  }
-  #boxprice1 {
-    color: #000000;
-    font-size: 18px;
-    font-weight: 700;
-    margin-right: 12px;
-  }
-  #boxprice2 {
-    color: #bcbcbc;
-    font-size: 18px;
-    font-weight: 700;
-  }
-  #qty {
-    padding: 10px;
-    font-size: 13px;
-    font-weight: bold;
-  }
-  
-  #boxbottom {
-    border-top: 3px solid #ececec;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-  }
-  #boxbottom > :nth-child(1) {
-    padding: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    border: none;
-  }
-  #boxbottom > :nth-child(2) {
-    padding: 10px;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: #f5d4db;
-  }
-  #continueshopping {
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    width: 97%;
-  }
-  #continueshopping a {
-    color: black;
-    font-size: large;
-    font-weight: bold;
-  }
-  
-  /* -------------donation----------------- */
-  #donationbox {
-    width: 25vw;
-    margin-left: 35px;
-  }
-  #donation-mini {
-    background-color: #f4f4f4;
-    padding: 15px;
-  }
-  .dntntxt {
-    color: #555555;
-    font-size: 25px;
-    font-weight: 700;
-    margin-bottom: -5px;
-  }
-  .dntninfo {
-    color: #6e6e6e;
-  }
-  #CouPonID {
-    padding: 10px;
-    font-size: large;
-    border: 3px solid #ececec;
-    margin: 10px;
-  }
-  #CouponBtn {
-    padding: 10px;
-    font-size: large;
-    color: #ececec;
-    background-color: #343232;
-    cursor: pointer;
-  }
-  #CouponApplied {
-    font-size: large;
-    font-weight: bold;
-    /* color: green;  */
-    margin-left: 13px;
-  }
-  .reedeemgift {
-    text-align: center;
-    font-size: large;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 10px;
-  }
-  #subtotal-div {
-    display: flex;
-    justify-content: space-between;
-    font-size: large;
-    font-weight: bold;
-    color: #949292;
-  }
-  #subtotal-div1 {
-    display: flex;
-    justify-content: space-between;
-    font-size: large;
-    font-weight: bold;
-  }
-  #orderplacing {
-    text-align: center;
-  }
-  #orderplacing > button {
-    padding: 15px;
-    font-size: larger;
-    font-weight: bold;
-    cursor: pointer;
-    color: #ececec;
-    background-color: #fc6486;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-  }
-  .etmdvry {
-    border: 2px solid #ececec;
-    font-size: 18px;
-    color: #4a4a4a;
-    margin-top: 20px;
-    font-weight: 600;
-    padding: 18px;
-  }
-  
-  /* -----------------footer---------------------- */
-  footer {
-    height: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color:
-  #4A4A4A;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #ffffff;
+}
+#navbar {
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 70px;
+}
+#navbar-child {
+  display: flex;
+  justify-content: space-around;
+}
+#child1 {
+  margin-top: 18px;
+  cursor: pointer;
+}
+#child1 > img {
+  width: 75%;
+}
+#child2 {
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto; */
+  width: 22%;
+}
+#child3 > p {
   font-size: larger;
-  border-top: 2px solid #ececec; ;
-  
-  }
-  
+}
+.top-bag > img {
+  height: 64.29px;
+  /* overflow: hidden; */
+}
+.navbar-top-p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.username-navbar {
+  line-height: 30px;
+  color: #adadad;
+  font-size: 14px;
+}
+
+/* ------------navbar ends---------------------- */
+
+.myshbag {
+  text-align: start;
+  font-weight: 400;
+  color: #555555;
+  font-size: 25px;
+}
+#main-box-main {
+  /* background-color: pink; */
+  width: 80%;
+  margin: auto;
+}
+#filltext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  background-color: #eeeeee;
+  width: 50%;
+  border: 1px solid #cccccc;
+  font-weight: bold;
+}
+.filladdtxt {
+  font-size: 14px;
+  color: #fc6486;
+}
+#adressform {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+  /* background-color: #9a2b2b; */
+  padding: 20px;
+  gap: 20px;
+}
+#adressform input {
+  padding: 10px;
+  font-weight: 500;
+  color: #000;
+  font-size: 13px;
+  width: 250px;
+  margin-top: 1em;
+}
+#adressform select {
+  padding: 10px;
+  font-weight: 500;
+  color: #000;
+  font-size: 13px;
+  width: 250px;
+}
+#submit-form-adress{
+    background:#fc6486;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+/* -------------------------------address-box------------------- */
+
+/* -----------------footer---------------------- */
+footer {
+margin-top: 50px;
+  bottom: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #4a4a4a;
+  font-size: larger;
+  border-top: 2px solid #ececec;
+  background-color: #f4f4f4;
+  /* background-color: #4a4a4a; */
+  width: 100%;
+}

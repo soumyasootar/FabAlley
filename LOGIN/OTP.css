@@ -2,7 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Proxima Vara, Arial, Helvetica, Sans, Sans-Serif;
+    font-family: "Lato", sans-serif;
+}
+
+body{
+    background: url(https://img.faballey.com/images/banner/dc0b5a58-e3c8-443b-88b5-1d107f8be592.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat:repeat;
+    background-blend-mode: difference;
+    border: 1px solid black;
 }
 
 .container {
@@ -11,15 +20,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .form {
     position: absolute;
     background: white;
-    max-width: 400px;
+    /* max-width: 400px; */
     padding: 30px;
     border-radius: 6px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .form.signup {
@@ -221,7 +231,7 @@ a.apple span {
     width: 100%;
     background: #fc6486;
     color: #fff;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 600;
     text-align: center;
     padding: 20px 0;
@@ -230,6 +240,8 @@ a.apple span {
     display: block;
     border: none;
     cursor: pointer;
+    font-weight:
+600;
 }
 
 
@@ -262,6 +274,7 @@ a.apple span {
     box-sizing: border-box;
     margin-bottom: 10px;
     color: #6d6d6d;
+    font-size: larger;
 }
 
 
@@ -294,6 +307,7 @@ a.apple span {
     background: #fbfbfb;
     padding: 0 5px;
     font-weight: 500;
+    font-size: medium;
 }
 
 
@@ -313,24 +327,14 @@ h3 {
 
 .loginother {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     text-align: center;
+    justify-content: center;
+    margin: auto;
     margin-top: 35px;
-    /* justify-content: space-around; */
-    margin-left: 15%;
-}
+    padding: 20px;
 
-.fb>img {
-    height: 50px;
-    width: 150px;
 }
-
-.gle>img {
-    height: 45px;
-    width: 120px;
-    margin-top: 5px;
-}
-
 
 .form-login {
     width: 100%;
@@ -339,7 +343,7 @@ h3 {
     top: 50%;
     left: 50%;
     padding: 50px;
-    max-width: 500px;
+    max-width: 650px;
     box-sizing: border-box;
     padding: 50px;
     border-radius: 5px;
@@ -349,9 +353,17 @@ h3 {
 }
 
 .cut {
-    height: 35px;
-    margin-left: 98%;
-    margin-top: -200px;
-    margin-bottom: 10px;
-    opacity: 0.8;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 25px;
+    cursor: pointer;
+}
+
+/* ------OTP------------------ */
+.emailname-span-otp{
+    font-size: 15px;
+    font-style: italic;
+    color: #6d6d6d;
+    text-transform: lowercase;
 }

@@ -367,3 +367,10 @@ h3 {
     color: #6d6d6d;
     text-transform: lowercase;
 }
+
+.wrongcred{
+    text-align: center;
+    /* font-size: 100px; */
+    font-weight: 600;
+    color: red;
+}

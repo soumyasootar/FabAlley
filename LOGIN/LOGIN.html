@@ -32,11 +32,12 @@
                 <form id="form">
                     <div class="logininpbox">
                         <input type="text" placeholder="Enter Username" id="username" class="logininp">
-                        <input type="email" placeholder="Enter Email" id="useremail" class="logininp">
+                        <input type="text" placeholder="Enter Email" id="useremail" class="logininp">
+                        <p class="wrongcred"></p>
                     </div>
 
                     <div class="button-field">
-                        <button class="contBtn">CONTINUE</button></a>
+                        <button class="contBtn"  onclick="sendemail()" >CONTINUE</button></a>
                     </div>
                 </form>
             </div>
@@ -64,6 +65,55 @@
 
     <!--JavaScript-->
     <script src="LOGIN.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     
 </body>
 </html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <input type="email" id="email" required/>
+    <button id="sendOtp" onclick="send()">Send OTP</button>
+    <input type="number" id="OTP" required/>
+<button id="verifyOtp">submit</button>
+
+</body>
+</html>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+   
+</script>
+<script>
+
+function send(){
+   var email= document.querySelector("#email").value;
+   console.log(email);  
+    var otpmath=Math.floor(Math.random() * 599999)+100000;
+    console.log(otpmath);  
+   Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "shreemore1109@gmail.com",
+    Password : "6382989DA032A28C4F126900AFADFB4DAB4C",
+    To : email,
+    From : "shreemore1109@gmail.com",
+    Subject : "This is the subject",
+    Body : "Hello! You are receiving this email because we received a otp request for your account. Your OTP Is:  " + otpmath
+}).then(
+  message => alert("OTP Sent Sucessfully in your email id")
+);
+document.querySelector("#email").value="";
+}
+
+   
+</script> -->

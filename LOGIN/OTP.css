@@ -32,16 +32,6 @@ body{
     /* width: 100%; */
 }
 
-.form.signup {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.forms.show-signup .form.signup {
-    opacity: 1;
-    pointer-events: auto;
-}
-
 header {
     font-size: 28px;
     font-weight: 600;
@@ -50,9 +40,7 @@ header {
     line-height: 1.5em;
 }
 
-form {
-    /* margin-top: 30px; */
-}
+
 
 .form .field {
     position: relative;
@@ -263,10 +251,6 @@ a.apple span {
     text-decoration: none;
 }
 
-.form-login {
-    /* text-align: center */
-}
-
 .logininp {
     border: 1px solid #ececec;
     padding: 20px;
@@ -348,7 +332,7 @@ h3 {
     padding: 50px;
     border-radius: 5px;
     transform: translate(-50%, -50%);
-    -webkit-transition: all 0.25s linear;
+    -moz-webkit-transition: all 0.25s linear;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 

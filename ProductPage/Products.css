@@ -217,11 +217,38 @@ body{
     text-align: center;
     padding: 10px 0;
 }
+#sort_by_relevence #view_pageId div p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
 #relevence_sorting{
     margin-right: 20px;
     width:14%;
     border:none;
     cursor: pointer;
+}
+/* ----------------load more----------------------- */
+#load_more{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+#lode_more_product{
+    display: flex;
+    width:40%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #fc6486;
+    padding: 9px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 1px solid #ffa2b6;
+    border-radius: 4px;
+    background: white;
 }
 
 /* ------------------drop down css------------------ */

@@ -1,0 +1,41 @@
+.paymentbox {
+  width: 80%;
+  margin-left: 2.4rem;
+  margin-top: 2rem;
+}
+.profileList
+{
+  width: 20%;
+}
+.payheading {
+  padding-left: 1rem;
+  display: flex;
+  background-color: white;
+}
+.paydiv {
+  text-align: center;
+  background-color: white;
+  margin-top: 0.2rem;
+}
+.paydiv i {
+  font-size: 11rem;
+  color: rgb(230, 225, 225);
+  margin-top: 2rem;
+}
+.paydiv p:last-child {
+  padding-bottom: 6rem;
+}
+@media only screen and (max-width: 1000px) {
+  .profile {
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profileList {
+    width: 90%;
+  }
+  .paymentbox {
+    width: 90%;
+    margin: auto;
+  }
+}

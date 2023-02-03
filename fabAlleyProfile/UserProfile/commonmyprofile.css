@@ -1,0 +1,205 @@
+body {
+  background: rgb(231, 229, 229);
+  font-family: 'Lato';
+  margin: 0;
+  padding: 0;
+}
+.profile .profileList {
+  /* display: flex; */
+  flex-direction: column;
+  /* width: 14rem; */
+  margin-top: 2rem;
+}
+.profile {
+  width: 80%;
+  margin: auto;
+}
+.profileList {
+  
+}
+.profileList li {
+  display: flex;
+  width: 100%;
+  background: white;
+  padding: 10px;
+  padding-left: 40px;
+  font-size: 13px;
+  line-height: 0px;
+  font-weight: 600;
+  box-sizing: border-box;
+  margin: auto;
+}
+.DisPageName {
+  display: inline-block;
+  margin: auto;
+  margin-left: 4rem;
+}
+.DisPageName a {
+  text-decoration: none;
+  color: black;
+}
+.profileList > li a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: rgb(51, 50, 50);
+}
+.profileList li :hover {
+  color: #fc2779;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+.profile a {
+  text-decoration: none;
+  color: rgb(43, 42, 42);
+}
+.profile i {
+  font-size: 0.7rem;
+}
+/* .popup {
+  background-color: white;
+  width: 14rem;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.5s, top 0.5s;
+}
+.popback {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  transition: transform 0.7s, bottom 0.5s;
+}
+.popup li {
+  display: block;
+  border: 1px solid rgb(231, 229, 229);
+  height: 2.5rem;
+  padding-top: 1rem;
+}
+.popup ul {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-left: -2.4rem;
+  color: #fc2779;
+} */
+.logoutPopup{
+  background-color: white;
+  width:13rem;
+  text-align: center;
+  padding:1rem;
+  border-radius: 5px;
+  position:absolute;
+  left:50%;
+  top:0;
+  transform: translate(-50%,-50%) scale(0.1);
+  visibility: hidden;
+  transition: transform .5s;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.logoutPopback{
+  top:50%;
+  transform: translate(-50%,-50%) scale(1);
+  visibility: visible;
+  z-index: 100;
+}
+.logoutPopup li{
+  display: block;
+  border: 1px solid rgb(199, 196, 196);
+  height: 1.5rem;
+  padding-top:1rem;
+  position:relative;
+}
+.logoutPopup ul{
+  width:99%;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  color:#fc2779;
+}
+.icon {
+  margin-right: 10px;
+}
+
+.profileList li a:hover i > * {
+  filter: invert(45%) sepia(86%) saturate(6019%) hue-rotate(320deg)
+    brightness(98%) contrast(103%);
+}
+.switch-tab-text {
+  color: #fc2779 !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+.switch-tab-border {
+  border-right: 3px solid #fc2779 !important;
+}
+ul.breadcrumb {
+  padding-top: 115px;
+  list-style: none;
+  /* background-color: #eee; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  margin-bottom: -15px;
+  margin-top: -80px;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 13px;
+}
+ul.breadcrumb li + li:before {
+  /* padding: 8px; */
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+#profile_email{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height:140px;
+}
+#profile_letter{
+  display: flex;
+  background: rgb(229, 227, 227);
+  color: rgb(157, 155, 155);
+  width:60px;
+  height:60px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding:0;
+  margin-top: 40px;
+}
+#hello_user{
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  margin:auto;
+  margin-top: -10px;
+}
+#email_show_login{
+  display: flex;
+  margin-top: -25px;
+  font-size: 14px;
+}

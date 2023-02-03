@@ -6,6 +6,7 @@ let Product = [{
   discount: "56",
   price2: "1450",
   price1: "638",
+  colour:"pink",
   site: "https://www.faballey.com/pink-white-floral-ruffle-sleeve-peplum-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05210Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05210Z/d4.jpg",
@@ -19,6 +20,7 @@ let Product = [{
   discount: "56",
   price2: "1650",
   price1: "726",
+  colour:"pink",
   site: "https://www.faballey.com/floral-pink-smoking-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP04999Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP04999Z/d5.jpg",
@@ -32,6 +34,7 @@ let Product = [{
   discount: "56",
   price2: "1600",
   price1: "704",
+  colour:"black",
   site: "https://www.faballey.com/black-organza-ruffled--shoulder-crop-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP06263Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP06263Z/d4.jpg",
@@ -45,6 +48,7 @@ let Product = [{
   discount: "56",
   price2: "1600",
   price1: "704",
+  colour:"blue",
   site: "https://www.faballey.com/powder-blue-lace-trim-detail-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05720Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05720Z/d4.jpg",
@@ -58,6 +62,7 @@ let Product = [{
   discount: "56",
   price2: "1900",
   price1: "836",
+  colour:"grey",
   site: "https://www.faballey.com/grey-velvet-lace-trim-buttoned-blouse-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP06308Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP06308Z/d4.jpg",
@@ -71,6 +76,7 @@ let Product = [{
   discount: "56",
   price2: "1600",
   price1: "704",
+  colour:"white",
   site: "https://www.faballey.com/white-abstract-overlap-front-smocked-peplum-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05877Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05877Z/d4.jpg",
@@ -84,6 +90,7 @@ let Product = [{
   discount: "56",
   price2: "1500",
   price1: "660",
+  colour:"pink",
   site: "https://www.faballey.com/pink-bardot-trim-smocked-crop-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05977Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05977Z/d4.jpg",
@@ -97,6 +104,7 @@ let Product = [{
   discount: "40",
   price2: "1600",
   price1: "960",
+  colour:"pink",
   site: "https://www.faballey.com/pink-floral-frilled-bardot-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP06162Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP06162Z/d4.jpg",
@@ -110,6 +118,7 @@ let Product = [{
   discount: "56",
   price2: "1400",
   price1: "616",
+  colour:"dusty",
   site: "https://www.faballey.com/dusty-pink-front-ruched-peplum-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05272Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05272Z/d5.jpg",
@@ -123,6 +132,7 @@ let Product = [{
   discount: "56",
   price2: "1500",
   price1: "660",
+  colour:"pink",
   site: "https://www.faballey.com/pink-solid-puff-sleeve-wrap-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP04893Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP04893Z/d4.jpg",
@@ -136,6 +146,7 @@ let Product = [{
   discount: "56",
   price2: "1500",
   price1: "660",
+  colour:"pink",
   site: "https://www.faballey.com/multicolored-floral-neck-tie-up-blouse-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05374Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05374Z/d4.jpg",
@@ -149,6 +160,7 @@ let Product = [{
   discount: "56",
   price2: "1400",
   price1: "616",
+  colour:"lilac",
   site: "https://www.faballey.com/lilac-front-tie-buttoned-smocked-sleeve-shirt-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05934Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05934Z/d4.jpg",
@@ -162,6 +174,7 @@ let Product = [{
   discount: "56",
   price2: "1400",
   price1: "616",
+  colour:"rust",
   site: "https://www.faballey.com/rust-polka-collared-front-knot-crop-shirt-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05275Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05275Z/d4.jpg",
@@ -175,6 +188,7 @@ let Product = [{
   discount: "61",
   price2: "1500",
   price1: "585",
+  colour:"pink",
   site: "https://www.faballey.com/pink-white-printed-wrap-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05050Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05050Z/d4.jpg",
@@ -188,6 +202,7 @@ let Product = [{
   discount: "40",
   price2: "1400",
   price1: "840",
+  colour:"pink",
   site: "https://www.faballey.com/hot-pink-puff-sleeve-smocked-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP06346Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP06346Z/d4.jpg",
@@ -201,6 +216,7 @@ let Product = [{
   discount: "56",
   price2: "1400",
   price1: "616",
+  colour:"dusty",
   site: "https://www.faballey.com/dusty-pink-gathered-peplum-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05204Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05204Z/d4.jpg",
@@ -214,6 +230,7 @@ let Product = [{
   discount: "56",
   price2: "1500",
   price1: "660",
+  colour:"wine",
   site: "https://www.faballey.com/wine-embellished-halter-asymmetric-top-78/prdt",
   img1: "https://img.faballey.com/images/Product/TOP05476Z/1.jpg",
   img2: "https://img.faballey.com/images/Product/TOP05476Z/d4.jpg",
@@ -231,8 +248,8 @@ function display(data) {
 
     document.querySelector("#product_tops").innerHTML +=
       `
-            <div id="product_single_item_container" onclick="viewpage(${ind})">
-            <div id="image_hover">
+            <div id="product_single_item_container" >
+            <div id="image_hover" onclick="viewpage(${ind})">
                 <img src="${ele.img1}"  onmouseover="hover(${ind})" onmouseout="hoverout(${ind})"
                 id="product_single_item_container_image" class="change_image${ind}">
                 <div id="product_size">
@@ -252,17 +269,65 @@ function display(data) {
                 <h5>3 Day Delivery</h5>
                 </div>
                 <div id="product_cartWishlist_div">
-                <i class="fa-regular fa-heart"></i>
-                <button id="add_to_bag">ADD TO BAG</button>
+                <i class="fa-regular fa-heart" id="wishlist${ind}" onclick="wishlist(${ind})"></i>
+                <button id="add_to_bag" class="add_to_bag${ind}" onclick="cart(${ind})">ADD TO BAG</button>
                 </div>
-                
-
             </div>
             `;
     // }
   })
 }
 
+// ----------------------wishlist----------------------
+let wishlist_product = JSON.parse(localStorage.getItem("mywishlistcart")) || [];
+
+function wishlist(e) {
+  // console.log(e.target)
+  console.log(viewProduct.id)
+  let t=document.querySelector("#wishlist"+e)
+  let filpro=wishlist_product.filter(function(y){
+    return y.id==Product[e].id;
+  });
+  if(filpro.length==1){
+   for(let i=0; i<wishlist_product.length; i++){
+    if(wishlist_product[i].id==filpro[0].id){
+      wishlist_product.splice(i,1)
+      t.classList.remove("fa-solid")
+      t.style.color="#1d2322"
+    }
+   }
+  }else{
+    wishlist_product.push(Product[e])
+    t.classList.add("fa-solid")
+    t.style.color="#fc6486"
+        localStorage.setItem("mywishlistcart",JSON.stringify(wishlist_product))
+  }
+  console.log(wishlist_product)
+}
+// --------------------------add to bag-----------------------
+let cart_product = JSON.parse(localStorage.getItem("mycart")) || [];
+
+function cart(e) {
+
+  let t=document.querySelector(".add_to_bag"+e)
+
+  let filprox=cart_product.filter(function (d){
+    return d.id==Product[e].id;
+  });
+  if(filprox.length==1){
+   for(let i=0; i<cart_product.length; i++){
+    if(cart_product[i].id==Product[e].id){
+      console.log(cart_product[i])
+    }
+   }
+  }else{
+    cart_product.push(Product[e])
+    t.style.background="#03bb5c"
+        localStorage.setItem("mycart",JSON.stringify(cart_product))
+  }
+  console.log(cart_product)
+}
+// ----------------------------------------------------
 function hover(ind) {
   let product = data[ind].img2;
   document.querySelector(".change_image"+ind).src = product;
@@ -273,11 +338,11 @@ function hoverout(ind) {
 }
 
 // --------------------View Product Detail---------------------
-let viewProduct=JSON.parse(localStorage.getItem("cart"));
+let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
 function viewpage(ind){
   let viewThis=data[ind];
   console.log(viewThis)
-  localStorage.setItem("cart",JSON.stringify(viewThis));
+  localStorage.setItem("View_detail",JSON.stringify(viewThis));
   window.open("singleProduct.html","_self")
 }
 
@@ -416,14 +481,15 @@ document.querySelector(".shorted_by").addEventListener("click",function(e){
 console.log(getValue)
 if(getValue==="LOW"){
   data.sort(function(a,b){
-    return a.price1-b.price1;
+    return a.price1-b.price
   })
-display(data);
+d
+colour:"pink",isplay(data);
 document.querySelector(".shorted_by").classList.remove("display_sorted");
 }
 if(getValue==="HIGH"){
   data.sort(function(a,b){
-    return b.price1-a.price1;
+    return b.price1-a.price
   })
 display(data);
 document.querySelector(".shorted_by").classList.remove("display_sorted");
@@ -452,15 +518,15 @@ document.querySelector("#filtering_part").innerHTML=
     Colour
   </a>
 
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Pink</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Black</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Grey</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> White</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Lilac</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Dusty</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Rust</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> Wine</a></li>
+  <ul class="dropdown-menu" id="chooseColor">
+    <li value="pink" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Pink</li>
+    <li value="black" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Black</li>
+    <li value="grey" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Grey</li>
+    <li value="white" class="dropdown-item"><i class="fa-regular fa-square-full"></i> White</li>
+    <li value="lilac" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Lilac</li>
+    <li value="dusty" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Dusty</li>
+    <li value="rust" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Rust</li>
+    <li value="wine" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Wine</li>
   </ul>
 </div>
 <div class="dropdown">
@@ -523,15 +589,14 @@ document.querySelector("#filtering_part").innerHTML=
     Discount
   </a>
 
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 10 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 20 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 30 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 40 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 50 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 50 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 60 % and above</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-square-full"></i> 70 % and above</a></li>
+  <ul class="dropdown-menu" id="chooseDis">
+    <li value="10" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 10 % and above</li>
+    <li value="20" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 20 % and above</li>
+    <li value="30" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 30 % and above</li>
+    <li value="40" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 40 % and above</li>
+    <li value="50" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 50 % and above</li>
+    <li value="60" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 60 % and above</li>
+    <li value="70" class="dropdown-item"><i class="fa-regular fa-square-full"></i> 70 % and above</li>
   </ul>
 </div>
 <div class="dropdown">
@@ -539,15 +604,88 @@ document.querySelector("#filtering_part").innerHTML=
     Price
   </a>
 
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <ul class="dropdown-menu" id="filPrice">
+    <li value="500" class="dropdown-item" ><i class="fa-regular fa-square-full"></i> Less Than-₹ 500</li>
+    <li value="1000" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Less Than-₹ 1000</li>
+    <li value="2000" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Less Than-₹ 2000</li>
+    <li value="2500" class="dropdown-item"><i class="fa-regular fa-square-full"></i> Less Than-₹ 2500</li>
   </ul>
 </div>
 
 `;
 
+// --------------------filtering-------------------------
+let cv = "";
+let filcolor = document.querySelector("#chooseColor");
+filcolor.addEventListener("click", (event) => {
+  for (let i = 0; i < filcolor.children.length; i++) {
+    if (filcolor.children[i] === event.target) {
+      cv = filcolor.children[i].attributes.value.nodeValue;
+      console.log(cv);
+      break;
+    }
+  }
+  if(cv===""){
+    display(data);
+  }else{
+    var filtered=data.filter(function(elem){
+      return elem.colour==cv;
+    })
+    console.log(filtered)
+    display(filtered);
+  }
+});
+
+
+let dv = "";
+let fildis = document.querySelector("#chooseDis");
+fildis.addEventListener("click", (event) => {
+  for (let i = 0; i < fildis.children.length; i++) {
+    if (fildis.children[i] === event.target) {
+      dv = fildis.children[i].attributes.value.nodeValue;
+      console.log(dv);
+      break;
+    }
+  }
+  if(dv===""){
+    display(data);
+  }else{
+    var filtered=data.filter(function(elem){
+      return elem.discount>=dv;
+    })
+    display(filtered);
+  }
+});
+
+
+
+let pv = "";
+let filPri = document.querySelector("#filPrice");
+filPri.addEventListener("click", (event) => {
+  for (let i = 0; i < filPri.children.length; i++) {
+    if (filPri.children[i] === event.target) {
+      pv = filPri.children[i].attributes.value.nodeValue;
+      // console.log(pv);
+      break;
+    }
+  }
+  // console.log(pv)
+  if(pv==""){
+    display(data);
+  }else{
+    var filtered=data.filter(function(elem){
+      // console.log(elem.price1)
+      console.log(pv)
+      return elem.price1<= Number(pv);
+    })
+    console.log(filtered)
+    display(filtered);
+  }
+});
+// console.log(filcolor.children.length)
+// console.log(filcolor.children)
+// console.log(filcolor.children[0].attributes.value.nodeValue)
+// console.log(filcolor)
 
 
 // ----------------jump to dress Page-----------------
@@ -555,3 +693,35 @@ document.querySelector("#filtering_part").innerHTML=
 document.querySelector("#open_dress_page").addEventListener("click",()=>{
   window.open("dress.html","_self")
 })
+document.querySelector("#jumpcart").addEventListener("click",()=>{
+  location.href="./fabAlleyProfile/myorder/myorder.html"
+})
+
+
+
+// ------------nested filter-------------------
+// localStorage.setItem("products", JSON.stringify(products));
+
+// Retrieve the products from local storage
+// const storedProducts = JSON.parse(localStorage.getItem("products"));
+
+// Filter the products based on discount and color
+// const filteredProducts = storedProducts
+//   .filter((product) => product.discount >= 10)
+//   .filter((product) => product.color === "blue");
+
+// Display the filtered products
+// const displayProducts = () => {
+//   const productsList = document.querySelector("#products-list");
+//   filteredProducts.forEach((product) => {
+//     productsList.innerHTML += `
+//       <div class="product">
+//         <p>Name: ${product.name}</p>
+//         <p>Discount: ${product.discount}%</p>
+//         <p>Color: ${product.color}</p>
+//       </div>
+//     `;
+//   });
+// };
+
+// displayProducts();

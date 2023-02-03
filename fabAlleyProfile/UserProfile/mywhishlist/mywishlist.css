@@ -1,0 +1,94 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.profileList {
+  width: 23%;
+}
+.whishlistbox {
+  width: 80%;
+  margin-left: 2.4rem;
+  margin-top: 2rem;
+  background-color: white;
+  text-align: center;
+  padding: 4rem 0;
+  display:flex;
+  flex-direction: column;
+  height:auto !important;
+}
+.whishlistbox img {
+  width: 11rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .profile {
+    flex-direction: column;
+    width: 100%;
+  }
+  .profileList {
+    width: 80%;
+  }
+  .whishlistbox {
+    width: 80%;
+    height:auto !important;
+    /* margin: auto; */
+  }
+}
+#wis_box{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+}
+#img_tit{
+  width:40%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+margin: 15px;
+}
+#img_wish{
+  display: flex;
+  width:40%;
+}
+#img_wish img{
+  width:100%;
+}
+#wis_title{
+  font-size: 15px;
+  font-weight: 600;
+  color: #323232;
+}
+#pric_btn_crs{
+  display: flex;
+  width:55%;
+  matgin:15px;
+  justify-content: space-between;
+  align-items: center;
+}
+#wish_price{
+display: flex;
+font-weight: 600;
+font-size: 15px;
+color: #323232;
+}
+#addt_cartw button{
+display: flex;
+background: #fc6486;
+color: #fff;
+text-transform: uppercase;
+font-size: 12px;
+padding: 10px 30px;
+font-weight: 500;
+display: inline-block;
+white-space: nowrap;
+margin-bottom: 10px;
+cursor: pointer;
+border:none;
+}
+#crs_btn{
+  display: flex;
+  margin-right: 15px;
+  border:none;
+}

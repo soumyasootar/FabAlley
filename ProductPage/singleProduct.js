@@ -1,33 +1,20 @@
-// let Product = [{
-//     "id": "1",
-//     "category": "tops",
-//     "title": "Pink White Floral Ruffle Sleeve Peplum Top",
-//     "discount": "56",
-//     "price2": "1450",
-//     "price1": "638",
-//     "site": "https://www.faballey.com/pink-white-floral-ruffle-sleeve-peplum-top-78/prdt",
-//     "img1": "https://img.faballey.com/images/Product/TOP05210Z/1.jpg",
-//     "img2": "https://img.faballey.com/images/Product/TOP05210Z/d4.jpg",
-//     "img3": "https://img.faballey.com/images/Product/TOP05210Z/d5.jpg",
-//     "img4": "https://img.faballey.com/images/Product/TOP05210Z/d8.jpg"
-//   },]
 
 
 
-let viewProduct=JSON.parse(localStorage.getItem("cart"));
+let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
 console.log(viewProduct)
 
 displayThis(viewProduct);
 
 function displayThis(ele){
-    console.log(ele)
+    // console.log(ele)
     document.querySelector("#Single_Page_container").innerHTML=
     `
     <div id="head_single_page">
-          <span>HOME</span>
-          <span id="product_type">${ele.category}</span>
-          <span>PEPLUM TOPS</span>
-          <span>TRENDS</span>
+          <span>HOME</span> |
+          <span id="product_type">${ele.category}</span> |
+          <span>PEPLUM TOPS</span> |
+          <span>TRENDS</span> |
           <span id="product_name">${ele.title}</span>
         </div>
         <div id="all_detail_container">
@@ -65,8 +52,8 @@ function displayThis(ele){
               </ul>
             </div>
             <div id="buttons">
-              <button id="add_to_bag">ADD TO BAG</button>
-              <button id="wishllist"><i class="fa-regular fa-heart"></i> ADD TO WISHLIST</button>
+              <button id="add_to_bag" onclick="cart()">ADD TO BAG</button>
+              <button id="wishllist" onclick="wishlist()"><i class="fa-regular fa-heart"></i> ADD TO WISHLIST</button>
             </div>
             <div id="check_heading"><span>Check Delivery Time</span></div>
             <div id="check_pin">
@@ -178,3 +165,119 @@ function displayThis(ele){
 
 }
 
+// -------------------adding to wishlist---------------------------
+let wishlist_product = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+function wishlist(e) {
+  // console.log(e.target)
+  console.log(viewProduct.id)
+  let t=document.querySelector("#wishllist")
+  let filpro=wishlist_product.filter(function(y){
+    return y.id==viewProduct.id;
+  });
+  if(filpro.length==1){
+   for(let i=0; i<wishlist_product.length; i++){
+    if(wishlist_product[i].id==filpro[0].id){
+      wishlist_product.splice(i,1)
+      t.children[0].classList.remove("fa-solid")
+      t.style.color="#1d2322"
+    }
+   }
+  }else{
+    wishlist_product.push(viewProduct)
+    t.children[0].classList.add("fa-solid")
+    t.style.color="#fc6486"
+        localStorage.setItem("wishlist",JSON.stringify(wishlist_product))
+  }
+  console.log(wishlist_product)
+}
+
+// -------------------------add to cart-----------------
+
+let cart_product = JSON.parse(localStorage.getItem("cart_fab")) || [];
+
+function cart(e) {
+
+  let t=document.querySelector("#add_to_bag")
+
+  let filprox=cart_product.filter(function (d){
+    return d.id==viewProduct.id;
+  });
+  if(filprox.length==1){
+   for(let i=0; i<cart_product.length; i++){
+    if(cart_product[i].id==viewProduct.id){
+      console.log(cart_product[i])
+    }
+   }
+  }else{
+    cart_product.push(viewProduct)
+    t.style.background="#03bb5c"
+        localStorage.setItem("cart_fab",JSON.stringify(cart_product))
+  }
+  console.log(cart_product)
+}
+
+
+
+// ----------------------selecting the size-------------------------
+let size=document.querySelector("#choose_size");
+let choose_SizeX=size.children
+// console.log(size.children)
+// console.log(choose_SizeX.length)
+for (let i = 0; i < choose_SizeX.length; i++) {
+  // console.log(choose_SizeX[i]);
+  choose_SizeX[i].addEventListener("click", (x) => {
+    // console.log(x.target);
+    // console.log(x.target.innerHTML);
+    for (let j = 0; j < choose_SizeX.length; j++) {
+      choose_SizeX[j].style.background = "white";
+      choose_SizeX[j].style.color = "#39373b";
+    }
+    x.target.style.background = "black";
+    x.target.style.color="white"
+    this_size=x.target.innerText;
+  });
+}
+
+
+// choose_SizeX.forEach(function(sizeX){
+//   console.log(sizeX)
+//   console.log(sizeX)
+//   btn.addEventListener('click', function() {
+//     const subCategoryList = btn.nextElementSibling;
+//     const right=btn.lastChild;
+//     console.log(right)
+//     if (subCategoryList.style.display === 'block') {
+//       right.classList.remove("fa-angle-down")
+//       subCategoryList.style.display = 'none';
+//     } else {
+//       subCategoryList.style.display = 'block';
+//       right.classList.add("fa-angle-down")
+//     }
+//   });
+// });
+
+// -----------------nested filter-------------------
+// const products = [
+//   { name: "Product 1", discount: 10, color: "red" },
+//   { name: "Product 2", discount: 20, color: "blue" },
+//   { name: "Product 3", discount: 15, color: "green" },
+//   { name: "Product 4", discount: 5, color: "red" },
+//   { name: "Product 5", discount: 25, color: "blue" },
+//   { name: "Product 6", discount: 10, color: "green" },
+// ];
+
+// const filteredProducts = products
+//   .filter((product) => product.discount >= 10)
+//   .filter((product) => product.color === "blue");
+
+// console.log(filteredProducts);
+
+
+// -------------------jump to page-------------------
+document.querySelector("#open_dress_page").addEventListener("click",()=>{
+  window.open("dress.html","_self")
+})
+document.querySelector("#tops_page_open").addEventListener("click",()=>{
+  window.open("ProductPage.html","_self");
+})

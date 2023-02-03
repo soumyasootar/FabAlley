@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <script
+      src="https://kit.fontawesome.com/09ea9ed7f5.js"
+      crossorigin="anonymous"></script>
+        <!-- google fonts  -->
+    <link rel="stylesheet" href="../../theme_fonts/fonts.css" />
+    <link rel="stylesheet" href="myprofile.css" />
+    <link rel="stylesheet" href="../commonmyprofile.css" />
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <script src="../commonmyprofile.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="shortcut icon"
+        href="data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8EIZk/FeGZPyVhmT8xIZk/OGGZPzwhmT88IZk/OGGZPzDhmT8lIZk/FaGZPwPhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8J4Zk/JeGZPzvhmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/O6GZPyVhmT8JYZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/IeGZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8hIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/B6GZPzNhmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8yoZk/BuGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwqhmT88IZk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT87YZk/CeGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8GIZk/POHZvz/hGH8/31Y/P99WPz/f1v8/4dl/P+IZvz/gl/8/39b/P+HZfz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Bd/P9/W/z/f1v8/4Rh/P+HZfz/hmT88YZk/BWGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPzYhmT8/4Vj/P+HZvz/jGz8/4xr/P+Kafz/hmP8/4Rh/P+Nbfz/iGb8/4Jf/P+HZfz/hmT8/4Zk/P+GZPz/hmT8/4dm/P+DYPz/gl/8/4Vj/P+FY/z/imn8/4Vj/P+GZPz/hmT81IZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8iYZk/P+GZPz/dU/8/6GH/f/59///+Pb//+DY/v9+W/z/ckv7/6+Z/f/l3f//fVj8/4Nh/P+GZPz/hmT8/4Zk/P+GZPz/gFz8/4Ri/P/m3v7/7+v///Pv//+hhv3/dlD8/4Zk/P+GZPz/hmT8hIZk/ACGZPwAhmT8AIZk/ByGZPz/hmT8/4Zk/P9yS/z/pYz9////////////7un+/31Z/P96VPz/j2/8//r5//+eg/z/eVT8/4Zk/P+GZPz/hmT8/4Zk/P9zTPz/n4T9/////////////////4lp/P99WPz/hmT8/4Zk/P+GZPz/hmT8GYZk/ACGZPwAhmT8n4Zk/P+GZPz/hmT8/3RN/P+kiv3////////////l3v7/fVn8/4Jf/P9wSPv/5t/+/8m7/v9uRfv/h2X8/4Zk/P+GZPz/h2X8/25E/P/Csf7////////////Tx/7/cUn8/4Zk/P+GZPz/hmT8/4Zk/P+GZPyahmT8AIZk/AyGZPz9hmT8/4Zk/P+GZPz/dE38/6SK/f///////////+Xd/v99Wfz/gmD8/29G+//Ht/7/5+D+/3FK+/+GZPz/hmT8/4Zk/P+EYfz/eFP8/+Td/v///////////7Ca/f9vRvv/h2X8/4Zk/P+GZPz/hmT8/4Zk/PqGZPwKhmT8WoZk/P+GZPz/hmT8/4Zk/P90TPz/pIv9////////////5Nz+/31Y/P+CX/z/elX8/52B/P/18///g1/8/2pA/P90TPz/dEz8/2Q5/P+IZvz////////////+/v//j3D8/3pV/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/FWGZPydhmT8/4Zk/P+GZPz/hmT8/3RM/P+ljP3////////////k3P7/fFf8/4Ng/P+EYfz/elX8/+fg///OwP7/s579/72q/f+8qv3/rpf9/8u8/v///////////+LZ/v93UPz/hGH8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8mIZk/MiGZPz/hmT8/4Zk/P+GZPz/c0z8/6aN/f///////////+Pb/v98V/z/g2D8/4dl/P9sQ/v/0ML+//b0//+5pf3/yLn+/8i5/v+/rf7/8u7/////////////vqv+/21E/P+HZfz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPzIhmT85YZk/P+GZPz/hmT8/4Zk/P9zTPz/po79////////////39b+/25F/P93UPz/elX8/2g9+/+xmv3/6OL//2Q5+/9wSPz/bEP8/2xD+//r5f7///////////+cgP3/dU/8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/OWGZPzzhmT8/4Zk/P+GZPz/hmT8/3NM/P+oj/3////////////r5f7/ooj9/6eO/f+oj/3/oof9/5p9/P/t5///nYL8/3pV/P90Tfz/n4T9////////////8Oz//39b/P+BXvz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT884Zk/POGZPz/hmT8/4Zk/P+GZPz/c0z8/6iQ/f////////////Pv/v/Ju/7/zb/+/8/B/v/Qw/7/knP8/9rP/v/Ht/7/b0f7/25F/P/Brv7////////////Mvv7/b0b7/4Zl/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPzzhmT85YZk/P+GZPz/hmT8/4Zk/P9zS/z/qZH9////////////3tT+/21E/P94Uvz/e1b8/3xX/P9qQPv/yrv+/+Xe/v9vRvv/d1H8/+Pb/v///////////6mR/f9wSPz/hmX8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/OaGZPzJhmT8/4Zk/P+GZPz/hmT8/3NL/P+pkf3////////////g1/7/eFP8/4Jg/P+FY/z/hWP8/3lT/P+fhP3/8u///31Z/P+Jafz///7////////7+f//imn8/31Y/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8yYZk/J6GZPz/hmT8/4Zk/P+GZPz/c0v8/6qS/f///////////9/W/v95U/z/hGH8/4Zk/P+GZPz/hGH8/3xX/P/v6///m379/5yB/P///////////9vQ/v9zTPz/hWP8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPyZhmT8W4Zk/P+GZPz/hmT8/4Zk/P9zS/z/q5T9////////////39b+/3lT/P+EYfz/hmT8/4Zk/P+HZfz/bUT7/9vR/v/Csf3/uKT9////////////t6P9/21F/P+HZfz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/FaGZPwNhmT8/oZk/P+GZPz/hmT8/3JL/P+slP3////////////e1f7/eFP8/4Rh/P+GZPz/hmT8/4Zk/P9zTPz/rZb9//Ht///r5f////////////+VePz/eFL8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz7hmT8CoZk/ACGZPyhhmT8/4Zk/P+GZPz/ckv8/62V/f///////////93T/v91Tvz/gl78/4Rh/P+EYfz/hGH8/35Z/P+DYPz/+vn/////////////6eP+/3pV/P+DYPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/JyGZPwAhmT8AIZk/B6GZPz/hmT8/4Zk/P9wSPz/sZz9////////////5d7+/3ZP/P+CX/z/hGH8/4Nh/P+DYPz/g2D8/29H/P/YzP7////////////Ftf7/bUT7/4Zl/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8G4Zk/ACGZPwAhmT8AIZk/IyGZPz/hmT8/3RO/P+pkf3/8e3///Ht///p4/7/0MP+/9PG/v/Tx/7/08f+/9PH/v/Ftf3/bUX7/6qS/f/49v//+ff//5+E/f90Tfz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/IeGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/NuGZPz/hmT8/4Zk/P+GZPz/h2X8/4xs/P+cgPz/m3/8/5t//P+cgPz/nYH8/5l8/P+EYvz/gl/8/4xs/P+MbPz/g2D8/4Zl/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPzXhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8G4Zk/PaHZfz/hGH8/39b/P9/W/z/f1r8/35a/P9+Wvz/flr8/35Z/P9+Wfz/f1v8/4hm/P+EYfz/fVj8/31Y/P+EYvz/h2X8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT884Zk/BiGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8LYZk/PKGZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/PCGZPwqhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8IYZk/NGGZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPzOhmT8HoZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/IqGZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8h4Zk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/CqGZPybhmT884Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPz/hmT8/4Zk/P+GZPzyhmT8mYZk/CiGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwUhmT8W4Zk/JmGZPzEhmT84YZk/PCGZPzwhmT84YZk/MOGZPyYhmT8WoZk/BOGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwAhmT8AIZk/ACGZPwA/8AD//8AAP/+AAB/+AAAH/AAAA/gAAAH4AAAB8AAAAOAAAABgAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAGAAAABwAAAA+AAAAfgAAAH8AAAD/gAAB/+AAB//wAA///AA/8=">
+  </head>
+  <body>
+    <nav id="main-main-navbar">
+      <div id="navbar">
+        <div id="top-banner">
+          <div id="left"></div>
+          <div id="center">
+            <div id="faballey-img">
+              <img style="width:100%"
+                src="https://static.faballey.com/images/indya/fabwht.png?v=11.39"
+                alt=""
+              />
+            </div>
+            <div id="indya">
+              <img
+                src="https://static.faballey.com/images/indya/indblk.png?v=11.39"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="right">
+            <a href="">Track Order |</a>
+            <a href="">Store Locator |</a>
+            <a href="">Login |</a>
+            <a href="">Sign up |</a>
+            <a id="navbar-cart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="#000000"
+                viewBox="0 0 256 256"
+              >
+                <rect width="256" height="256" fill="none"></rect>
+                <path
+                  d="M208.8,72H47.2a8.1,8.1,0,0,0-8,7.1L25,207.1a8,8,0,0,0,7.9,8.9H223.1a8,8,0,0,0,7.9-8.9l-14.2-128A8.1,8.1,0,0,0,208.8,72Z"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></path>
+                <path
+                  d="M88,104V72a40,40,0,0,1,80,0v32"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="16"
+                ></path>
+              </svg>
+              <p><span id="navbar-cart-count">5</span></p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="navbar-mid">
+        <img
+          class="logo-fab"
+          src="https://static.faballey.com/images/logo.png?v=11.39"
+          alt=""
+        />
+        <div id="navbar-mid-mid">
+          <div class="dropdown">
+            <a href="" class="dropbtn">NEW IN</a>
+            <div class="dropdown-content">
+              <div class="flexxxxx newin-main">
+                <div class="newin">
+                  <p>Clothing</p>
+                  <p>Curve</p>
+                  <p>Accessories</p>
+                  <p>Bestselling</p>
+                </div>
+                <img
+                  class="newin-img"
+                  src="https://img.faballey.com/images/menu/newinsmenuimg1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">RIMZIM DADI-J X FABALLEY</a>
+            <div class="dropdown-content flexxxxx">
+              <div class="flexxxxx newin-main">
+                <div class="newin">
+                  <p>Shop The Collection</p>
+                  <p>Explore The Lookbook</p>
+                </div>
+                <img
+                  class="newin-img"
+                  src="https://img.faballey.com/images/menu/aw22rdmenuimg1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="#">WINTERWEAR</a>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">CLOTHING</a>
+            <div class="dropdown-content flexxxxx">
+              <div class="cloth-main-div">
+              <div class="clothing-left">
+                <p>Tops</p>
+                <p>Dresses</p>
+                <p>Co-ords</p>
+                <p>Skirts</p>
+                <p>Bottoms</p>
+                <p>Basics</p>
+                <p>Classics</p>
+                <p>Workwear</p>
+                <p>Loungewear</p>
+                <p>Winterwear</p>
+                <p class="hover-heading">AW '22</p>
+              </div>
+  
+              <div class="clothing-mid">
+                <p class="hover-heading">SHOP BY OCCASION</p>
+                <p>Party</p>
+                <p>Vacation</p>
+                <p>Work</p>
+                <p>Loungewear</p>
+                <p class="hover-heading">CURVE</p>
+                <p>Tops</p>
+                <p>Dresses</p>
+              </div>
+              <div class="clothing-right">
+                <p class="hover-heading">SHOP BY TRENDS</p>
+                <p>The New Florals</p>
+                <p>Colours of Fall</p>
+                <p>Belt up</p>
+                <p>Clean & Sharp</p>
+                <p>Cool Cut Outs</p>
+                <p>Frills & Ruffles</p>
+                <p>Statement Textures</p>
+                <p>Delicate Lace</p>
+              </div>
+            </div>
+            </div>
+          </div>
+  
+          <div class="dropdown">
+            <a href="#" class="dropbtn" id="tops_page_open">TOPS</a>
+            <div class="dropdown-content flexxxxx">
+              <div class="tops-main">
+              <div class="tops-left">
+                <p class="hover-heading">SHOP BY STYLE</p>
+                <p>Crop Tops</p>
+                <p>Tank Tops</p>
+                <p>T-Shirts</p>
+                <p>Shirts</p>
+                <p>Blouses</p>
+                <p>Maxi Tops</p>
+                <p>Peplum Tops</p>
+                <p>Wrap Tops</p>
+                <p>AW '22</p>
+              </div>
+  
+              <div class="tops-mid">
+                <p class="hover-heading">SHOP BY TRENDS</p>
+                <p>The New Florals</p>
+                <p>Colours of Fall</p>
+                <p>Belt up</p>
+                <p>Clean & Sharp</p>
+                <p>Cool Cut Outs</p>
+                <p>Frills & Ruffles</p>
+                <p>Statement Textures</p>
+                <p>Delicate Lace</p>
+              </div>
+  
+              <div class="tops-right">
+                <p class="hover-heading">SHOP BY OCCASION</p>
+                <p>Casual Tops</p>
+                <p>Party Tops</p>
+                <p>Work Tops</p>
+              </div>
+              <img class="tops-img"
+                src="https://img.faballey.com/images/menu/topmenuimg1.jpg"
+                alt=""
+              />
+            </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">DRESSES</a>
+            <div class="dropdown-content flexxxxx">
+              <div class="tops-main">
+              <div class="dress-left tops-left">
+                <p class="hover-heading">SHOP BY STYLE</p>
+                <p>Bodycon Dresses</p>
+                <p>A-Line Dresses</p>
+                <p>Maxi Dresses</p>
+                <p>Midi Dresses</p>
+                <p>Mini Dresses</p>
+                <p>Skater Dresses</p>
+                <p>Shift Dresses</p>
+                <p>Shirt Dresses</p>
+              </div>
+              <div class="dress-mid tops-mid">
+                <p class="hover-heading">SHOP BY TRENDS</p>
+                <p>The New Florals</p>
+                <p>Colours of Fall</p>
+                <p>Belt up</p>
+                <p>Clean & Sharp</p>
+                <p>Cool Cut Outs</p>
+                <p>Frills & Ruffles</p>
+                <p>Statement Textures</p>
+                <p>Delicate Lace</p>
+              </div>
+              <div class="dress-right tops-right">
+                <p class="hover-heading">SHOP BY OCCASION</p>
+                <p>Casual Dress</p>
+                <p>Party Dress</p>
+                <p>Work Dress</p>
+              </div>
+              <img class="tops-img"
+                src="https://img.faballey.com/images/menu/dressesmenuimg1.jpg"
+                alt=""
+              />
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="#">CO-ORDS</a>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">PARTYWEAR</a>
+            <div class="dropdown-content">
+              <div class="flexxxxx newin-main">
+                <div class="newin">
+                  <p>Shop The Collection</p>
+                  <p>Explore The Lookbook</p>
+                </div>
+                <img
+                  class="newin-img"
+                  src="https://img.faballey.com/images/menu/fapartywear.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="#">CURVE</a>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">LOOKBOOKS</a>
+            <div class="dropdown-content">
+              <div class="flexxxxx newin-main">
+                <div class="newin">
+                  <p>RIMZIM DADU X FABALLEY</p>
+                  <p>PARTY'22 - Lights.Camera.Shine.</p>
+                  <p>AW'22 - That Fall Feeling</p>
+                  <p>SS'22 - Girls Just Wanna Have Sun</p>
+                </div>
+                <img
+                  class="newin-img"
+                  src="https://img.faballey.com/images/menu/lkbkmenuimg1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropbtn" style="color: #fc6486;">SALE</a>
+            <div class="dropdown-content">
+              <div class="flexxxxx sale-main">
+                <div class="sale-m">
+                <div class="sale-left">
+                  <p>Clearance</p>
+                  <p>Under ₹699</p>
+                  <p>Under ₹799</p>
+                  <p>Under ₹999</p>
+                  <p>2 Dresses at 1800</p>
+                  <p>2 Tops at 999</p>
+                  <p>Shop The Collection</p>
+                  <p>Explore The Lookbook</p>
+                </div>
+                <img
+                  class="sale-img"
+                  src="https://img.faballey.com/images/clearance-saledpnv2.jpg"
+                  alt=""
+                />
+                <img
+                  class="sale-img"
+                  src="https://img.faballey.com/images/699saleundr.jpg"
+                  alt=""
+                />
+                <img
+                  class="sale-img"
+                  src="https://img.faballey.com/images/799saleundr.jpg"
+                  alt=""
+                />
+                <img
+                  class="sale-img"
+                  src="https://img.faballey.com/images/999saleundr.jpg"
+                  alt=""
+                />
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form role="search" class="search-form">
+          <input
+            type="search"
+            name="q"
+            class="search-text"
+            placeholder="Search..."
+            autocomplete="off"
+          />
+          <input type="submit" value="" class="search-submit" />
+          <div id="mic">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-mic"
+            >
+              <path
+                d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+              ></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+          </div>
+        </form>
+        <select name="currency" id="currency">
+          <option>₹ INR</option>
+          <option>$ USD</option>
+          <option>$ CAD</option>
+          <option>£ GBP</option>
+          <option>$ SGD</option>
+          <option>$ AUD</option>
+          <option>د.إ AED</option>
+          <option>﷼ SAR</option>
+          <option>€ EURO</option>
+        </select>
+      </div>
+      <div id="nav-bottom">
+        <div>Party'22 | Shop Now</div>
+        <div>Sale | Upto off</div>
+        <div>Free shipping on all orders</div>
+      </div>
+    </nav>
+    <div>
+    <ul class="breadcrumb">
+      <li><a href="/index.html">Home</a></li>
+      <li>My Profile</li>
+    </ul>
+    <div class="profile">
+      <ul class="profileList">
+        <div id="profile_email">
+          <div id="profile_letter"><h1>P</h1></div>
+          <div id="hello_user"><h3>Hello!</h3></div>
+          <div id="email_show_login"><p>Pankajkranand@gmail.com</p></div>
+        </div>
+        <li>
+          <a href="../myprofile/MyProfile.html"
+            ><i class="icon"
+              ><i class="fa-regular fa-user" style="font-size:18px"></i></i>
+            My Profile</a
+          >
+        </li>
+        <li>
+          <a href="../myorder/myorder.html"
+            ><i class="icon"
+              ><i class="fa-solid fa-briefcase" style="font-size:18px"></i></i>
+            My Order</a
+          >
+        </li>
+        <li>
+          <a href="../mywhishlist/mywishllist.html"
+            ><i class="icon"
+              ><i class="fa-regular fa-heart" style="font-size:18px"></i></i>
+            My Wishlist</a
+          >
+        </li>
+
+        <li>
+          <a href="../mywallet/Mywallet.html"
+            ><i class="icon"
+              ><i class="fa-solid fa-wallet" style="font-size:18px"></i></i>
+            My Credit</a
+          >
+        </li>
+        
+        
+        <li>
+          <a href="../mypayment/myPayment.html"
+            ><i class="icon"
+              ><i class="fa-solid fa-gift" style="font-size:18px"></i></i>
+            My Vouchers</a
+          >
+        </li>
+        <li>
+          <a href="../mypayment/myPayment.html"
+            ><i class="icon"
+              ><i class="fa-regular fa-address-book" style="font-size:18px"></i></i>
+            My Addresses</a
+          >
+        </li>
+        <li>
+          <a href="../mypayment/myPayment.html"
+            ><i class="icon"
+              ><i class="fa-solid fa-headset" style="font-size:18px"></i></i>
+            Contact Us</a
+          >
+        </li>
+        <li class="logout">
+          <a
+            ><i class="icon"
+              ><i class="fa-solid fa-right-to-bracket" style="font-size:18px"></i></i>
+            Log Out</a
+          >
+        </li>
+      </ul>
+      <div class="profileback">
+        <div class="profiletop">
+          <div class="profilebox">
+            <div class="profiledetail">
+              <div id="contant_information">
+                <span>Contact Information</span>
+              </div>
+
+              <div id="profile_edit">
+                <div id="email_section">
+                  <apan>Pankajkranand@gmail.com</span>
+                </div>
+                <div id="number_edit">
+                  <div id="code_div">
+
+                  </div>
+                  <div id="imput_number">
+                    <input type="number" placeholder="Enter Your Number">
+                  </div>
+                </div>
+                <div id="edit_button">
+                  <button>EDIT</button>
+                </div>
+              </div>
+              <div id="prime_info">
+                <span>Primary Information</span>
+              </div>
+
+              <div id="prime_info_edit">
+                <div id="info_user_name">
+                  <span>First Name</span>
+                </div>
+                <div id="info_user_last">
+                  <span>Last Name</span>
+                </div>
+                <div id="info_user_gender">
+                  <span>Gender</span><span>Male</span>
+                </div>
+                <div id="info_user_gender">
+                  <span>Date Of Birth</span><span>20/01/1999</span>
+                </div>
+                <div id="info_user_pass">
+                  <span>Password</span><span>***********</span>
+                </div>
+                <div id="edit_button">
+                  <button>EDIT</button>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="address-section">
+         
+          
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer-main-main">
+      <div id="footer-div-1">
+          <p class="footer-p-tags">ONLINE SHOPPING SITE FOR WOMENS FASHION - FABALLEY</p>
+          <p>
+              FabAlley.com is an online fashion store for taste-makers and
+              trend-breakers all over the country. When it comes to online shopping
+              for women looking for the latest fashion trends, FabAlley is the
+              one-stop destination. Started in 2012, this online fashion store
+              comprises of the trendiest tops, hottest dresses, skirts, jackets,
+              shoes, bags, accessories and fashion jewellery for women online
+              shopping. Every new season brings fresh and latest fashion for women.
+              And it becomes important for you to keep up with the current trend.
+              However, FabAlley has all your styling stress sussed!
+          </p>
+      </div>
+      <div id="footer-div-2">
+          <img src="https://img.faballey.com/images/membership-desktop2.png" alt="" />
+          <div id="footer-div-21">
+              <p class="footer-p-tags">DOWNLOAD THE APP</p>
+              <div id="footer-div-211">
+                  <img src="https://static.faballey.com/images/glplay.png?v=11.39" alt="" />
+                  <img src="https://static.faballey.com/images/appstore.png?v=11.39" alt="" />
+              </div>
+          </div>
+      </div>
+      <div id="footer-div-3">
+          <div id="footer-div-31">
+              <p class="footer-p-tags" style="margin-bottom: 35px;">COMPANY</p>
+              <p>About Us</p>
+              <p>Careers</p>
+              <p>Contact Us</p>
+              <p>FabAlley CSR</p>
+              <p>Gift Cards</p>
+          </div>
+          <div id="footer-div-32">
+              <p class="footer-p-tags" style="text-align: center;">HELP</p>
+              <div id="footer-div-32a">
+              <div id="footer-div-321">
+                  <p>Order Status</p>
+                  <p>Returns & Exchange</p>
+                  <p>International Orders</p>
+                  <p>Terms And Conditions</p>
+                  <p>Privacy Policy</p>
+                  <p>Investor Relations</p>
+                  <p>Responsible Disclosure Policy</p>
+              </div>
+              <div id="footer-div-322">
+                  <p>FAQs</p>
+                  <p>Cancellation policy</p>
+                  <p>Shipping Policy</p>
+                  <p>Ordering & Payment</p>
+                  <p>Size Guide</p>
+                  <p>Wholesale Enquiry</p>
+              </div>
+          </div>
+          </div>
+          <div id="footer-div-323">
+              <p class="footer-p-tags" style="margin-bottom: 31px;">NEWSLETTER SIGNUP</p>
+              <div id="footer-div-3231">
+                  <input type="email" name="" placeholder="ENTER EMAIL ADDRESS" />
+                  <button>SUBSCRIBE</button>
+              </div>
+              <img src="../resources/Connectwithus.png" alt="" />
+          </div>
+      </div>
+      <div id="footer-div-4">
+          <p class="footer-p-tags">IN CASE OF ANY CONCERN, CONTACT US</p>
+          <div id="footer-div-41">
+              <div id="footer-div-411">
+                  <p class="footer-p-tags">HEAD OFFICE ADDRESS:</p>
+                  <p>
+                      High Street Essentials Pvt Ltd C-11, Sector 7, Noida, UP- 201301,
+                      India Customer Care:+91-8929987349 / 0120-6850262
+                  </p>
+              </div>
+              <div id="footer-div-411">
+                  <p class="footer-p-tags">RETURN ADDRESS:</p>
+                  <p>
+                      High Street Essentials Pvt Ltd
+                      Plot No-1C/2, Sector 16,
+                      Greater Noida(West), Gautam Buddha Nagar, UP - 201306, India
+                  </p>
+              </div>
+              <div id="footer-div-412">
+                  <p class="footer-p-tags">PAYMENT METHODS</p>
+                  <img src="https://static.faballey.com/images/patmentimg.png?v=11.39" alt="">
+              </div>
+          </div>
+      </div>
+      <div id="footer-div-5">
+          <p class="footer-p-tags">POPULAR SEARCHES:</p>
+          <p>New Arrivals | Western Clothing | Tops | Dresses | Skirts | Bottoms | Denim | Jackets & Blazers | Shrugs
+              |
+              Work Wear | Vacation Wear | Casual Wear | Crop Tops | Maxi Tops | Off Shoulder Tops | Cold Shoulder Tops
+              Maxi Dresses | Skater Dresses I Mini Dresses | Off Shoulder Dresses | Cold Shoulder Dresses | Floral
+              Dresses
+              Plus Size Tops | Winter Wear | Leggings | Jeggings | Women's Loungewear | Wholesale Enquiries
+              Curve | Accessories | Sale | Party Wear |
+              | Ruffled Tops | Bell Sleeve Tops | Floral Tops |
+              | LBD | Jumpsuits | Plus Size Dresses</p>
+      </div>
+      <div id="footer-div-6">
+          <p>©2023 FabAlley.com. All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+  <script src="/navBar/navbar.js"></script>
+  <script src="/Sidebar_cart/sidebar.js"></script>
+</html>
+
+

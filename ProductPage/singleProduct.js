@@ -1,8 +1,20 @@
+let cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
 
+document.querySelector("#navbar-cart-count").innerText= cartarray.length
 
 
 let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
 console.log(viewProduct)
+
+//username 
+var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
+
+if(user1name!="User"){
+    document.getElementById("custname").innerText=user1name
+    document.getElementById("hi-name").style.display="block"
+    document.getElementById("login-signup").style.display="none"
+
+}
 
 displayThis(viewProduct);
 
@@ -166,7 +178,7 @@ function displayThis(ele){
 }
 
 // -------------------adding to wishlist---------------------------
-let wishlist_product = JSON.parse(localStorage.getItem("wishlist")) || [];
+let wishlist_product = JSON.parse(localStorage.getItem("mywishlistcart")) || [];
 
 function wishlist(e) {
   // console.log(e.target)
@@ -182,19 +194,20 @@ function wishlist(e) {
       t.children[0].classList.remove("fa-solid")
       t.style.color="#1d2322"
     }
+
    }
   }else{
     wishlist_product.push(viewProduct)
     t.children[0].classList.add("fa-solid")
     t.style.color="#fc6486"
-        localStorage.setItem("wishlist",JSON.stringify(wishlist_product))
+        localStorage.setItem("mywishlistcart",JSON.stringify(wishlist_product))
   }
   console.log(wishlist_product)
 }
 
 // -------------------------add to cart-----------------
 
-let cart_product = JSON.parse(localStorage.getItem("cart_fab")) || [];
+let cart_product = JSON.parse(localStorage.getItem("mycart")) || [];
 
 function cart(e) {
 
@@ -204,15 +217,20 @@ function cart(e) {
     return d.id==viewProduct.id;
   });
   if(filprox.length==1){
+
    for(let i=0; i<cart_product.length; i++){
     if(cart_product[i].id==viewProduct.id){
+      window.open("../Carts/components/carts.html","_self")
       console.log(cart_product[i])
     }
    }
   }else{
     cart_product.push(viewProduct)
     t.style.background="#03bb5c"
-        localStorage.setItem("cart_fab",JSON.stringify(cart_product))
+        localStorage.setItem("mycart",JSON.stringify(cart_product))
+        cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
+
+        document.querySelector("#navbar-cart-count").innerText= cartarray.length
   }
   console.log(cart_product)
 }
@@ -275,9 +293,9 @@ for (let i = 0; i < choose_SizeX.length; i++) {
 
 
 // -------------------jump to page-------------------
-document.querySelector("#open_dress_page").addEventListener("click",()=>{
-  window.open("dress.html","_self")
-})
-document.querySelector("#tops_page_open").addEventListener("click",()=>{
-  window.open("ProductPage.html","_self");
-})
+// document.querySelector("#open_dress_page").addEventListener("click",()=>{
+//   window.open("dress.html","_self")
+// })
+// document.querySelector("#tops_page_open").addEventListener("click",()=>{
+//   window.open("ProductPage.html","_self");
+// })

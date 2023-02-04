@@ -299,7 +299,7 @@ let wishlist_product = JSON.parse(localStorage.getItem("mywishlistcart")) || [];
 
 function wishlist(e) {
   // console.log(e.target)
-  console.log(viewProduct.id)
+  // console.log(viewProduct.id)
   let t=document.querySelector("#wishlist"+e)
   let filpro=wishlist_product.filter(function(y){
     return y.id==Product[e].id;

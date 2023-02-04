@@ -378,3 +378,66 @@ input.search-text::-webkit-search-cancel-button {
  margin: 1em;
  width: 18%;
 }
+
+/*iPhone 6 Portrait*/
+@media only screen and (min-device-width: 390px) and (max-device-width:819px) {
+  #navbar-mid-mid{
+    display: none;
+  }
+  #nav-bottom{
+    margin-top: 40px;
+  }
+  #right a{
+    margin: auto;
+  }
+  #top-banner{
+    flex-direction: column;
+  }
+  
+#navbar-cart p {
+    position: absolute;
+    top: 26px;
+    right: 14px;
+}
+#navbar-mid > img {
+  margin-top: 10px;
+  width: 6em;
+}
+#navbar-mid {
+  margin-top: 40px;
+}
+/* footer  */
+#rimzim-category-home{
+  font-size: small;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+#footer-div-2{
+  flex-direction: column;
+}
+#rimzim-grid-div{
+  flex-direction: column;
+}
+#footer-div-3{
+  flex-direction: column;
+}
+}
+/* iPad Air */
+@media only screen and (min-device-width: 820px) and (max-device-width:1000px){ 
+  #navbar-mid-mid{
+    display: none;
+  }
+    #nav-bottom{
+      margin-top: 40px;
+    }
+    #right a{
+      font-size: 0.5em;
+    }
+    /* footer  */
+    #rimzim-category-home{
+      font-size: medium;
+    }
+    #footer-div-2{
+      flex-direction: column;
+    }
+  }

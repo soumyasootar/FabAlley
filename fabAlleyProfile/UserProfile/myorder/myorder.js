@@ -1,34 +1,34 @@
-var faceData = [
-  {
-    id: "1",
-    category: "tops",
-    title: "Pink White Floral Ruffle Sleeve Peplum Top",
-    discount: "56",
-    price2: "1450",
-    price1: "638",
-    colour:"pink",
-    site: "https://www.faballey.com/pink-white-floral-ruffle-sleeve-peplum-top-78/prdt",
-    img1: "https://img.faballey.com/images/Product/TOP05210Z/1.jpg",
-    img2: "https://img.faballey.com/images/Product/TOP05210Z/d4.jpg",
-    img3: "https://img.faballey.com/images/Product/TOP05210Z/d5.jpg",
-    img4: "https://img.faballey.com/images/Product/TOP05210Z/d8.jpg",
-  },
-  {
-    id: "2",
-    category: "tops",
-    title: "Pink Floral Smocked Peplum Top",
-    discount: "56",
-    price2: "1650",
-    price1: "726",
-    colour:"pink",
-    site: "https://www.faballey.com/floral-pink-smoking-top-78/prdt",
-    img1: "https://img.faballey.com/images/Product/TOP04999Z/1.jpg",
-    img2: "https://img.faballey.com/images/Product/TOP04999Z/d5.jpg",
-    img3: "https://img.faballey.com/images/Product/TOP04999Z/d8.jpg",
-    img4: "https://img.faballey.com/images/Product/TOP04999Z/d4.jpg",
-  },
-  ];
-  var data=JSON.parse(localStorage.getItem("cart"))||[];
+// var faceData = [
+//   {
+//     id: "1",
+//     category: "tops",
+//     title: "Pink White Floral Ruffle Sleeve Peplum Top",
+//     discount: "56",
+//     price2: "1450",
+//     price1: "638",
+//     colour:"pink",
+//     site: "https://www.faballey.com/pink-white-floral-ruffle-sleeve-peplum-top-78/prdt",
+//     img1: "https://img.faballey.com/images/Product/TOP05210Z/1.jpg",
+//     img2: "https://img.faballey.com/images/Product/TOP05210Z/d4.jpg",
+//     img3: "https://img.faballey.com/images/Product/TOP05210Z/d5.jpg",
+//     img4: "https://img.faballey.com/images/Product/TOP05210Z/d8.jpg",
+//   },
+//   {
+//     id: "2",
+//     category: "tops",
+//     title: "Pink Floral Smocked Peplum Top",
+//     discount: "56",
+//     price2: "1650",
+//     price1: "726",
+//     colour:"pink",
+//     site: "https://www.faballey.com/floral-pink-smoking-top-78/prdt",
+//     img1: "https://img.faballey.com/images/Product/TOP04999Z/1.jpg",
+//     img2: "https://img.faballey.com/images/Product/TOP04999Z/d5.jpg",
+//     img3: "https://img.faballey.com/images/Product/TOP04999Z/d8.jpg",
+//     img4: "https://img.faballey.com/images/Product/TOP04999Z/d4.jpg",
+//   },
+//   ];
+  var faceData=JSON.parse(localStorage.getItem("ordercart-fab"))||[];
   displayProduct(faceData);
 function displayProduct(doc) {
   document.querySelector(".orderdiv").innerHTML = " ";

@@ -1,33 +1,52 @@
-let Product = [{
-  id: "1",
-  category: "tops",
-  title: "Pink White Floral Ruffle Sleeve Peplum Top",
-  discount: "56",
-  price2: "1450",
-  price1: "638",
-  colour:"pink",
-  site: "https://www.faballey.com/pink-white-floral-ruffle-sleeve-peplum-top-78/prdt",
-  img1: "https://img.faballey.com/images/Product/TOP05210Z/1.jpg",
-  img2: "https://img.faballey.com/images/Product/TOP05210Z/d4.jpg",
-  img3: "https://img.faballey.com/images/Product/TOP05210Z/d5.jpg",
-  img4: "https://img.faballey.com/images/Product/TOP05210Z/d8.jpg",
-},
-{
-  id: "2",
-  category: "tops",
-  title: "Pink Floral Smocked Peplum Top",
-  discount: "56",
-  price2: "1650",
-  price1: "726",
-  colour:"pink",
-  site: "https://www.faballey.com/floral-pink-smoking-top-78/prdt",
-  img1: "https://img.faballey.com/images/Product/TOP04999Z/1.jpg",
-  img2: "https://img.faballey.com/images/Product/TOP04999Z/d5.jpg",
-  img3: "https://img.faballey.com/images/Product/TOP04999Z/d8.jpg",
-  img4: "https://img.faballey.com/images/Product/TOP04999Z/d4.jpg",
-},]
+// let Product = [{
+//   id: "1",
+//   category: "tops",
+//   title: "Pink White Floral Ruffle Sleeve Peplum Top",
+//   discount: "56",
+//   price2: "1450",
+//   price1: "638",
+//   colour:"pink",
+//   site: "https://www.faballey.com/pink-white-floral-ruffle-sleeve-peplum-top-78/prdt",
+//   img1: "https://img.faballey.com/images/Product/TOP05210Z/1.jpg",
+//   img2: "https://img.faballey.com/images/Product/TOP05210Z/d4.jpg",
+//   img3: "https://img.faballey.com/images/Product/TOP05210Z/d5.jpg",
+//   img4: "https://img.faballey.com/images/Product/TOP05210Z/d8.jpg",
+// },
+// {
+//   id: "2",
+//   category: "tops",
+//   title: "Pink Floral Smocked Peplum Top",
+//   discount: "56",
+//   price2: "1650",
+//   price1: "726",
+//   colour:"pink",
+//   site: "https://www.faballey.com/floral-pink-smoking-top-78/prdt",
+//   img1: "https://img.faballey.com/images/Product/TOP04999Z/1.jpg",
+//   img2: "https://img.faballey.com/images/Product/TOP04999Z/d5.jpg",
+//   img3: "https://img.faballey.com/images/Product/TOP04999Z/d8.jpg",
+//   img4: "https://img.faballey.com/images/Product/TOP04999Z/d4.jpg",
+// },]
 
-// let Product= JSON.parse(localStorage.getItem("mywishlistcart")) || [];
+
+let cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
+
+document.querySelector("#navbar-cart-count").innerText = cartarray.length
+
+
+// let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
+// console.log(viewProduct)
+
+//username 
+var user1name = JSON.parse(localStorage.getItem("usernamefab")) || "User"
+
+if (user1name != "User") {
+  document.getElementById("custname").innerText = user1name
+  document.getElementById("hi-name").style.display = "block"
+  document.getElementById("login-signup").style.display = "none"
+
+}
+
+let Product= JSON.parse(localStorage.getItem("mywishlistcart")) || [];
 
 display(Product)
 function display(data){
@@ -53,7 +72,7 @@ function display(data){
               <button class="add_to_bag${ind}">ADD TO BAG</button>
             </div>
             <div id="crs_btn">
-              <button onclick="remove(${ind})">X</button>
+              <button onclick="remove(${ind})">Remove</button>
             </div>
           </div>
         </div>
@@ -80,6 +99,7 @@ function cart(e) {
     cart_product.push(Product[e])
     t.style.background="#03bb5c"
         localStorage.setItem("mycart",JSON.stringify(cart_product))
+        document.querySelector("#navbar-cart-count").innerText = cartarray.length
   }
   console.log(cart_product)
 }

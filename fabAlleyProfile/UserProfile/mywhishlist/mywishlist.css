@@ -91,4 +91,19 @@ border:none;
   display: flex;
   margin-right: 15px;
   border:none;
+  
+}
+#crs_btn>button{
+  padding: 5px;
+  /* border-radius: 10px; */
+  border: none;
+  /* width: 20px; */
+  /* height: 20px; */
+  text-align: center;
+  background-color: #ccc;
+  /* color: white; */
+  /* font-size: x-large; */
+  font-weight: 700;
+  margin-top: -10px;
+
 }

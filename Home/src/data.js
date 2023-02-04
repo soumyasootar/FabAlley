@@ -1912,3 +1912,4 @@
         "img4": "https://img.faballey.com/images/Product/CTP00546D/d8.jpg"
       }
     ]
+    localStorage.setItem("totalproducts",JSON.stringify(products))

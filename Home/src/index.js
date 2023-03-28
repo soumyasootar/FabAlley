@@ -19,7 +19,10 @@ if (user1name != "User") {
   document.getElementById("login-signup").style.display = "none";
 }
 
+//search
 document.querySelector(".search-text").addEventListener("input", searchyoo);
+
+document.querySelector(".search-form").addEventListener("submit", searchyoo);
 
 function searchyoo() {
   event.preventDefault();
@@ -28,9 +31,10 @@ function searchyoo() {
   }, 2000);
 }
 
+
 function searchhhhh() {
-  // console.log("yoooooooooo");
   let serch = document.querySelector(".search-text").value;
+  console.log("serch: ", serch);
   serch.toLowerCase();
   console.log("serch: ", serch);
   if (serch.includes("top")) {

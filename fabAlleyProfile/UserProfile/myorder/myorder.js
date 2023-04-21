@@ -28,8 +28,27 @@
 //     img4: "https://img.faballey.com/images/Product/TOP04999Z/d4.jpg",
 //   },
 //   ];
-var faceData = JSON.parse(localStorage.getItem("ordercart-fab")) || [];
-displayProduct(faceData);
+// var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
+// document.querySelector(".emailname-span-otp").innerHTML=email
+// document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
+// var faceData = JSON.parse(localStorage.getItem("ordercart-fab")) || [];
+
+
+var userId=localStorage.getItem("user-id")
+var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
+document.querySelector(".emailname-span-otp").innerHTML=email
+document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
+
+fetchtops();
+var Product=[];
+async function fetchtops(){
+  let res=await fetch(`http://localhost:3002/faballey/order/${userId}`)
+  let json=await res.json();
+  console.log(json.wishlistsCart);
+  Product=[...json.wishlistsCart]
+  display(Product)
+}
+// displayProduct(faceData);
 function displayProduct(doc) {
   document.querySelector(".orderdiv").innerHTML = " ";
   doc.map(function (x, ind) {
@@ -96,3 +115,13 @@ function printPdf() {
   document.body.removeChild(a);
   console.log("worked");
 }
+  //username
+var logout =document.querySelector(".logout")
+logout.addEventListener("click",logoooout)
+
+function logoooout(){
+  localStorage.setItem("usernamefab","User")
+  localStorage.setItem("user-id","00000")
+  window.open("../../../index.html","_self")
+}
+

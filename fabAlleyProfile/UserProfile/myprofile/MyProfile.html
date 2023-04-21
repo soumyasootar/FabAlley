@@ -33,14 +33,18 @@ document.querySelector("#navbar-cart-count").innerText= cartarray.length
 // console.log(viewProduct)
 
 //username 
-var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
-
 if(user1name!="User"){
     document.getElementById("custname").innerText=user1name
     document.getElementById("hi-name").style.display="block"
     document.getElementById("login-signup").style.display="none"
 
 }
+var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
+console.log("user1name: ", user1name);
+var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
+document.querySelector("#email_show_login").innerHTML=email
+document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
+
   </script>
   <body>
     <nav id="main-main-navbar">
@@ -635,8 +639,8 @@ if(user1name!="User"){
       </div>
     </footer>
   </body>
-  <script src="/navBar/navbar.js"></script>
-  <script src="/Sidebar_cart/sidebar.js"></script>
+  <!-- <script src="/navBar/navbar.js"></script> -->
+  <!-- <script src="/Sidebar_cart/sidebar.js"></script> -->
 </html>
 
 

@@ -1,12 +1,11 @@
 let cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
 
-document.querySelector("#navbar-cart-count").innerText= cartarray.length
-
+document.querySelector("#navbar-cart-count").innerText = cartarray.length;
 
 // let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
 // console.log(viewProduct)
 
-//username 
+//username
 // var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
 
 // if(user1name!="User"){
@@ -16,26 +15,24 @@ document.querySelector("#navbar-cart-count").innerText= cartarray.length
 
 // }
 
-
 fetchtops();
-var data=[];
-async function fetchtops(){
-  let res=await fetch("http://localhost:3002/faballey/tops")
-  let json=await res.json();
+var data = [];
+async function fetchtops() {
+  let res = await fetch("http://localhost:3002/faballey/tops");
+  let json = await res.json();
   console.log(json);
-  data=[...json]
-  display(data)
+  data = [...json];
+  display(data);
 }
 
 // localStorage.setItem("FabAlleyProduct", JSON.stringify(Product));
 // let data = JSON.parse(localStorage.getItem("FabAlleyProduct"));
 function display(data) {
-  let productEl=document.querySelector("#product_tops").innerHTML = ""
-  data.map(function (ele,ind) {
+  let productEl = (document.querySelector("#product_tops").innerHTML = "");
+  data.map(function (ele, ind) {
     // if(ele.category=="dress"){
 
-    document.querySelector("#product_tops").innerHTML +=
-      `
+    document.querySelector("#product_tops").innerHTML += `
             <div id="product_single_item_container" >
             <div id="image_hover" onclick="viewpage(${ind})">
                 <img src="${ele.img1}"  onmouseover="hover(${ind})" onmouseout="hoverout(${ind})"
@@ -63,58 +60,66 @@ function display(data) {
             </div>
             `;
     // }
-  })
+  });
 }
 
 // ----------------------wishlist----------------------
 
-let userId="643d4353527c87a4cb619139";
+// let userId="643d4353527c87a4cb619139";
+var user1name = localStorage.getItem("usernamefab") || "User";
+
+if (user1name != "User") {
+  document.getElementById("custname").innerText = user1name;
+  document.getElementById("hi-name").style.display = "block";
+  document.getElementById("login-signup").style.display = "none";
+}
+
+var userId = localStorage.getItem("user-id");
 
 async function wishlist(e) {
-  let t=document.querySelector("#wishlist"+e)
-  let fil=await fetch(`http://localhost:3002/faballey/wishlist/643d4353527c87a4cb619139`)
+  let t = document.querySelector("#wishlist" + e);
+  let fil = await fetch(`http://localhost:3002/faballey/wishlist/${userId}`);
   let json = await fil.json();
-  
-  let filpro=json.wishlistsCart.filter(function(y){
-    return y._id==data[e]._id;
+
+  let filpro = json.wishlistsCart.filter(function (y) {
+    return y._id == data[e]._id;
   });
-  if(filpro.length==1){
-   for(let i=0; i<json.wishlistsCart.length; i++){
-    if(json.wishlistsCart[i]._id==filpro[0]._id){
-      let doc={
-        userId: userId,
-        productId:filpro[0]._id
+  if (filpro.length == 1) {
+    for (let i = 0; i < json.wishlistsCart.length; i++) {
+      if (json.wishlistsCart[i]._id == filpro[0]._id) {
+        let doc = {
+          userId: userId,
+          productId: filpro[0]._id,
+        };
+        let res = await fetch("http://localhost:3002/faballey/wishlist", {
+          method: "DELETE",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(doc),
+        });
+        t.classList.remove("fa-solid");
+        t.style.color = "#1d2322";
       }
-      let res=await fetch('http://localhost:3002/faballey/wishlist',{
-        method: 'DELETE',
-        headers:{'content-type': 'application/json'},
-        body: JSON.stringify(doc)
-      })
-      t.classList.remove("fa-solid")
-      t.style.color="#1d2322"
     }
-   }
-  }else{
-   let doc={
-    userId: userId,
-    productId:data[e]._id,
-    quantity:1
-  }
-  let res=await fetch('http://localhost:3002/faballey/wishlist',{
-    method: 'POST',
-    headers:{'content-type': 'application/json'},
-    body: JSON.stringify(doc)
-  })
-    t.classList.add("fa-solid")
-    t.style.color="#fc6486"
+  } else {
+    let doc = {
+      userId: userId,
+      productId: data[e]._id,
+      quantity: 1,
+    };
+    let res = await fetch("http://localhost:3002/faballey/wishlist", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(doc),
+    });
+    t.classList.add("fa-solid");
+    t.style.color = "#fc6486";
   }
 }
 // --------------------------add to bag-----------------------
 // let cart_product = JSON.parse(localStorage.getItem("mycart")) || [];
 
 async function cart(e) {
-
-  let t=document.querySelector(".add_to_bag"+e)
+  let t = document.querySelector(".add_to_bag" + e);
 
   // let filprox=cart_product.filter(function (d){
   //   return d.id==Product[e].id;
@@ -127,55 +132,56 @@ async function cart(e) {
   //   }
   //  }
   // }else{
-   
-    let doc={
-      userId: userId,
-      productId:data[e]._id,
-      quantity:1
-    }
-    let res=await fetch('http://localhost:3002/faballey/cart',{
-      method: 'POST',
-      headers:{'content-type': 'application/json'},
-      body: JSON.stringify(doc)
-    })
-    // cart_product.push(Product[e])
-    t.style.background="#03bb5c"
-    let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
-    let json = await fil.json();
-        document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
-        // location.reload()
+
+  let doc = {
+    userId: userId,
+    productId: data[e]._id,
+    quantity: 1,
+  };
+  let res = await fetch("http://localhost:3002/faballey/cart", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(doc),
+  });
+  // cart_product.push(Product[e])
+  t.style.background = "#03bb5c";
+  let fil = await fetch(`http://localhost:3002/faballey/cart/${userId}`);
+  let json = await fil.json();
+  document.querySelector("#navbar-cart-count").innerText =
+    json.productsCart.length;
+  // location.reload()
   // }
   // console.log(cart_product)
 }
 
 lengthProduct();
-async function lengthProduct(){
-  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+async function lengthProduct() {
+  let fil = await fetch(`http://localhost:3002/faballey/cart/${userId}`);
   let json = await fil.json();
-      document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
+  document.querySelector("#navbar-cart-count").innerText =
+    json.productsCart.length;
 }
 // ----------------------------------------------------
 function hover(ind) {
   let product = data[ind].img2;
-  document.querySelector(".change_image"+ind).src = product;
+  document.querySelector(".change_image" + ind).src = product;
 }
 function hoverout(ind) {
   let product = data[ind].img1;
-  document.querySelector(".change_image"+ind).src = product;
+  document.querySelector(".change_image" + ind).src = product;
 }
 
 // --------------------View Product Detail---------------------
-let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
-function viewpage(ind){
-  let viewThis=data[ind];
-  console.log(viewThis)
-  localStorage.setItem("View_detail",JSON.stringify(viewThis));
-  window.open("singleProduct.html","_self")
+let viewProduct = JSON.parse(localStorage.getItem("View_detail"));
+function viewpage(ind) {
+  let viewThis = data[ind];
+  console.log(viewThis);
+  localStorage.setItem("View_detail", JSON.stringify(viewThis));
+  window.open("singleProduct.html", "_self");
 }
 
 // ----------------drop downs--------------------
-document.querySelector("#drop_down").innerHTML=
-`
+document.querySelector("#drop_down").innerHTML = `
 <span class="menu-heading">TOPS</span>
     <ul class="category-list">
       <li class="category-item">
@@ -263,70 +269,67 @@ document.querySelector("#drop_down").innerHTML=
     </ul>
 `;
 
-
-const categoryBtns = document.querySelectorAll('.category-btn');
-console.log(categoryBtns)
-categoryBtns.forEach(function(btn) {
-  btn.addEventListener('click', function() {
+const categoryBtns = document.querySelectorAll(".category-btn");
+console.log(categoryBtns);
+categoryBtns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
     const subCategoryList = btn.nextElementSibling;
-    const right=btn.lastChild;
-    console.log(right)
+    const right = btn.lastChild;
+    console.log(right);
     // console.log(subCategoryList)
-    if (subCategoryList.style.display === 'block') {
-      right.classList.remove("fa-angle-down")
-      subCategoryList.style.display = 'none';
+    if (subCategoryList.style.display === "block") {
+      right.classList.remove("fa-angle-down");
+      subCategoryList.style.display = "none";
     } else {
-      subCategoryList.style.display = 'block';
-      right.classList.add("fa-angle-down")
+      subCategoryList.style.display = "block";
+      right.classList.add("fa-angle-down");
     }
   });
 });
-var right=document.querySelector(".fa-angle-right");
+var right = document.querySelector(".fa-angle-right");
 
+document
+  .querySelector(".sub-category-list")
+  .addEventListener("click", function (x) {
+    // console.log(x.target.innerText)
+  });
 
-document.querySelector(".sub-category-list").addEventListener("click",function(x){
-  // console.log(x.target.innerText)
-})
-
-
-let bala=false;
-document.querySelector(".sort_by_relevence").addEventListener("click",()=>{
- const disthis= document.querySelector(".shorted_by")
- if (bala===true) {
-  disthis.classList.remove("display_sorted")
-  bala=false;
-} else {
-  disthis.classList.add("display_sorted")
-  bala=true;
-}
+let bala = false;
+document.querySelector(".sort_by_relevence").addEventListener("click", () => {
+  const disthis = document.querySelector(".shorted_by");
+  if (bala === true) {
+    disthis.classList.remove("display_sorted");
+    bala = false;
+  } else {
+    disthis.classList.add("display_sorted");
+    bala = true;
+  }
 });
 
 // -------------------sorting---------------------------
 
-document.querySelector(".shorted_by").addEventListener("click",function(e){
-  let getValue=e.target.attributes.value.nodeValue
-// console.log(getValue)
-if(getValue==="LOW"){
-  data.sort(function(a,b){
-    return a.price1-b.price1
-  })
-  display(data);
-// colour:"pink",display(data);
-document.querySelector(".shorted_by").classList.remove("display_sorted");
-}
-if(getValue==="HIGH"){
-  data.sort(function(a,b){
-    return b.price1-a.price1
-  })
-display(data);
-document.querySelector(".shorted_by").classList.remove("display_sorted");
-}
-})
-
+document.querySelector(".shorted_by").addEventListener("click", function (e) {
+  let getValue = e.target.attributes.value.nodeValue;
+  // console.log(getValue)
+  if (getValue === "LOW") {
+    data.sort(function (a, b) {
+      return a.price1 - b.price1;
+    });
+    display(data);
+    // colour:"pink",display(data);
+    document.querySelector(".shorted_by").classList.remove("display_sorted");
+  }
+  if (getValue === "HIGH") {
+    data.sort(function (a, b) {
+      return b.price1 - a.price1;
+    });
+    display(data);
+    document.querySelector(".shorted_by").classList.remove("display_sorted");
+  }
+});
 
 // ------------filtering button part------------------
-document.querySelector("#filtering_part").innerHTML=
-`
+document.querySelector("#filtering_part").innerHTML = `
 <div class="dropdown">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Size
@@ -452,17 +455,16 @@ filcolor.addEventListener("click", (event) => {
       break;
     }
   }
-  if(cv===""){
+  if (cv === "") {
     display(data);
-  }else{
-    var filtered=data.filter(function(elem){
-      return elem.colour==cv;
-    })
-    console.log(filtered)
+  } else {
+    var filtered = data.filter(function (elem) {
+      return elem.colour == cv;
+    });
+    console.log(filtered);
     display(filtered);
   }
 });
-
 
 let dv = "";
 let fildis = document.querySelector("#chooseDis");
@@ -474,17 +476,15 @@ fildis.addEventListener("click", (event) => {
       break;
     }
   }
-  if(dv===""){
+  if (dv === "") {
     display(data);
-  }else{
-    var filtered=data.filter(function(elem){
-      return elem.discount>=dv;
-    })
+  } else {
+    var filtered = data.filter(function (elem) {
+      return elem.discount >= dv;
+    });
     display(filtered);
   }
 });
-
-
 
 let pv = "";
 let filPri = document.querySelector("#filPrice");
@@ -497,15 +497,15 @@ filPri.addEventListener("click", (event) => {
     }
   }
   // console.log(pv)
-  if(pv==""){
+  if (pv == "") {
     display(data);
-  }else{
-    var filtered=data.filter(function(elem){
+  } else {
+    var filtered = data.filter(function (elem) {
       // console.log(elem.price1)
-      console.log(pv)
-      return elem.price1<= Number(pv);
-    })
-    console.log(filtered)
+      console.log(pv);
+      return elem.price1 <= Number(pv);
+    });
+    console.log(filtered);
     display(filtered);
   }
 });
@@ -513,7 +513,6 @@ filPri.addEventListener("click", (event) => {
 // console.log(filcolor.children)
 // console.log(filcolor.children[0].attributes.value.nodeValue)
 // console.log(filcolor)
-
 
 // ----------------jump to dress Page-----------------
 
@@ -523,8 +522,6 @@ filPri.addEventListener("click", (event) => {
 // document.querySelector("#jumpcart").addEventListener("click",()=>{
 //   location.href="./fabAlleyProfile/myorder/myorder.html"
 // })
-
-
 
 // ------------nested filter-------------------
 // localStorage.setItem("products", JSON.stringify(products));

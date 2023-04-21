@@ -9,7 +9,8 @@ let cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
 // console.log(viewProduct)
 
 //username 
-var user1name = JSON.parse(localStorage.getItem("usernamefab")) || "User"
+var user1name = localStorage.getItem("usernamefab") || "User"
+
 
 if (user1name != "User") {
   document.getElementById("custname").innerText = user1name
@@ -18,12 +19,16 @@ if (user1name != "User") {
 
 }
 
-let userId="643d4353527c87a4cb619139";
+// let userId="643d4353527c87a4cb619139";
+var userId=localStorage.getItem("user-id")
+var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
+document.querySelector(".emailname-span-otp").innerHTML=email
+document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
 
 fetchtops();
 var Product=[];
 async function fetchtops(){
-  let res=await fetch(`http://localhost:3002/faballey/wishlist/643d4353527c87a4cb619139`)
+  let res=await fetch(`http://localhost:3002/faballey/wishlist/${userId}`)
   let json=await res.json();
   console.log(json.wishlistsCart);
   Product=[...json.wishlistsCart]
@@ -89,7 +94,7 @@ async function add_to_bag(e) {
   fetchtops()
   lengthProduct();
   async function lengthProduct(){
-    let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+    let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
     let json = await fil.json();
         document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
   }
@@ -112,7 +117,7 @@ async function remove(ind){
 
 lengthProduct();
 async function lengthProduct(){
-  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+  let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
   let json = await fil.json();
       document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }

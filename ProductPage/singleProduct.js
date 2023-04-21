@@ -7,7 +7,7 @@ let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
 console.log(viewProduct)
 
 //username 
-var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
+var user1name=(localStorage.getItem("usernamefab"))||"User"
 
 if(user1name!="User"){
     document.getElementById("custname").innerText=user1name
@@ -178,12 +178,13 @@ function displayThis(ele){
 }
 
 // -------------------adding to wishlist---------------------------
-let userId="643d4353527c87a4cb619139";
+// let userId="643d4353527c87a4cb619139";
+var userId=localStorage.getItem("user-id")
 
 async function wishlist(e) {
   // console.log(e.target)
   let t=document.querySelector("#wishllist")
-  let fil=await fetch(`http://localhost:3002/faballey/wishlist/643d4353527c87a4cb619139`)
+  let fil=await fetch(`http://localhost:3002/faballey/wishlist/${userId}`)
   let json = await fil.json();
   
   let filpro=json.wishlistsCart.filter(function(y){
@@ -223,6 +224,13 @@ async function wishlist(e) {
 }
 
 // -------------------------add to cart-----------------
+var user1name = localStorage.getItem("usernamefab") || "User";
+
+if (user1name != "User") {
+  document.getElementById("custname").innerText = user1name;
+  document.getElementById("hi-name").style.display = "block";
+  document.getElementById("login-signup").style.display = "none";
+}
 
 let cart_product = JSON.parse(localStorage.getItem("mycart")) || [];
 
@@ -243,7 +251,7 @@ async function cart(e) {
   })
   // cart_product.push(Product[e])
   t.style.background="#03bb5c"
-  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+  let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
   let json = await fil.json();
       document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 
@@ -251,7 +259,7 @@ async function cart(e) {
 
 lengthProduct();
 async function lengthProduct(){
-  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+  let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
   let json = await fil.json();
       document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }

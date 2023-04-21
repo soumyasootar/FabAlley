@@ -1,10 +1,12 @@
 var otpcode=JSON.parse(localStorage.getItem("otp-fab"))||"123456"
-var email=JSON.parse(localStorage.getItem("useremailfab"))||"your mail."
+var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
 document.querySelector(".emailname-span-otp").innerHTML=email
 
 document.querySelector(".button-field").addEventListener("click",otpcheck)
 function otpcheck(){
     event.preventDefault()
+    
+
     var OTPenter=document.querySelector("#otp-fab-user").value
     if(OTPenter==otpcode||OTPenter==1234){
         console.log("OTPenter: ", OTPenter);

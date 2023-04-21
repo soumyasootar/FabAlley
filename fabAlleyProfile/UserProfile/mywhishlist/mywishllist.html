@@ -313,7 +313,7 @@
           <h3>Hello!</h3>
         </div>
         <div id="email_show_login">
-          <p>soumyaswaroopsootar@gmail.com</p>
+          <p><span class="emailname-span-otp">noemailentered</span></p>
         </div>
       </div>
       <li>
@@ -487,6 +487,7 @@ logout.addEventListener("click",logoooout)
 
 function logoooout(){
   localStorage.setItem("usernamefab","User")
+  localStorage.setItem("user-id","00000")
   window.open("../../../index.html","_self")
 }
 </script>

@@ -7,7 +7,7 @@ document.querySelector("#navbar-cart-count").innerText= cartarray.length
 // console.log(viewProduct)
 
 //username 
-var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
+var user1name=(localStorage.getItem("usernamefab"))||"User"
 
 if(user1name!="User"){
     document.getElementById("custname").innerText=user1name
@@ -83,11 +83,19 @@ function viewpage(ind){
 }
 
 // ----------------------wishlist----------------------
-let userId="643d4353527c87a4cb619139";
+// let userId="643d4353527c87a4cb619139";
+var userId=localStorage.getItem("user-id")
+var user1name = localStorage.getItem("usernamefab") || "User";
+
+if (user1name != "User") {
+  document.getElementById("custname").innerText = user1name;
+  document.getElementById("hi-name").style.display = "block";
+  document.getElementById("login-signup").style.display = "none";
+}
 
 async function wishlist(e) {
   let t=document.querySelector("#wishlist"+e)
-  let fil=await fetch(`http://localhost:3002/faballey/wishlist/643d4353527c87a4cb619139`)
+  let fil=await fetch(`http://localhost:3002/faballey/wishlist/${userId}`)
   let json = await fil.json();
   
   let filpro=json.wishlistsCart.filter(function(y){
@@ -143,13 +151,13 @@ async function cart(e) {
   })
   // cart_product.push(Product[e])
   t.style.background="#03bb5c"
-  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+  let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
   let json = await fil.json();
       document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }
 lengthProduct();
 async function lengthProduct(){
-  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+  let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
   let json = await fil.json();
       document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }

@@ -52,7 +52,7 @@
             <div id="counterCart">
                 <p class="myshbag">Choose Payment Mode</p>
             </div>
-            <form id="adressform">
+            <form id="adressform" >
                 <div class="col-50">
                     <label for="fname" style="color: #000;font-weight: 700;font-size: 35px; ">Accepted Cards</label>
                     <div class="icon-container">
@@ -77,7 +77,7 @@
                             <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
                         </div>
                     </div>
-                    <input type="submit" name="submit" value="PLACE ORDER" onclick="sendemail()"
+                    <input type="submit" name="submit" value="PLACE ORDER" onclick="sendemail()" 
                         style="color:#ffffff;font-size: 20px; width: 200px;padding: 0px;height: 40px;margin-top: 30px;"
                         id="submit-form-adress">
                 </div>
@@ -139,7 +139,8 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
     //username 
-    var user1name = JSON.parse(localStorage.getItem("usernamefab")) || "User"
+    var user1name = localStorage.getItem("usernamefab") || "User"
+    var userId = localStorage.getItem("user-id")
     document.getElementById("custname").innerText = user1name
 
     //total
@@ -152,7 +153,7 @@
     var addressobj = JSON.parse(localStorage.getItem("address-form")) || {}
     showaddress(addressobj)
     function showaddress(obj) {
-        console.log("hi", address)
+        // console.log("hi", address)
         document.getElementById("Addressbox").innerHTML = ""
         var div1 = document.createElement("div")
         div1.setAttribute("id", "boxx")
@@ -179,30 +180,80 @@
         asd.textContent = "ADDRESS:";
         document.getElementById("Addressbox").append(asd, div1)
     }
-    function sendemail() {
-        event.preventDefault();
-        var myCart=JSON.parse(localStorage.getItem("mycart"))||[]
-        localStorage.setItem("ordercart-fab",JSON.stringify(myCart))
-        myCart=[]
-        localStorage.setItem("mycart",JSON.stringify(myCart))
-        let username = JSON.parse(localStorage.getItem("usernamefab")) || "Soumya";
-        console.log("username: ", username);
-        var email = JSON.parse(localStorage.getItem("useremailfab")) || "soumyaswaroopsootar@gmail.com";
-        console.log("email: ", email);
-        var otpmath = Math.floor(Math.random() * 599999) + 100000;
-        localStorage.setItem("otp-fab", JSON.stringify(otpmath));
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "faballey.india1@gmail.com",
-            Password: "31762D74A7E1E57A7DC33FD99AA517638508",
-            To: email,
-            From: "faballey.india1@gmail.com",
-            Subject: "OTP for FABALLEY INDIA PAYMENT",
-            Body: "Hello ! " + username + " ,Thank You for Ordering .Here is your OTP:  " + otpmath,
-        }).then((message) => {
-            alert("OTP SENT TO YOUR REGISTER EMAIL,Redirecting....")
-            window.open("otp-cart.html", "_self")
-        })
-        email.value = "";
+    // function sendemail() {
+    //     event.preventDefault();
+    //     var myCart = JSON.parse(localStorage.getItem("mycart")) || []
+    //     localStorage.setItem("ordercart-fab", JSON.stringify(myCart))
+    //     myCart = []
+    //     localStorage.setItem("mycart", JSON.stringify(myCart))
+    //     let username = JSON.parse(localStorage.getItem("usernamefab")) || "Soumya";
+    //     console.log("username: ", username);
+    //     var email = JSON.parse(localStorage.getItem("useremailfab")) || "soumyaswaroopsootar@gmail.com";
+    //     console.log("email: ", email);
+    //     var otpmath = Math.floor(Math.random() * 599999) + 100000;
+    //     localStorage.setItem("otp-fab", JSON.stringify(otpmath));
+    //     Email.send({
+    //         Host: "smtp.elasticemail.com",
+    //         Username: "faballey.india1@gmail.com",
+    //         Password: "31762D74A7E1E57A7DC33FD99AA517638508",
+    //         To: email,
+    //         From: "faballey.india1@gmail.com",
+    //         Subject: "OTP for FABALLEY INDIA PAYMENT",
+    //         Body: "Hello ! " + username + " ,Thank You for Ordering .Here is your OTP:  " + otpmath,
+    //     }).then((message) => {
+    //         alert("OTP SENT TO YOUR REGISTER EMAIL,Redirecting....")
+    //         window.open("otp-cart.html", "_self")
+    //     })
+    //     email.value = "";
+    // }
+    async function sendemail() {
+        event.preventDefault()
+        // console.log("hi");
+        try {
+            console.log("hi");
+            const res = await fetch(`http://localhost:3002/faballey/cart/${userId}`);
+            const { productsCart } = await res.json();
+            // console.log("productsCart: ", productsCart);
+
+            if (productsCart.length > 0) {
+                // Add products to order cart
+                for (let i = 0; i < productsCart.length; i++) {
+                    const { product, quantity } = productsCart[i];
+                    // console.log("productsCart: ", productsCart[i]);
+                    const orderDoc = {
+                        userId,
+                        productId:product._id,
+                        quantity,
+                    };
+                    console.log("orderDoc: ", orderDoc);
+                    await fetch('http://localhost:3002/faballey/order', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(orderDoc),
+                    });
+                    // Empty the cart
+                    await fetch('http://localhost:3002/faballey/cart', {
+                        method: 'DELETE',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(orderDoc),
+                    });
+                }
+
+                // Update cart count in the navbar
+                const res2 = await fetch(`http://localhost:3002/faballey/cart/${userId}`);
+                const { productsCart: newCart } = await res2.json();
+                // document.querySelector('#navbar-cart-count').innerText = newCart.length;
+
+                alert('Order placed successfully!');
+            } else {
+                alert('No products found in the cart!');
+            }
+        } catch (error) {
+            console.error(error);
+            
+            alert('Error placing the order!');
+        }
     }
+
+
 </script>

@@ -1,5 +1,6 @@
+;
 
-let userId="643d4353527c87a4cb619139";
+var userId=localStorage.getItem("user-id")
 fetchtops();
 let Procuctsssarray =[];
 async function fetchtops(){

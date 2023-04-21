@@ -11,7 +11,7 @@ let cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
 document.querySelector("#navbar-cart-count").innerText = cartarray.length;
 
 //username
-var user1name = JSON.parse(localStorage.getItem("usernamefab")) || "User";
+var user1name = localStorage.getItem("usernamefab") || "User";
 
 if (user1name != "User") {
   document.getElementById("custname").innerText = user1name;
@@ -68,4 +68,11 @@ function micsearch(serch) {
   } else {
     window.open("./ProductPage/dress.html", "_self");
   }
+}
+var userId=localStorage.getItem("user-id")
+lengthProduct();
+async function lengthProduct(){
+  let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
+  let json = await fil.json();
+      document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }

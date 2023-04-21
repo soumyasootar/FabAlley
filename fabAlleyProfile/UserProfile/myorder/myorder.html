@@ -25,23 +25,30 @@
   function openfun(){
       window.open("../../../index.html","_self")
     }
-    let cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
+    // let cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
+    var userId=localStorage.getItem("user-id")
+lengthProduct();
+async function lengthProduct(){
+  let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
+  let json = await fil.json();
+      document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
+}
 
-document.querySelector("#navbar-cart-count").innerText= cartarray.length
+// document.querySelector("#navbar-cart-count").innerText= cartarray.length
 
 
 // let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
 // console.log(viewProduct)
 
 //username 
-var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
+// var user1name=(localStorage.getItem("usernamefab"))||"User"
 
-if(user1name!="User"){
-    document.getElementById("custname").innerText=user1name
-    document.getElementById("hi-name").style.display="block"
-    document.getElementById("login-signup").style.display="none"
+// if(user1name!="User"){
+//     document.getElementById("custname").innerText=user1name
+//     document.getElementById("hi-name").style.display="block"
+//     document.getElementById("login-signup").style.display="none"
 
-}
+// }
 </script>
 <body>
   <nav id="main-main-navbar">
@@ -591,7 +598,7 @@ if(user1name!="User"){
   </footer>
 </body>
 <script src="./myorder.js"></script>
-<script src="/navBar/navbar.js"></script>
+<!-- <script src="/navBar/navbar.js"></script> -->
 <script src="/Sidebar_cart/sidebar.js"></script>
 
 </html>

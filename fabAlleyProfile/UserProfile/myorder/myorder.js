@@ -29,24 +29,33 @@
 //   },
 //   ];
 // var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
-// document.querySelector(".emailname-span-otp").innerHTML=email
-// document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
-// var faceData = JSON.parse(localStorage.getItem("ordercart-fab")) || [];
+// // var faceData = JSON.parse(localStorage.getItem("ordercart-fab")) || [];
 
+
+// // document.querySelector(".emailname-span-otp").innerHTML=email
+// // document.querySelector("#custname").innerHTML=email
+// // document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
+
+var user1name = localStorage.getItem("usernamefab") || "User";
+var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
+document.querySelector(".emailname-span-otp").innerHTML=email    
+document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0).toUpperCase() 
+
+if (user1name != "User") {
+  document.getElementById("custname").innerText = user1name;
+  document.getElementById("hi-name").style.display = "block";
+  document.getElementById("login-signup").style.display = "none";
+}
 
 var userId=localStorage.getItem("user-id")
-var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
-document.querySelector(".emailname-span-otp").innerHTML=email
-document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
-
 fetchtops();
 var Product=[];
 async function fetchtops(){
   let res=await fetch(`http://localhost:3002/faballey/order/${userId}`)
   let json=await res.json();
-  console.log(json.wishlistsCart);
-  Product=[...json.wishlistsCart]
-  display(Product)
+  console.log(json.ordersCart);
+  Product=[...json.ordersCart]
+  displayProduct(Product)
 }
 // displayProduct(faceData);
 function displayProduct(doc) {
@@ -62,7 +71,7 @@ function displayProduct(doc) {
       </div>
       <div class="namediv">
           <p class="titlename">${x.title}</p>
-          <p class="featuredtxt">colour: ${x.colour}</p>
+          
           <p class="titlename">₹ ${x.price1}</p>
       </div>
       <div class="status">

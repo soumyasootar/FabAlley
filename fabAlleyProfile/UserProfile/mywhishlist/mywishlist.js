@@ -23,7 +23,7 @@ if (user1name != "User") {
 var userId=localStorage.getItem("user-id")
 var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
 document.querySelector(".emailname-span-otp").innerHTML=email
-document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
+document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0).toUpperCase() 
 
 fetchtops();
 var Product=[];

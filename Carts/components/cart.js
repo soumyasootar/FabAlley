@@ -5,7 +5,9 @@ let Procuctsssarray =[];
 async function fetchtops(){
   let res=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
   let json=await res.json();
-  let alpha=[...json.productsCart]
+  let alpha=[];
+  alpha=[...json.productsCart]
+  Procuctsssarray =[];
   alpha.forEach(function (elem) {
     Procuctsssarray.push(elem.product)
   });

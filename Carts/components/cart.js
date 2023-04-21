@@ -1,132 +1,31 @@
-// let CARTSarray = [
-//   {
-//     id: "1",
-//     category: "tops",
-//     title: "Pink White Floral Ruffle Sleeve Peplum Top",
-//     discount: "56",
-//     price2: "1450",
-//     price1: "638",
-//     site: "https://www.faballey.com/pink-white-floral-ruffle-sleeve-peplum-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP05210Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP05210Z/d4.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP05210Z/d5.jpg",
-//   },
-//   {
-//     id: "2",
-//     category: "tops",
-//     title: "Pink Floral Smocked Peplum Top",
-//     discount: "56",
-//     price2: "1650",
-//     price1: "726",
-//     site: "https://www.faballey.com/floral-pink-smoking-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP04999Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP04999Z/d5.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP04999Z/d8.jpg",
-//     img4: "https://img.faballey.com/images/Product/TOP04999Z/d4.jpg",
-//   },
-//   {
-//     id: "3",
-//     category: "tops",
-//     title: "Black Organza Ruffled  Shoulder Crop Top",
-//     discount: "56",
-//     price2: "1600",
-//     price1: "704",
-//     site: "https://www.faballey.com/black-organza-ruffled--shoulder-crop-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP06263Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP06263Z/d4.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP06263Z/d5.jpg",
-//     img4: "https://img.faballey.com/images/Product/TOP06263Z/d8.jpg",
-//   },
-//   {
-//     id: "4",
-//     category: "tops",
-//     title: "Powder Blue Lace Trim Detail Top",
-//     discount: "56",
-//     price2: "1600",
-//     price1: "704",
-//     site: "https://www.faballey.com/powder-blue-lace-trim-detail-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP05720Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP05720Z/d4.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP05720Z/d5.jpg",
-//     img4: "https://img.faballey.com/images/Product/TOP05720Z/d8.jpg",
-//   },
-//   {
-//     id: "4",
-//     category: "tops",
-//     title: "Powder Blue Lace Trim Detail Top",
-//     discount: "56",
-//     price2: "1600",
-//     price1: "704",
-//     site: "https://www.faballey.com/powder-blue-lace-trim-detail-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP05720Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP05720Z/d4.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP05720Z/d5.jpg",
-//     img4: "https://img.faballey.com/images/Product/TOP05720Z/d8.jpg",
-//   },
-//   {
-//     id: "4",
-//     category: "tops",
-//     title: "Powder Blue Lace Trim Detail Top",
-//     discount: "56",
-//     price2: "1600",
-//     price1: "704",
-//     site: "https://www.faballey.com/powder-blue-lace-trim-detail-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP05720Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP05720Z/d4.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP05720Z/d5.jpg",
-//     img4: "https://img.faballey.com/images/Product/TOP05720Z/d8.jpg",
-//   },
-//   {
-//     id: "4",
-//     category: "tops",
-//     title: "Powder Blue Lace Trim Detail Top",
-//     discount: "56",
-//     price2: "1600",
-//     price1: "704",
-//     site: "https://www.faballey.com/powder-blue-lace-trim-detail-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP05720Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP05720Z/d4.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP05720Z/d5.jpg",
-//     img4: "https://img.faballey.com/images/Product/TOP05720Z/d8.jpg",
-//   },
-//   {
-//     id: "4",
-//     category: "tops",
-//     title: "Powder Blue Lace Trim Detail Top",
-//     discount: "56",
-//     price2: "1600",
-//     price1: "704",
-//     site: "https://www.faballey.com/powder-blue-lace-trim-detail-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP05720Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP05720Z/d4.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP05720Z/d5.jpg",
-//     img4: "https://img.faballey.com/images/Product/TOP05720Z/d8.jpg",
-//   },
-//   {
-//     id: "4",
-//     category: "tops",
-//     title: "Powder Blue Lace Trim Detail Top",
-//     discount: "56",
-//     price2: "1600",
-//     price1: "704",
-//     site: "https://www.faballey.com/powder-blue-lace-trim-detail-top-78/prdt",
-//     img1: "https://img.faballey.com/images/Product/TOP05720Z/1.jpg",
-//     img2: "https://img.faballey.com/images/Product/TOP05720Z/d4.jpg",
-//     img3: "https://img.faballey.com/images/Product/TOP05720Z/d5.jpg",
-//     img4: "https://img.faballey.com/images/Product/TOP05720Z/d8.jpg",
-//   },
-// ];
-// localStorage.setItem("mycart", JSON.stringify(CARTSarray));
 
-let Procuctsssarray = JSON.parse(localStorage.getItem("mycart")) || [];
-
+let userId="643d4353527c87a4cb619139";
+fetchtops();
+let Procuctsssarray =[];
+async function fetchtops(){
+  let res=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
+  let json=await res.json();
+  let alpha=[...json.productsCart]
+  alpha.forEach(function (elem) {
+    Procuctsssarray.push(elem.product)
+  });
+  let qty=[]
+  for(let i=0; i<json.productsCart.length; i++){
+  qty.push(json.productsCart[i].quantity)
+}
+  console.log(qty)
+  let i=0;
 Procuctsssarray.forEach(function (elem) {
-  elem.quantity = 1;
+  elem.quantity = Number(qty[i]);
+  i++;
 });
+  displayCart(Procuctsssarray)
+  console.log(Procuctsssarray);
+}
 
-localStorage.setItem("mycart", JSON.stringify(Procuctsssarray));
 
-displayCart(Procuctsssarray);
+
+// displayCart(Procuctsssarray);
 function displayCart(temp) {
   let product=document.getElementById("productBox")
   product.innerHTML=""
@@ -231,28 +130,60 @@ function totalprice() {
   localStorage.setItem("local-subtotal", subtotal);
 }
 
-function quantityitems(elem, index, div) {
+async function quantityitems(elem, index, div) {
   let quantity = div.querySelector("#qty").value;
   elem.quantity = Number(quantity);
+  let doc={
+    userId: userId,
+    productId:Procuctsssarray[index]._id,
+    quantity:elem.quantity
+  }
+  let res=await fetch('http://localhost:3002/faballey/cart',{
+    method: 'POST',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc)
+  })
+  console.log(elem.quantity);
   console.log(elem);
-  localStorage.setItem("mycart", JSON.stringify(Procuctsssarray));
 
   displayCart(Procuctsssarray);
 }
 
-function removeItem(elem, index) {
-  event.preventDefault();
-  Procuctsssarray.splice(index, 1);
-  localStorage.setItem("mycart", JSON.stringify(Procuctsssarray));
-  displayCart(Procuctsssarray);
+async function removeItem(elem, index) {
+  // event.preventDefault();
+  let doc={
+    userId: userId,
+    productId:Procuctsssarray[index]._id
+  }
+  let res=await fetch('http://localhost:3002/faballey/cart',{
+    method: 'DELETE',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc)
+  })
+  fetchtops();
 }
 
-function wishlistadd(elem,index){
-  let wishcart=JSON.parse(localStorage.getItem("mywishlistcart"))||[]
-  wishcart.push(elem)
-  Procuctsssarray.splice(index, 1);
-  localStorage.setItem("mywishlistcart",JSON.stringify(wishcart))
-  displayCart(Procuctsssarray);
+async function wishlistadd(elem,index){
+  let doc={
+    userId: userId,
+    productId:Procuctsssarray[index]._id,
+    quantity:1
+  }
+  let res=await fetch('http://localhost:3002/faballey/wishlist',{
+    method: 'POST',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc)
+  })
+  let doc2={
+    userId: userId,
+    productId:Procuctsssarray[index]._id
+  }
+  let res2=await fetch('http://localhost:3002/faballey/cart',{
+    method: 'DELETE',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc2)
+  })
+  fetchtops();
 }
 
 //coupon

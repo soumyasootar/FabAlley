@@ -1,36 +1,8 @@
-// let Product = [{
-//   id: "1",
-//   category: "tops",
-//   title: "Pink White Floral Ruffle Sleeve Peplum Top",
-//   discount: "56",
-//   price2: "1450",
-//   price1: "638",
-//   colour:"pink",
-//   site: "https://www.faballey.com/pink-white-floral-ruffle-sleeve-peplum-top-78/prdt",
-//   img1: "https://img.faballey.com/images/Product/TOP05210Z/1.jpg",
-//   img2: "https://img.faballey.com/images/Product/TOP05210Z/d4.jpg",
-//   img3: "https://img.faballey.com/images/Product/TOP05210Z/d5.jpg",
-//   img4: "https://img.faballey.com/images/Product/TOP05210Z/d8.jpg",
-// },
-// {
-//   id: "2",
-//   category: "tops",
-//   title: "Pink Floral Smocked Peplum Top",
-//   discount: "56",
-//   price2: "1650",
-//   price1: "726",
-//   colour:"pink",
-//   site: "https://www.faballey.com/floral-pink-smoking-top-78/prdt",
-//   img1: "https://img.faballey.com/images/Product/TOP04999Z/1.jpg",
-//   img2: "https://img.faballey.com/images/Product/TOP04999Z/d5.jpg",
-//   img3: "https://img.faballey.com/images/Product/TOP04999Z/d8.jpg",
-//   img4: "https://img.faballey.com/images/Product/TOP04999Z/d4.jpg",
-// },]
+
 
 
 let cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
 
-document.querySelector("#navbar-cart-count").innerText = cartarray.length
 
 
 // let viewProduct=JSON.parse(localStorage.getItem("View_detail"));
@@ -46,9 +18,19 @@ if (user1name != "User") {
 
 }
 
-let Product= JSON.parse(localStorage.getItem("mywishlistcart")) || [];
+let userId="643d4353527c87a4cb619139";
 
-display(Product)
+fetchtops();
+var Product=[];
+async function fetchtops(){
+  let res=await fetch(`http://localhost:3002/faballey/wishlist/643d4353527c87a4cb619139`)
+  let json=await res.json();
+  console.log(json.wishlistsCart);
+  Product=[...json.wishlistsCart]
+  display(Product)
+}
+
+// display(Product)
 function display(data){
   document.querySelector(".whishlistbox").innerHTML=""
   data.map(function(ele,ind){
@@ -69,7 +51,7 @@ function display(data){
               <span>₹ ${ele.price1}</span>
             </div>
             <div id="addt_cartw">
-              <button class="add_to_bag${ind}">ADD TO BAG</button>
+              <button onclick="add_to_bag(${ind})">ADD TO BAG</button>
             </div>
             <div id="crs_btn">
               <button onclick="remove(${ind})">Remove</button>
@@ -80,30 +62,57 @@ function display(data){
   })
 }
 
-let cart_product = JSON.parse(localStorage.getItem("mycart")) || [];
 
-function cart(e) {
+async function add_to_bag(e) {
 
-  let t=document.querySelector(".add_to_bag"+e)
 
-  let filprox=cart_product.filter(function (d){
-    return d.id==Product[e].id;
-  });
-  if(filprox.length==1){
-   for(let i=0; i<cart_product.length; i++){
-    if(cart_product[i].id==Product[e].id){
-      console.log(cart_product[i])
-    }
-   }
-  }else{
-    cart_product.push(Product[e])
-    t.style.background="#03bb5c"
-        localStorage.setItem("mycart",JSON.stringify(cart_product))
-        document.querySelector("#navbar-cart-count").innerText = cartarray.length
+  let doc={
+    userId: userId,
+    productId:Product[e]._id,
+    quantity:1
   }
-  console.log(cart_product)
+  let res=await fetch('http://localhost:3002/faballey/cart',{
+    method: 'POST',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc)
+  })
+
+  let doc2={
+    userId: userId,
+    productId:Product[e]._id
+  }
+  let res2=await fetch('http://localhost:3002/faballey/wishlist',{
+    method: 'DELETE',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc2)
+  })
+  fetchtops()
+  lengthProduct();
+  async function lengthProduct(){
+    let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+    let json = await fil.json();
+        document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
+  }
 }
-function remove(ind){
-  Product.splice(ind,1)
-  display(Product)
+
+
+
+async function remove(ind){
+  let doc={
+    userId: userId,
+    productId:Product[ind]._id
+  }
+  let res=await fetch('http://localhost:3002/faballey/wishlist',{
+    method: 'DELETE',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc)
+  })
+  fetchtops()
+}
+
+lengthProduct();
+async function lengthProduct(){
+  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+  let json = await fil.json();
+      document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }

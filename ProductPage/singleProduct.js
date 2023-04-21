@@ -178,61 +178,82 @@ function displayThis(ele){
 }
 
 // -------------------adding to wishlist---------------------------
-let wishlist_product = JSON.parse(localStorage.getItem("mywishlistcart")) || [];
+let userId="643d4353527c87a4cb619139";
 
-function wishlist(e) {
+async function wishlist(e) {
   // console.log(e.target)
-  console.log(viewProduct.id)
   let t=document.querySelector("#wishllist")
-  let filpro=wishlist_product.filter(function(y){
-    return y.id==viewProduct.id;
+  let fil=await fetch(`http://localhost:3002/faballey/wishlist/643d4353527c87a4cb619139`)
+  let json = await fil.json();
+  
+  let filpro=json.wishlistsCart.filter(function(y){
+    return y._id==viewProduct._id;
   });
   if(filpro.length==1){
-   for(let i=0; i<wishlist_product.length; i++){
-    if(wishlist_product[i].id==filpro[0].id){
-      wishlist_product.splice(i,1)
+   for(let i=0; i<json.wishlistsCart.length; i++){
+    if(json.wishlistsCart[i]._id==filpro[0]._id){
+      let doc={
+        userId: userId,
+        productId:filpro[0]._id
+      }
+      let res=await fetch('http://localhost:3002/faballey/wishlist',{
+        method: 'DELETE',
+        headers:{'content-type': 'application/json'},
+        body: JSON.stringify(doc)
+      })
       t.children[0].classList.remove("fa-solid")
       t.style.color="#1d2322"
     }
-
    }
   }else{
-    wishlist_product.push(viewProduct)
-    t.children[0].classList.add("fa-solid")
-    t.style.color="#fc6486"
-        localStorage.setItem("mywishlistcart",JSON.stringify(wishlist_product))
+   let doc={
+    userId: userId,
+    productId:viewProduct._id,
+    quantity:1
   }
-  console.log(wishlist_product)
+  let res=await fetch('http://localhost:3002/faballey/wishlist',{
+    method: 'POST',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc)
+  })
+  t.children[0].classList.add("fa-solid")
+    t.style.color="#fc6486"
+  }
+
 }
 
 // -------------------------add to cart-----------------
 
 let cart_product = JSON.parse(localStorage.getItem("mycart")) || [];
 
-function cart(e) {
+async function cart(e) {
 
   let t=document.querySelector("#add_to_bag")
 
-  let filprox=cart_product.filter(function (d){
-    return d.id==viewProduct.id;
-  });
-  if(filprox.length==1){
-
-   for(let i=0; i<cart_product.length; i++){
-    if(cart_product[i].id==viewProduct.id){
-      window.open("../Carts/components/carts.html","_self")
-      console.log(cart_product[i])
-    }
-   }
-  }else{
-    cart_product.push(viewProduct)
-    t.style.background="#03bb5c"
-        localStorage.setItem("mycart",JSON.stringify(cart_product))
-        cartarray = JSON.parse(localStorage.getItem("mycart")) || [];
-
-        document.querySelector("#navbar-cart-count").innerText= cartarray.length
+  
+  let doc={
+    userId: userId,
+    productId:viewProduct._id,
+    quantity:1
   }
-  console.log(cart_product)
+  let res=await fetch('http://localhost:3002/faballey/cart',{
+    method: 'POST',
+    headers:{'content-type': 'application/json'},
+    body: JSON.stringify(doc)
+  })
+  // cart_product.push(Product[e])
+  t.style.background="#03bb5c"
+  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+  let json = await fil.json();
+      document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
+
+}
+
+lengthProduct();
+async function lengthProduct(){
+  let fil=await fetch(`http://localhost:3002/faballey/cart/643d4353527c87a4cb619139`)
+  let json = await fil.json();
+      document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }
 
 

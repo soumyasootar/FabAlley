@@ -131,6 +131,7 @@ logout.addEventListener("click",logoooout)
 function logoooout(){
   localStorage.setItem("usernamefab","User")
   localStorage.setItem("user-id","00000")
+  localStorage.setItem("useremailfab","abc@gmail.com")
   window.open("../../../index.html","_self")
 }
 

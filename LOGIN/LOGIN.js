@@ -20,7 +20,7 @@ function sendemail() {
     };
     console.log("obj: ", obj);
 
-    fetch("http://localhost:3002/faballey/register", {
+    fetch("https://backend-faballey.vercel.app//faballey/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

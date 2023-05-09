@@ -4,7 +4,7 @@ var userId=localStorage.getItem("user-id")
 fetchtops();
 let Procuctsssarray =[];
 async function fetchtops(){
-  let res=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
+  let res=await fetch(`https://backend-faballey.vercel.app//faballey/cart/${userId}`)
   let json=await res.json();
   let alpha=[];
   alpha=[...json.productsCart]
@@ -141,7 +141,7 @@ async function quantityitems(elem, index, div) {
     productId:Procuctsssarray[index]._id,
     quantity:elem.quantity
   }
-  let res=await fetch('http://localhost:3002/faballey/cart',{
+  let res=await fetch('https://backend-faballey.vercel.app//faballey/cart',{
     method: 'POST',
     headers:{'content-type': 'application/json'},
     body: JSON.stringify(doc)
@@ -158,7 +158,7 @@ async function removeItem(elem, index) {
     userId: userId,
     productId:Procuctsssarray[index]._id
   }
-  let res=await fetch('http://localhost:3002/faballey/cart',{
+  let res=await fetch('https://backend-faballey.vercel.app//faballey/cart',{
     method: 'DELETE',
     headers:{'content-type': 'application/json'},
     body: JSON.stringify(doc)
@@ -172,7 +172,7 @@ async function wishlistadd(elem,index){
     productId:Procuctsssarray[index]._id,
     quantity:1
   }
-  let res=await fetch('http://localhost:3002/faballey/wishlist',{
+  let res=await fetch('https://backend-faballey.vercel.app//faballey/wishlist',{
     method: 'POST',
     headers:{'content-type': 'application/json'},
     body: JSON.stringify(doc)
@@ -181,7 +181,7 @@ async function wishlistadd(elem,index){
     userId: userId,
     productId:Procuctsssarray[index]._id
   }
-  let res2=await fetch('http://localhost:3002/faballey/cart',{
+  let res2=await fetch('https://backend-faballey.vercel.app//faballey/cart',{
     method: 'DELETE',
     headers:{'content-type': 'application/json'},
     body: JSON.stringify(doc2)

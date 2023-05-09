@@ -16,7 +16,7 @@ async function sendemail() {
     };
 
     try {
-      const fetchdata = await fetch("http://localhost:3002/faballey/login", {
+      const fetchdata = await fetch("https://backend-faballey.vercel.app//faballey/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

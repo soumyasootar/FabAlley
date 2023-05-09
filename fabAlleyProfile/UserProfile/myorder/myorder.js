@@ -51,7 +51,7 @@ var userId=localStorage.getItem("user-id")
 fetchtops();
 var Product=[];
 async function fetchtops(){
-  let res=await fetch(`http://localhost:3002/faballey/order/${userId}`)
+  let res=await fetch(`https://backend-faballey.vercel.app//faballey/order/${userId}`)
   let json=await res.json();
   console.log(json.ordersCart);
   Product=[...json.ordersCart]

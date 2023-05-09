@@ -72,7 +72,7 @@ function micsearch(serch) {
 var userId=localStorage.getItem("user-id")
 lengthProduct();
 async function lengthProduct(){
-  let fil=await fetch(`http://localhost:3002/faballey/cart/${userId}`)
+  let fil=await fetch(`https://backend-faballey.vercel.app//faballey/cart/${userId}`)
   let json = await fil.json();
       document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }

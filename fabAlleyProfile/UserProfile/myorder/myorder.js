@@ -31,15 +31,16 @@
 // var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
 // // var faceData = JSON.parse(localStorage.getItem("ordercart-fab")) || [];
 
-
 // // document.querySelector(".emailname-span-otp").innerHTML=email
 // // document.querySelector("#custname").innerHTML=email
 // // document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0)
 
 var user1name = localStorage.getItem("usernamefab") || "User";
-var email=JSON.parse(localStorage.getItem("useremailfab"))||"abc@mail.com"
-document.querySelector(".emailname-span-otp").innerHTML=email    
-document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0).toUpperCase() 
+var email = JSON.parse(localStorage.getItem("useremailfab")) || "abc@mail.com";
+document.querySelector(".emailname-span-otp").innerHTML = email;
+document.querySelector("#profile_letter>h1").innerHTML = email
+  .charAt(0)
+  .toUpperCase();
 
 if (user1name != "User") {
   document.getElementById("custname").innerText = user1name;
@@ -47,15 +48,18 @@ if (user1name != "User") {
   document.getElementById("login-signup").style.display = "none";
 }
 
-var userId=localStorage.getItem("user-id")
+var userId = localStorage.getItem("user-id");
 fetchtops();
-var Product=[];
-async function fetchtops(){
-  let res=await fetch(`https://backend-faballey.vercel.app/faballey/order/${userId}`)
-  let json=await res.json();
+var Product = [];
+async function fetchtops() {
+  let res = await fetch(
+    `https://backend-faballey.vercel.app/faballey/order/${userId}`
+  );
+  let json = await res.json();
   console.log(json.ordersCart);
-  Product=[...json.ordersCart]
-  displayProduct(Product)
+  Product = [...json.ordersCart];
+  if(Product.length>0)
+  displayProduct(Product);
 }
 // displayProduct(faceData);
 function displayProduct(doc) {
@@ -90,7 +94,7 @@ function displayProduct(doc) {
     let dd = String(today.getDate()).padStart(2, "0");
     let mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
     let yyyy = today.getFullYear();
-    today = dd + "/" + mm + "/" + yyyy;
+    today = ((Number(dd) + 5) % 30) + "/" + mm + "/" + yyyy;
     console.log(today);
     d.innerHTML = today;
   });
@@ -124,14 +128,13 @@ function printPdf() {
   document.body.removeChild(a);
   console.log("worked");
 }
-  //username
-var logout =document.querySelector(".logout")
-logout.addEventListener("click",logoooout)
+//username
+var logout = document.querySelector(".logout");
+logout.addEventListener("click", logoooout);
 
-function logoooout(){
-  localStorage.setItem("usernamefab","User")
-  localStorage.setItem("user-id","00000")
-  localStorage.setItem("useremailfab","abc@gmail.com")
-  window.open("../../../index.html","_self")
+function logoooout() {
+  localStorage.setItem("usernamefab", "User");
+  localStorage.setItem("user-id", "00000");
+  localStorage.setItem("useremailfab", "abc@gmail.com");
+  window.open("../../../index.html", "_self");
 }
-

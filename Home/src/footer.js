@@ -52,6 +52,7 @@ export default function footer() {
             <p>Size Guide</p>
             <p>Wholesale Enquiry</p>
             <a href="https://dashboard-flax-eight.vercel.app/" target="_blank" style="color: black;">Admin</a>
+            <a href="https://backend-faballey.vercel.app/" target="_blank" style="color: black;">Backend</a>
 
         </div>
     </div>

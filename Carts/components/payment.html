@@ -211,7 +211,7 @@
         // console.log("hi");
         try {
             console.log("hi");
-            const res = await fetch(`https://backend-faballey.vercel.app//faballey/cart/${userId}`);
+            const res = await fetch(`https://backend-faballey.vercel.app/faballey/cart/${userId}`);
             const { productsCart } = await res.json();
             // console.log("productsCart: ", productsCart);
 
@@ -226,13 +226,13 @@
                         quantity,
                     };
                     console.log("orderDoc: ", orderDoc);
-                    await fetch('https://backend-faballey.vercel.app//faballey/order', {
+                    await fetch('https://backend-faballey.vercel.app/faballey/order', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(orderDoc),
                     });
                     // Empty the cart
-                    await fetch('https://backend-faballey.vercel.app//faballey/cart', {
+                    await fetch('https://backend-faballey.vercel.app/faballey/cart', {
                         method: 'DELETE',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(orderDoc),
@@ -240,7 +240,7 @@
                 }
 
                 // Update cart count in the navbar
-                const res2 = await fetch(`https://backend-faballey.vercel.app//faballey/cart/${userId}`);
+                const res2 = await fetch(`https://backend-faballey.vercel.app/faballey/cart/${userId}`);
                 const { productsCart: newCart } = await res2.json();
                 // document.querySelector('#navbar-cart-count').innerText = newCart.length;
 

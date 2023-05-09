@@ -28,7 +28,7 @@ document.querySelector("#profile_letter>h1").innerHTML=email.charAt(0).toUpperCa
 fetchtops();
 var Product=[];
 async function fetchtops(){
-  let res=await fetch(`https://backend-faballey.vercel.app//faballey/wishlist/${userId}`)
+  let res=await fetch(`https://backend-faballey.vercel.app/faballey/wishlist/${userId}`)
   let json=await res.json();
   console.log(json.wishlistsCart);
   Product=[...json.wishlistsCart]
@@ -76,7 +76,7 @@ async function add_to_bag(e) {
     productId:Product[e]._id,
     quantity:1
   }
-  let res=await fetch('https://backend-faballey.vercel.app//faballey/cart',{
+  let res=await fetch('https://backend-faballey.vercel.app/faballey/cart',{
     method: 'POST',
     headers:{'content-type': 'application/json'},
     body: JSON.stringify(doc)
@@ -86,7 +86,7 @@ async function add_to_bag(e) {
     userId: userId,
     productId:Product[e]._id
   }
-  let res2=await fetch('https://backend-faballey.vercel.app//faballey/wishlist',{
+  let res2=await fetch('https://backend-faballey.vercel.app/faballey/wishlist',{
     method: 'DELETE',
     headers:{'content-type': 'application/json'},
     body: JSON.stringify(doc2)
@@ -94,7 +94,7 @@ async function add_to_bag(e) {
   fetchtops()
   lengthProduct();
   async function lengthProduct(){
-    let fil=await fetch(`https://backend-faballey.vercel.app//faballey/cart/${userId}`)
+    let fil=await fetch(`https://backend-faballey.vercel.app/faballey/cart/${userId}`)
     let json = await fil.json();
         document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
   }
@@ -107,7 +107,7 @@ async function remove(ind){
     userId: userId,
     productId:Product[ind]._id
   }
-  let res=await fetch('https://backend-faballey.vercel.app//faballey/wishlist',{
+  let res=await fetch('https://backend-faballey.vercel.app/faballey/wishlist',{
     method: 'DELETE',
     headers:{'content-type': 'application/json'},
     body: JSON.stringify(doc)
@@ -117,7 +117,7 @@ async function remove(ind){
 
 lengthProduct();
 async function lengthProduct(){
-  let fil=await fetch(`https://backend-faballey.vercel.app//faballey/cart/${userId}`)
+  let fil=await fetch(`https://backend-faballey.vercel.app/faballey/cart/${userId}`)
   let json = await fil.json();
       document.querySelector("#navbar-cart-count").innerText= json.productsCart.length
 }

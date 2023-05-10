@@ -509,6 +509,61 @@ filPri.addEventListener("click", (event) => {
     display(filtered);
   }
 });
+
+
+//search with mic
+document.querySelector(".search-text").addEventListener("input", searchyoo);
+document.querySelector(".search-form").addEventListener("submit", searchyoo);
+
+function searchyoo() {
+  event.preventDefault();
+  setTimeout(function () {
+    searchhhhh();
+  }, 2000);
+}
+
+
+function searchhhhh() {
+  let serch = document.querySelector(".search-text").value;
+  console.log("serch: ", serch);
+  serch.toLowerCase();
+  console.log("serch: ", serch);
+  if (serch.includes("top")) {
+    window.open("ProductPage.html", "_self");
+  } else if (serch.includes("dress")) {
+    window.open("dress.html", "_self");
+  } else {
+    window.open("dress.html", "_self");
+  }
+}
+
+// microphone
+const button = document.querySelector("#mic");
+var textInput = document.querySelector(".search-text");
+
+button.addEventListener("click", () => {
+  const recognition = new webkitSpeechRecognition();
+  recognition.onresult = (event) => {
+    textInput.value = event.results[0][0].transcript;
+    let serch = document.querySelector(".search-text").value;
+    micsearch(serch);
+  };
+  recognition.start();
+});
+
+function micsearch(serch) {
+  if (serch.includes("top")) {
+    window.open("ProductPage.html", "_self");
+  } else if (serch.includes("dress")) {
+    window.open("dress.html", "_self");
+  } else {
+    window.open("dress.html", "_self");
+  }
+}
+
+// Search Ends 
+
+
 // console.log(filcolor.children.length)
 // console.log(filcolor.children)
 // console.log(filcolor.children[0].attributes.value.nodeValue)

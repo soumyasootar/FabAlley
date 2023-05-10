@@ -237,7 +237,7 @@ input.search-text::-webkit-search-cancel-button {
 
 #mic {
   position: absolute;
-  top: 2em;
+  top: 1.65em;
   right: 2em;
   cursor: pointer;
 }

@@ -208,5 +208,5 @@ document.getElementById("CouponBtn").addEventListener("click",()=>{
 })
 
 //username 
-var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
+var user1name=(localStorage.getItem("usernamefab"))||"User"
 document.getElementById("custname").innerText=user1name

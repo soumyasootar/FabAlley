@@ -169,13 +169,13 @@ body {
 }
 #CouPonID {
   padding: 10px;
-  font-size: large;
+  font-size: 13px;
   border: 3px solid #ececec;
   margin: 10px;
 }
 #CouponBtn {
   padding: 10px;
-  font-size: large;
+  font-size: 13px;
   color: #ececec;
   background-color: #343232;
   cursor: pointer;
